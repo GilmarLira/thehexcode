@@ -105,48 +105,55 @@ a, a:hover, a:focus, a:active {
 /* Typography
 ------------------------------------------------------------ */
 body {
-  font-size: 16px;
-  line-height: 24px; }
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28.8px; }
+
+h1, h2, h3, h4, h5, h6,
+.alpha, .beta, .gamma, .delta, .epsilon, .zeta {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
 
 h1, .alpha {
-  font-size: 110px;
-  line-height: 120px;
+  font-size: 118px;
+  line-height: 144px;
   margin-top: 0px;
-  margin-bottom: 24px; }
+  margin-bottom: 28.8px; }
 
 h2, .beta {
-  font-size: 68px;
-  line-height: 72px;
+  font-size: 74px;
+  line-height: 86.4px;
   margin-top: 0px;
-  margin-bottom: 24px; }
+  margin-bottom: 28.8px; }
 
 h3, .gamma {
-  font-size: 42px;
-  line-height: 48px;
+  font-size: 46px;
+  line-height: 57.6px;
   margin-top: 0px;
-  margin-bottom: 24px; }
+  margin-bottom: 28.8px; }
 
 h4, .delta {
-  font-size: 26px;
-  line-height: 48px;
+  font-size: 29px;
+  line-height: 57.6px;
   margin-top: 0px;
   margin-bottom: 0px; }
 
 h5, .epsilon {
-  font-size: 16px;
-  line-height: 24px; }
+  font-size: 18px;
+  line-height: 28.8px; }
 
 h6, .zeta {
-  font-size: 10px;
-  line-height: 24px;
+  font-size: 11px;
+  line-height: 28.8px;
   margin-top: 0px;
   margin-bottom: 0px; }
 
 p, ul, ol {
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 28.8px;
   margin-top: 0px;
-  margin-bottom: 24px; }
+  margin-bottom: 28.8px; }
 
 body {
   background: white; }
@@ -181,8 +188,8 @@ body {
     .main_sidebar .main_nav .nav_list {
       height: 100%; }
       .main_sidebar .main_nav .nav_list .nav_list_item {
-        font-size: 68px;
-        line-height: 72px;
+        font-size: 74px;
+        line-height: 86.4px;
         margin-top: 0px;
         margin-bottom: 0px;
         height: 16.666666667%;
@@ -202,8 +209,8 @@ body {
   .content p {
     position: relative;
     top: 45%;
-    font-size: 42px;
-    line-height: 48px;
+    font-size: 46px;
+    line-height: 57.6px;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center; }
