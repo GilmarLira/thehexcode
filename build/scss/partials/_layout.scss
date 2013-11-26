@@ -1,112 +1,85 @@
-/* Layout
------------------------------------------------------------- */
-.header{
-  @include outer-container;
-  background: $color-header-bg;
-  color: $color-text;
-  .logo{
-    @include span-columns(6);
-    @include pad();
-    @extend .gamma;
-  }
-  .main-nav{
-    @include span-columns(6);
-    @include pad();
-    text-align:right;
-    li{
-      display:inline-block;
-      margin-right:1em;
-      &:last-child{ margin-right:0;}
-    }
-    a{
-      text-transform:uppercase;
-      color: $color-link;
-      @include transition( color 0.2s );
-      &:hover{
-        color: $color-link-hover;
-      }
-    }
-  }
-  // Stack logo and nav on small screens
-  @include media($small){
-    .logo,.main-nav{
-      text-align:center;
-    }
-    .logo{
-      @include span-columns(12);
-    }
-    .main-nav{
-      @include span-columns(12);
-    }
-  }
+
+// Layout
+// ////////////////////////////////////////////////////
+
+// Uncomment this to see the layout structure
+// * { @include outline; }
+
+body{
+	background: $color-body-bg;
 }
 
-
-.promo{
-  @include outer-container;
-  margin-bottom:flex-gutter();
-  img{
-    width:100%;
-    vertical-align:baseline;
-  }
+// Wraps the sidebar and the content window together
+.container{
+	@include outer-container;
+	background-color: $color-content-bg;
 }
 
-.features{
-  @include outer-container;
-  margin-bottom:flex-gutter();
-  figure{
-    @include span-columns(6);
-    @include omega(2n);
-    @include media($small){
-      @include span-columns(12);
-      @include omega(1n);
-    }
-    img{
-      width:100%;
-      vertical-align:baseline;
-    }
-  }
+// Logo and nav reside here
+.main_sidebar{ 
+	@include span-columns(3);
+
+	.logo{ @include background(url('../img/logo.svg') no-repeat center / 80% 80%); }
+
+	height: 100%;
+	background-color: $color-nav-bg;
+	color: $color-nav-text;
+
+	.logo{
+		height: 14.285%;
+	}
+
+	.main_nav{
+		// nav height is 100% minus logo height
+		height: 85.715%;
+
+		.nav_list{
+			height: 100%;
+
+			.nav_list_item{
+				@include rhythm(3);
+
+				// Each has 1.6 of the nav total height
+				height: 16.666666667%;
+				text-align: center;
+				padding-top: .75em;
+				border-top: 1px dotted $color-content-bg;
+			} 
+		}
+
+	}
 }
 
-.image-grid{
-  @include outer-container;
-  li{
-    // Small
-    @include media($small){
-      @include span-columns(12);
-      @include omega(1n);
-    }
-    // Medium
-    @include media($medium){
-      @include span-columns(6);
-      @include omega(2n);
-    }
-    // Big
-    @include media($big){
-      @include span-columns(3);
-      @include omega(4n);
-    }
-    margin-bottom:flex-gutter();
-    img{
-      width:100%;
-      vertical-align:baseline;
-    }
-  }
-}
+// Area for the content
+.content{
+	@include span-columns(13);
+	@include position;
 
+	height: 100%;
+
+	p{
+		@include position(45% 0 0 0);
+		@include rhythm(2);
+
+		text-align: center;
+	}
+
+	.content_section{ 
+		@include position(absolute);
+
+		width: 100%;
+		height: 100%;
+		display: none;
+
+		&:nth-child(1){ background-color: hsl(40, 100, 50); }
+		&:nth-child(2){ background-color: hsl(60, 100, 50); }
+		&:nth-child(3){ background-color: hsl(90, 100, 50); }
+		&:nth-child(4){ background-color: hsl(120, 100, 50); }
+		&:nth-child(5){ background-color: hsl(150, 100, 50); }
+		&:nth-child(6){ background-color: hsl(180, 100, 50); }
+	}
+} 
 
 .footer{
-  @include outer-container;
-  @include pad();
-  background: $color-footer-bg;
-}
-
-
-
-
-
-/* Misc Styles - Should be in own file but its here for now
------------------------------------------------------------- */
-.button{
-  @include button( #222, #ccc, 4px );
+	display: none;
 }

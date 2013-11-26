@@ -6,10 +6,11 @@
 
 // Change the grid settings
 $grid-columns: 16;
-$max-width: em(1280);
+$max-width: 100%;
 
 //Visual Grid Helper
-$visual-grid: true;
+// $visual-grid: true;
+$visual-grid: false;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.3;
 

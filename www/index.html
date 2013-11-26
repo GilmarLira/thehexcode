@@ -10,51 +10,60 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/libs/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
+<body onload="initContainer()">
 
-    <header class="header">
-        <h1 class="logo">SITE LOGO</h1>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#">Linky Poo</a></li>
-                <li><a href="#">Linky Poo</a></li>
-                <li><a href="#">Linky Poo</a></li>
-                <li><a href="#">Linky Poo</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="container">
+        
+        <aside class="main_sidebar">
+            <div class="logo"></div>
+            <nav class="main_nav">
+                <ul class="nav_list">
+                    <li class="nav_list_item">1</li>
+                    <li class="nav_list_item">2</li>
+                    <li class="nav_list_item">3</li>
+                    <li class="nav_list_item">4</li>
+                    <li class="nav_list_item">5</li>
+                    <li class="nav_list_item">6</li>
+                </ul>
+            </nav>
+        </aside>
 
-    <section class="promo">
-        <img src="img/promo.jpg">
-    </section>
+        <div class="content">
+            <section class="content_section">
+                <p>1</p>
+            </section>
 
-    <section class="features">
-        <figure><img src="img/promo.jpg"></figure>
-        <figure><img src="img/promo.jpg"></figure>
-    </section>
+            <section class="content_section">
+                <p>2</p>
+            </section>
 
-    <section class="image-grid">
-        <ul>
-            <li><img src="img/thumbnail.jpg"></li>
-            <li><img src="img/thumbnail.jpg"></li>
-            <li><img src="img/thumbnail.jpg"></li>
-            <li><img src="img/thumbnail.jpg"></li>
-            <li><img src="img/thumbnail.jpg"></li>
-            <li><img src="img/thumbnail.jpg"></li>
-            <li><img src="img/thumbnail.jpg"></li>
-            <li><img src="img/thumbnail.jpg"></li>
-        </ul>
-    </section>
+            <section class="content_section">
+                <p>3</p>
+            </section>
 
+            <section class="content_section">
+                <p>4</p>
+            </section class="content_section">
+
+            <section class="content_section">
+                <p>5</p>
+            </section>
+
+            <section class="content_section">
+                <p>6</p>
+            </section>
+        </div>
+    </div>
+    
     <footer class="footer">
-        <small>©2013 WNM498.02 ALL DAY, ALL NIGHT</small>
+        <small>©2013 The HEX Code</small>
     </footer>
 
     <!-- HTML5 BP jQuery Technique -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
 
-    <script src="js/plugins.js"></script>
+    <!-- <script src="js/plugins.js"></script> -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
