@@ -1,0 +1,350 @@
+/* Reset
+------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+::-moz-selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #f15a22;
+  color: #fff;
+  text-shadow: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Reset
+------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+::-moz-selection {
+  background: #fe57a1;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #f15a22;
+  color: #fff;
+  text-shadow: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none; }
+
+/* Helper Mixins
+------------------------------------------------------------ */
+/* ==========================================================================
+
+   Buttons
+
+   ========================================================================== */
+/* ==========================================================================
+
+   Vertical Rhythm and Modular Scale with Baseline Grid by Justin Metros
+   // inspired by www.gridlover.net
+
+   ========================================================================== */
+/* Colors
+------------------------------------------------------------ */
+/* Typography
+------------------------------------------------------------ */
+body {
+  font-size: 16px;
+  line-height: 24px; }
+
+h1, .alpha {
+  font-size: 110px;
+  line-height: 120px;
+  margin-top: 0px;
+  margin-bottom: 24px; }
+
+h2, .beta {
+  font-size: 68px;
+  line-height: 72px;
+  margin-top: 0px;
+  margin-bottom: 24px; }
+
+h3, .gamma, .header .logo {
+  font-size: 42px;
+  line-height: 48px;
+  margin-top: 0px;
+  margin-bottom: 24px; }
+
+h4, .delta {
+  font-size: 26px;
+  line-height: 48px;
+  margin-top: 0px;
+  margin-bottom: 0px; }
+
+h5, .epsilon {
+  font-size: 16px;
+  line-height: 24px; }
+
+h6, .zeta {
+  font-size: 10px;
+  line-height: 24px;
+  margin-top: 0px;
+  margin-bottom: 0px; }
+
+p, ul, ol {
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 0px;
+  margin-bottom: 24px; }
+
+/* Layout
+------------------------------------------------------------ */
+.header {
+  zoom: 1;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #dddddd;
+  color: #222222; }
+  .header:before, .header:after {
+    content: " ";
+    display: table; }
+  .header:after {
+    clear: both; }
+  .header .logo {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    padding: 2.35765%; }
+    .header .logo:last-child {
+      margin-right: 0; }
+  .header .main-nav {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    padding: 2.35765%;
+    text-align: right; }
+    .header .main-nav:last-child {
+      margin-right: 0; }
+    .header .main-nav li {
+      display: inline-block;
+      margin-right: 1em; }
+      .header .main-nav li:last-child {
+        margin-right: 0; }
+    .header .main-nav a {
+      text-transform: uppercase;
+      color: #333333;
+      -webkit-transition: color 0.2s;
+      -moz-transition: color 0.2s;
+      transition: color 0.2s; }
+      .header .main-nav a:hover {
+        color: #ef00fe; }
+  @media screen and (max-width: 640px) {
+    .header .logo, .header .main-nav {
+      text-align: center; }
+    .header .logo {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .header .logo:last-child {
+        margin-right: 0; }
+    .header .main-nav {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .header .main-nav:last-child {
+        margin-right: 0; } }
+
+.promo {
+  zoom: 1;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.35765%; }
+  .promo:before, .promo:after {
+    content: " ";
+    display: table; }
+  .promo:after {
+    clear: both; }
+  .promo img {
+    width: 100%;
+    vertical-align: baseline; }
+
+.features {
+  zoom: 1;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.35765%; }
+  .features:before, .features:after {
+    content: " ";
+    display: table; }
+  .features:after {
+    clear: both; }
+  .features figure {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .features figure:last-child {
+      margin-right: 0; }
+    .features figure:nth-child(2n) {
+      margin-right: 0; }
+    .features figure:nth-child(2n+1) {
+      clear: left; }
+    @media screen and (max-width: 640px) {
+      .features figure {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .features figure:last-child {
+          margin-right: 0; }
+        .features figure:nth-child(1n) {
+          margin-right: 0; }
+        .features figure:nth-child(1n+1) {
+          clear: left; } }
+    .features figure img {
+      width: 100%;
+      vertical-align: baseline; }
+
+.image-grid {
+  zoom: 1;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto; }
+  .image-grid:before, .image-grid:after {
+    content: " ";
+    display: table; }
+  .image-grid:after {
+    clear: both; }
+  .image-grid li {
+    margin-bottom: 2.35765%; }
+    @media screen and (max-width: 640px) {
+      .image-grid li {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .image-grid li:last-child {
+          margin-right: 0; }
+        .image-grid li:nth-child(1n) {
+          margin-right: 0; }
+        .image-grid li:nth-child(1n+1) {
+          clear: left; } }
+    @media screen and (min-width: 641px) and (max-width: 1024px) {
+      .image-grid li {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .image-grid li:last-child {
+          margin-right: 0; }
+        .image-grid li:nth-child(2n) {
+          margin-right: 0; }
+        .image-grid li:nth-child(2n+1) {
+          clear: left; } }
+    @media screen and (min-width: 1025px) {
+      .image-grid li {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        .image-grid li:last-child {
+          margin-right: 0; }
+        .image-grid li:nth-child(4n) {
+          margin-right: 0; }
+        .image-grid li:nth-child(4n+1) {
+          clear: left; } }
+    .image-grid li img {
+      width: 100%;
+      vertical-align: baseline; }
+
+.footer {
+  zoom: 1;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.35765%;
+  background: #999999; }
+  .footer:before, .footer:after {
+    content: " ";
+    display: table; }
+  .footer:after {
+    clear: both; }
+
+/* Misc Styles - Should be in own file but its here for now
+------------------------------------------------------------ */
+.button {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  color: #cccccc;
+  background-color: #222222;
+  border-radius: 4px;
+  margin-top: 24px;
+  margin-bottom: 24px; }
+  .button:hover {
+    color: #e6e6e6;
+    background-color: #090909; }

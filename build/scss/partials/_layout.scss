@@ -1,0 +1,112 @@
+/* Layout
+------------------------------------------------------------ */
+.header{
+  @include outer-container;
+  background: $color-header-bg;
+  color: $color-text;
+  .logo{
+    @include span-columns(6);
+    @include pad();
+    @extend .gamma;
+  }
+  .main-nav{
+    @include span-columns(6);
+    @include pad();
+    text-align:right;
+    li{
+      display:inline-block;
+      margin-right:1em;
+      &:last-child{ margin-right:0;}
+    }
+    a{
+      text-transform:uppercase;
+      color: $color-link;
+      @include transition( color 0.2s );
+      &:hover{
+        color: $color-link-hover;
+      }
+    }
+  }
+  // Stack logo and nav on small screens
+  @include media($small){
+    .logo,.main-nav{
+      text-align:center;
+    }
+    .logo{
+      @include span-columns(12);
+    }
+    .main-nav{
+      @include span-columns(12);
+    }
+  }
+}
+
+
+.promo{
+  @include outer-container;
+  margin-bottom:flex-gutter();
+  img{
+    width:100%;
+    vertical-align:baseline;
+  }
+}
+
+.features{
+  @include outer-container;
+  margin-bottom:flex-gutter();
+  figure{
+    @include span-columns(6);
+    @include omega(2n);
+    @include media($small){
+      @include span-columns(12);
+      @include omega(1n);
+    }
+    img{
+      width:100%;
+      vertical-align:baseline;
+    }
+  }
+}
+
+.image-grid{
+  @include outer-container;
+  li{
+    // Small
+    @include media($small){
+      @include span-columns(12);
+      @include omega(1n);
+    }
+    // Medium
+    @include media($medium){
+      @include span-columns(6);
+      @include omega(2n);
+    }
+    // Big
+    @include media($big){
+      @include span-columns(3);
+      @include omega(4n);
+    }
+    margin-bottom:flex-gutter();
+    img{
+      width:100%;
+      vertical-align:baseline;
+    }
+  }
+}
+
+
+.footer{
+  @include outer-container;
+  @include pad();
+  background: $color-footer-bg;
+}
+
+
+
+
+
+/* Misc Styles - Should be in own file but its here for now
+------------------------------------------------------------ */
+.button{
+  @include button( #222, #ccc, 4px );
+}

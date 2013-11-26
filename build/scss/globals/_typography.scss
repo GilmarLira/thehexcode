@@ -1,0 +1,16 @@
+/* Typography
+------------------------------------------------------------ */
+
+$body-font-size           : 16px;
+$body-line-height         : 1.5;
+$scale-factor             : 1.618; // http://modularscale.com/
+
+body { @include rhythm(0); }
+
+h1,.alpha   { @include rhythm(4, 0, 1); }
+h2,.beta    { @include rhythm(3, 0, 1); }
+h3,.gamma   { @include rhythm(2, 0, 1); }
+h4,.delta   { @include rhythm(1, 0, 0); }
+h5,.epsilon { @include rhythm(0, 0, 0); }
+h6,.zeta    { @include rhythm(-1, 0, 0); }
+p, ul, ol   { @include rhythm(0, 0, 1); }
