@@ -4,7 +4,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   -moz-box-sizing: border-box;
@@ -54,7 +53,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   -moz-box-sizing: border-box;
@@ -93,8 +91,6 @@ img {
 a, a:hover, a:focus, a:active {
   text-decoration: none; }
 
-/* Helper Mixins
------------------------------------------------------------- */
 /* ==========================================================================
 
    Buttons
@@ -106,8 +102,6 @@ a, a:hover, a:focus, a:active {
    // inspired by www.gridlover.net
 
    ========================================================================== */
-/* Colors
------------------------------------------------------------- */
 /* Typography
 ------------------------------------------------------------ */
 body {
@@ -126,7 +120,7 @@ h2, .beta {
   margin-top: 0px;
   margin-bottom: 24px; }
 
-h3, .gamma, .header .logo {
+h3, .gamma {
   font-size: 42px;
   line-height: 48px;
   margin-top: 0px;
@@ -154,197 +148,82 @@ p, ul, ol {
   margin-top: 0px;
   margin-bottom: 24px; }
 
-/* Layout
------------------------------------------------------------- */
-.header {
-  zoom: 1;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  background: #dddddd;
-  color: #222222; }
-  .header:before, .header:after {
-    content: " ";
-    display: table; }
-  .header:after {
-    clear: both; }
-  .header .logo {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    padding: 2.35765%; }
-    .header .logo:last-child {
-      margin-right: 0; }
-  .header .main-nav {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 48.82117%;
-    padding: 2.35765%;
-    text-align: right; }
-    .header .main-nav:last-child {
-      margin-right: 0; }
-    .header .main-nav li {
-      display: inline-block;
-      margin-right: 1em; }
-      .header .main-nav li:last-child {
-        margin-right: 0; }
-    .header .main-nav a {
-      text-transform: uppercase;
-      color: #333333;
-      -webkit-transition: color 0.2s;
-      -moz-transition: color 0.2s;
-      transition: color 0.2s; }
-      .header .main-nav a:hover {
-        color: #ef00fe; }
-  @media screen and (max-width: 640px) {
-    .header .logo, .header .main-nav {
-      text-align: center; }
-    .header .logo {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .header .logo:last-child {
-        margin-right: 0; }
-    .header .main-nav {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .header .main-nav:last-child {
-        margin-right: 0; } }
+body {
+  background: white; }
 
-.promo {
-  zoom: 1;
-  max-width: 1400px;
+.container {
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2.35765%; }
-  .promo:before, .promo:after {
-    content: " ";
-    display: table; }
-  .promo:after {
+  background-color: #f1f1f1; }
+  .container:after {
+    content: "";
+    display: table;
     clear: both; }
-  .promo img {
+
+.main_sidebar {
+  float: left;
+  display: block;
+  margin-right: 1.75788%;
+  width: 17.32172%;
+  height: 100%;
+  background-color: black;
+  color: white; }
+  .main_sidebar:last-child {
+    margin-right: 0; }
+  .main_sidebar .logo {
+    background: url("../img/logo.svg") no-repeat center/80% 80%;
+    background: url("../img/logo.svg") no-repeat center/80% 80%; }
+  .main_sidebar .logo {
+    height: 14.285%; }
+  .main_sidebar .main_nav {
+    height: 85.715%; }
+    .main_sidebar .main_nav .nav_list {
+      height: 100%; }
+      .main_sidebar .main_nav .nav_list .nav_list_item {
+        font-size: 68px;
+        line-height: 72px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 16.666666667%;
+        text-align: center;
+        padding-top: .75em;
+        border-top: 1px dotted #f1f1f1; }
+
+.content {
+  float: left;
+  display: block;
+  margin-right: 1.75788%;
+  width: 80.9204%;
+  position: relative;
+  height: 100%; }
+  .content:last-child {
+    margin-right: 0; }
+  .content p {
+    position: relative;
+    top: 45%;
+    font-size: 42px;
+    line-height: 48px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center; }
+  .content .content_section {
+    position: absolute;
     width: 100%;
-    vertical-align: baseline; }
-
-.features {
-  zoom: 1;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2.35765%; }
-  .features:before, .features:after {
-    content: " ";
-    display: table; }
-  .features:after {
-    clear: both; }
-  .features figure {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 48.82117%; }
-    .features figure:last-child {
-      margin-right: 0; }
-    .features figure:nth-child(2n) {
-      margin-right: 0; }
-    .features figure:nth-child(2n+1) {
-      clear: left; }
-    @media screen and (max-width: 640px) {
-      .features figure {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 100%; }
-        .features figure:last-child {
-          margin-right: 0; }
-        .features figure:nth-child(1n) {
-          margin-right: 0; }
-        .features figure:nth-child(1n+1) {
-          clear: left; } }
-    .features figure img {
-      width: 100%;
-      vertical-align: baseline; }
-
-.image-grid {
-  zoom: 1;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto; }
-  .image-grid:before, .image-grid:after {
-    content: " ";
-    display: table; }
-  .image-grid:after {
-    clear: both; }
-  .image-grid li {
-    margin-bottom: 2.35765%; }
-    @media screen and (max-width: 640px) {
-      .image-grid li {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 100%; }
-        .image-grid li:last-child {
-          margin-right: 0; }
-        .image-grid li:nth-child(1n) {
-          margin-right: 0; }
-        .image-grid li:nth-child(1n+1) {
-          clear: left; } }
-    @media screen and (min-width: 641px) and (max-width: 1024px) {
-      .image-grid li {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 48.82117%; }
-        .image-grid li:last-child {
-          margin-right: 0; }
-        .image-grid li:nth-child(2n) {
-          margin-right: 0; }
-        .image-grid li:nth-child(2n+1) {
-          clear: left; } }
-    @media screen and (min-width: 1025px) {
-      .image-grid li {
-        display: block;
-        float: left;
-        margin-right: 2.35765%;
-        width: 23.23176%; }
-        .image-grid li:last-child {
-          margin-right: 0; }
-        .image-grid li:nth-child(4n) {
-          margin-right: 0; }
-        .image-grid li:nth-child(4n+1) {
-          clear: left; } }
-    .image-grid li img {
-      width: 100%;
-      vertical-align: baseline; }
+    height: 100%;
+    display: none; }
+    .content .content_section:nth-child(1) {
+      background-color: #ffaa00; }
+    .content .content_section:nth-child(2) {
+      background-color: yellow; }
+    .content .content_section:nth-child(3) {
+      background-color: #80ff00; }
+    .content .content_section:nth-child(4) {
+      background-color: lime; }
+    .content .content_section:nth-child(5) {
+      background-color: #00ff80; }
+    .content .content_section:nth-child(6) {
+      background-color: cyan; }
 
 .footer {
-  zoom: 1;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2.35765%;
-  background: #999999; }
-  .footer:before, .footer:after {
-    content: " ";
-    display: table; }
-  .footer:after {
-    clear: both; }
-
-/* Misc Styles - Should be in own file but its here for now
------------------------------------------------------------- */
-.button {
-  display: inline-block;
-  cursor: pointer;
-  padding: 0.5em 1em;
-  color: #cccccc;
-  background-color: #222222;
-  border-radius: 4px;
-  margin-top: 24px;
-  margin-bottom: 24px; }
-  .button:hover {
-    color: #e6e6e6;
-    background-color: #090909; }
+  display: none; }
