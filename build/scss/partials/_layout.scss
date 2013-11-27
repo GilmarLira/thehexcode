@@ -72,6 +72,9 @@ body {
 		display: none;
 		padding: 50px;
 		max-width: 850px;
+
+		&:first-child{ display: block; }
+
 		/*
 		&:nth-child(1) { background-color: $color-hex-red; }
 		&:nth-child(2) { background-color: $color-hex-green; }

@@ -2,7 +2,9 @@
 // Interaction
 // ////////////////////////////////////////////////////
 
-var containerWidth, containerHeight;
+window.addEventListener('load', initContainer, false);
+
+var containerWidth, containerHeight, colorInput;
 
 var delay = (function(){
       var timer = 0;
@@ -22,6 +24,9 @@ $(window).resize(function() {
 
 // Get viewport dimensions
 function initContainer() {
+    colorInput = document.getElementById('color-input');
+    colorInput.addEventListener('keyup', input_color, false);
+
     containerWidth = $(window).width();
     containerHeight = $(window).height();
 
@@ -30,13 +35,14 @@ function initContainer() {
     });
     
     console.log(containerHeight);
+    initRing();
 }
 
 $(document).ready(function(){
 
     $(".main_nav li").click(function(){
         var $index = $(this).index();
-        console.log($index);
+        console.log("Current section: "+$index);
 
         // Slide animation is currently buggy
         // $(".content section").eq($index).css('z-index', '2').slideDown("slow", function(){
@@ -45,5 +51,11 @@ $(document).ready(function(){
 
         $(".content section").eq($index).show().siblings("section").hide();
     });
+
+
+    // $("#ring li").click(function(event){
+    //     console.log(event.target);
+
+    // });    
 });
 
