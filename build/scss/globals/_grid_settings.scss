@@ -5,8 +5,9 @@
 @import "../libs/neat/neat-helpers";
 
 // Change the grid settings
-$grid-columns: 16;
+$grid-columns: 12;
 $max-width: 100%;
+$gutter: 0em;
 
 //Visual Grid Helper
 // $visual-grid: true;

@@ -5,29 +5,34 @@
 
 #section-colorcode{  
     @include transition(all 1s ease-in-out);  
-    text-align: center;
-    padding-top: 50%;
 
     label{
-        @include rhythm(3);
-
-        font-weight: bold;
-        border-bottom: 1px solid black;
+        @include rhythm(4);
+        font-family: $fontfamily-montserrat;
+        font-weight: 700;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgba($color-nav-bg, .8);
         // background-color: rgba(255, 255, 255, .4);
     }
 
     #color-input{
         @include position(-.5rem 0 0 0);
-        @include rhythm(2);
+        @include rhythm(3);
 
         letter-spacing: 4px;
-        font-family: inherit;
-        background: none;
+        font-family: $fontfamily-montserrat;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        background: transparent;
         line-height: 2em;        
         border: 0;
-        width: 260px;
+        width: 350px;
         margin-left: 2rem;
-        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+        text-shadow: 2px 0px 0px rgba(255, 255, 255, 0.3), 
+            -2px 0px 0px rgba(255, 255, 255, 0.3), 
+            0px 2px 0px rgba(255, 255, 255, 0.3), 
+            0px -2px 0px rgba(255, 255, 255, 0.3);
 
         &:focus{
             outline: none;

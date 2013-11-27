@@ -10,37 +10,44 @@ $scale-factor: 1.6; // http://modularscale.com/
 body { 
 	font-family: $fontfamily-robotoslab;
 	font-weight: 300;
-	@include rhythm(0); 
+	@include rhythm(0);
 }
 
 h1, h2, h3, h4, h5, h6,
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
 	font-family: $fontfamily-montserrat;
 	font-weight: 700;
+	text-transform: uppercase;
 }
 
 h1,.alpha { 
-	@include rhythm(4, 0, 1); 
+	@include rhythm(3, 0, 1); 
+	line-height: .8;
 }
 
 h2,.beta { 
-	@include rhythm(3, 0, 1); 
+	@include rhythm(2, 0, 1); 
+	line-height: .8;
 }
 
 h3,.gamma { 
-	@include rhythm(2, 0, 1); 
+	@include rhythm(1, 0, 1); 
+	line-height: .9;
 }
 
 h4,.delta { 
-	@include rhythm(1, 0, 0); 
+	@include rhythm(0, 0, 0); 
+	line-height: 1;
 }
 
 h5,.epsilon { 
-	@include rhythm(0, 0, 0); 
+	@include rhythm(-1, 0, 0); 
+	line-height: 1;
 }
 
 h6,.zeta { 
-	@include rhythm(-1, 0, 0); 
+	@include rhythm(-2, 0, 0); 
+	line-height: 1;
 }
 
 p, ul, ol { 

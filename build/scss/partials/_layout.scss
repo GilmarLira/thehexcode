@@ -17,33 +17,45 @@ body {
 
 // Logo and nav reside here
 .main_sidebar { 
-	@include span-columns(3);
-
+	@include span-columns(2);
 	height: 100%;
-	background-color: $color-nav-bg;
+	background-color: rgba($color-nav-bg, .8);
 	color: $color-nav-text;
-
 	.logo {
 		@include background(url('../img/logo.svg') no-repeat center / 80% 80%);
-
-		height: 14.285%;
+		height: 20%; // 14.285% old value
 	}
-
+	a {
+		color: rgba($color-body-bg, .8);
+		&:hover {
+			color: $color-body-bg;
+		}
+	}
 	.main_nav {
 		// nav height is 100% minus logo height
-		height: 85.715%;
-
+		height: 80%;  //85.715% old value
 		.nav_list {
 			height: 100%;
-
 			.nav_list_item {
-				@include rhythm(3);
-
+				font-family: $fontfamily-montserrat;
+				font-weight: 700;
+				text-transform: uppercase;
+				@include rhythm(2);
+				line-height: .8;
 				// Each has 1 / 6 of the nav total height
 				height: 16.666666667%;
 				text-align: center;
 				padding-top: .55em;
 				border-top: 1px dotted $color-content-bg;
+				span {
+					@include rhythm(-1);
+					display: block;
+					font-family: $fontfamily-robotoslab;
+					font-weight: 300;
+					text-transform: lowercase;
+					font-style: italic;
+					opacity: .8;
+				}
 			} 
 		}
 
@@ -52,31 +64,21 @@ body {
 
 // Area for the content
 .content {
-	@include span-columns(13);
+	@include span-columns(10);
 	@include position;
-
 	height: 100%;
 
-	p {
-		@include position(45% 0 0 0);
-		@include rhythm(2);
-
-		text-align: center;
-	}
-
 	.content_section { 
-		@include position(absolute);
-
-		width: 100%;
-		height: 100%;
 		display: none;
-
-		&:nth-child(1){ background-color: hsl(40, 100, 50); }
-		&:nth-child(2){ background-color: hsl(60, 100, 50); }
-		&:nth-child(3){ background-color: hsl(90, 100, 50); }
-		&:nth-child(4){ background-color: hsl(120, 100, 50); }
-		&:nth-child(5){ background-color: hsl(150, 100, 50); }
-		&:nth-child(6){ background-color: hsl(180, 100, 50); }
+		padding: 100px;
+		/*
+		&:nth-child(1) { background-color: $color-hex-red; }
+		&:nth-child(2) { background-color: $color-hex-green; }
+		&:nth-child(3) { background-color: $color-hex-blue; }
+		&:nth-child(4) { background-color: $color-hex-yellow; }
+		&:nth-child(5) { background-color: $color-hex-cyan; }
+		&:nth-child(6) { background-color: $color-hex-magenta; }
+		*/
 	}
 } 
 
