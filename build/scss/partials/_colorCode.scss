@@ -1,0 +1,36 @@
+
+// Color Code
+// ////////////////////////////////////////////////////
+// *{ @include outline; }
+
+#section-colorcode{  
+    @include transition(all 1s ease-in-out);  
+    text-align: center;
+    padding-top: 50%;
+
+    label{
+        @include rhythm(3);
+
+        font-weight: bold;
+        border-bottom: 1px solid black;
+        // background-color: rgba(255, 255, 255, .4);
+    }
+
+    #color-input{
+        @include position(-.5rem 0 0 0);
+        @include rhythm(2);
+
+        letter-spacing: 4px;
+        font-family: inherit;
+        background: none;
+        line-height: 2em;        
+        border: 0;
+        width: 260px;
+        margin-left: 2rem;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.8);
+
+        &:focus{
+            outline: none;
+        }
+    }
+}

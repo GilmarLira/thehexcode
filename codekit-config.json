@@ -336,6 +336,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/www\/js\/color.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/js\/color.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/www\/js\/color-ck.js",
+      "fileType" : 64
+    },
     "\/build\/scss\/globals\/_grid_settings.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -348,18 +359,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/libs\/bourbon\/css3\/_backface-visibility.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css3\/_backface-visibility.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_backface-visibility.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/build\/scss\/libs\/neat\/grid\/_reset.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -369,6 +368,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/build\/scss\/libs\/neat\/css\/_reset.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/build\/scss\/libs\/bourbon\/css3\/_backface-visibility.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css3\/_backface-visibility.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_backface-visibility.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -607,6 +618,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/www\/css\/style.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/css\/style.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/build\/scss\/libs\/bourbon\/_bourbon.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -666,18 +686,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/libs\/bourbon\/addons\/_clearfix.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/addons\/_clearfix.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_clearfix.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/build\/scss\/libs\/bourbon\/css3\/_font-face.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -690,8 +698,20 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/libs\/bourbon\/addons\/_html5-input-types.scss" : {
+    "\/build\/scss\/libs\/bourbon\/functions\/_tint-shade.scss" : {
       "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/functions\/_tint-shade.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_tint-shade.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/build\/scss\/libs\/bourbon\/addons\/_html5-input-types.scss" : {
+      "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
@@ -699,18 +719,6 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_html5-input-types.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/build\/scss\/libs\/bourbon\/css3\/_appearance.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css3\/_appearance.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_appearance.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -726,15 +734,27 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/libs\/bourbon\/functions\/_tint-shade.scss" : {
+    "\/build\/scss\/libs\/bourbon\/addons\/_clearfix.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/functions\/_tint-shade.scss",
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/addons\/_clearfix.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_tint-shade.css",
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_clearfix.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/build\/scss\/libs\/bourbon\/css3\/_appearance.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css3\/_appearance.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_appearance.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -807,6 +827,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/build\/scss\/css\/_typography.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/build\/scss\/partials\/_colorCode.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/partials\/_colorCode.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/css\/_colorCode.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -941,15 +973,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/libs\/bourbon\/addons\/_button.scss" : {
+    "\/build\/scss\/libs\/bourbon\/functions\/_grid-width.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/addons\/_button.scss",
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/functions\/_grid-width.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_button.css",
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_grid-width.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -965,6 +997,18 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/build\/scss\/libs\/bourbon\/addons\/_button.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/addons\/_button.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_button.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/build\/scss\/libs\/bourbon\/helpers\/_render-gradients.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -974,18 +1018,6 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_render-gradients.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
-    "\/build\/scss\/libs\/bourbon\/functions\/_grid-width.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/functions\/_grid-width.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_grid-width.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -1126,6 +1158,13 @@
       "type" : 1,
       "position" : 0,
       "linkedFileAbbreviatedPath" : "\/build\/js\/scripts\/interaction.js",
+      "baseFileAbbreviatedPath" : "\/build\/js\/scripts.js",
+      "followForSyntaxChecking" : 1
+    },
+    {
+      "type" : 1,
+      "position" : 1,
+      "linkedFileAbbreviatedPath" : "\/www\/js\/color.js",
       "baseFileAbbreviatedPath" : "\/build\/js\/scripts.js",
       "followForSyntaxChecking" : 1
     }

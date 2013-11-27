@@ -19,15 +19,13 @@ body {
 .main_sidebar { 
 	@include span-columns(3);
 
-	.logo { 
-		@include background(url('../img/logo.svg') no-repeat center / 80% 80%);
-	}
-
 	height: 100%;
 	background-color: $color-nav-bg;
 	color: $color-nav-text;
 
 	.logo {
+		@include background(url('../img/logo.svg') no-repeat center / 80% 80%);
+
 		height: 14.285%;
 	}
 
@@ -41,10 +39,10 @@ body {
 			.nav_list_item {
 				@include rhythm(3);
 
-				// Each has 1.6 of the nav total height
+				// Each has 1 / 6 of the nav total height
 				height: 16.666666667%;
 				text-align: center;
-				padding-top: .75em;
+				padding-top: .55em;
 				border-top: 1px dotted $color-content-bg;
 			} 
 		}
