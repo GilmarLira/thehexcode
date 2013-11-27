@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/libs/modernizr-2.6.2.min.js"></script>
 </head>
-<body onload="initContainer()">
+<body>
 
     <div class="container">
         
@@ -87,8 +87,22 @@
                     <h1 class="gamma">The Power of the Hex Code</h1>
                     <p>Practical application by simply rearranging numbers or subtly changing the ones digit to keep the same tone or drastically change the tone. </p>
                     <div class="hex-interaction">                    
-                        <label>#<input type="text" placeholder="00ff00" onkeyup="colorize()" id="color-input" maxlength="6" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /></label>
+                        <label>#<input type="text" placeholder="00ff00" id="color-input" maxlength="6" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /></label>
                     </div>
+                    
+                    <div id="ring-container">
+                        <div id="ring-aligner">
+                            <ol id="ring-red1" class="ring"></ol>
+                            <ol id="ring-red2" class="ring"></ol>
+
+                            <ol id="ring-green1" class="ring"></ol>
+                            <ol id="ring-green2" class="ring"></ol>
+
+                            <ol id="ring-blue1" class="ring"></ol>
+                            <ol id="ring-blue2" class="ring"></ol>
+                      </div>
+                    </div>
+
                 </div>
             </section>
 

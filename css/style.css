@@ -243,6 +243,8 @@ body {
     &:nth-child(5) { background-color: $color-hex-cyan; }
     &:nth-child(6) { background-color: $color-hex-magenta; }
     */ }
+    .content .content_section:first-child {
+      display: block; }
 
 .footer {
   display: none; }
@@ -279,3 +281,67 @@ body {
     text-shadow: 2px 0px 0px rgba(255, 255, 255, 0.3), -2px 0px 0px rgba(255, 255, 255, 0.3), 0px 2px 0px rgba(255, 255, 255, 0.3), 0px -2px 0px rgba(255, 255, 255, 0.3); }
     #section-colorcode #color-input:focus {
       outline: none; }
+  #section-colorcode #ring-container {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+    /* make the perspective origin be the center of the screen */
+    -webkit-perspective-origin: 300px 250px;
+    /* set up the amount of perspective on the children of this container */
+    -webkit-perspective: 1000;
+    /* base transform for this container, need a value to transition from */
+    -webkit-transform: translateX(0);
+    /* set up core properties for the sliding transitions, the changes of
+    values is done directly by script */
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 0.5s; }
+    #section-colorcode #ring-container #ring-aligner {
+      position: absolute;
+      text-align: center;
+      /* make sure the content lives in 3D space */
+      -webkit-transform-style: preserve-3d;
+      /* push back the content in the Z axis to cancel individual
+      transforms set on ring items by script */
+      -webkit-transform: translateZ(-235px); }
+      #section-colorcode #ring-container #ring-aligner .ring {
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        /* position the ring to the center of the screen in height */
+        top: 250px;
+        /* override some user agent styles on <ol> elements */
+        margin: 0;
+        list-style-type: none;
+        -webkit-padding-start: 0;
+        /* make sure the content lives in 3D space */
+        -webkit-transform-style: preserve-3d; }
+        #section-colorcode #ring-container #ring-aligner .ring:hover .letter {
+          background-color: rgba(255, 255, 255, 0.3); }
+        #section-colorcode #ring-container #ring-aligner .ring .letter {
+          font-size: 29px;
+          line-height: 57.6px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          background-color: rgba(0, 0, 0, 0.3);
+          outline: 1px solid gray;
+          position: absolute;
+          text-align: center;
+          /* set the bounds of an item */
+          width: 100px;
+          height: 100px;
+          padding-top: 1rem;
+          /* offset each item by half its height so that they overlay
+            the center of the transform on the ring */
+          top: -45px;
+          /* hide the back of the elements so that we don't see anything
+            but the items currently in the front of the ring */
+          -webkit-backface-visibility: hidden; }
+          #section-colorcode #ring-container #ring-aligner .ring .letter:hover {
+            background-color: aqua;
+            cursor: pointer; }
