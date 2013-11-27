@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/libs/modernizr-2.6.2.min.js"></script>
 </head>
-<body onload="initContainer()">  <!-- Gilmar: this onload thing doesn't look that semantic. any way we can avoid it??? (Hugo) -->
+<body onload="initContainer()">  <!--Gilmar: this onload thing doesn't look that semantic. any way we can avoid it??? (Hugo) -->
+<!-- Will replace with a clener version later. (G) -->
 
     <div class="container">
         
@@ -43,7 +44,12 @@
             </section>
 
             <section id="section-colorcode" class="content_section">
-                <p>4</p>
+                <div class="hex-interaction">
+
+                    
+                    <label>#<input type="text" placeholder="00ff00" onkeyup="colorize()" id="color-input" maxlength="6" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /></label>
+                
+                </div>
             </section>
 
             <section id="section-resources" class="content_section">
@@ -58,6 +64,7 @@
     
     <footer class="footer">
         <small>©2013 The HEX Code</small>  <!-- why Copyright? I'd do some sort of copy-left license, like a CC-BY license (Hugo) -->
+        <!-- It's just leftover from the original template. Change this as you please (G) -->
     </footer>
 
     <!-- HTML5 BP jQuery Technique -->
