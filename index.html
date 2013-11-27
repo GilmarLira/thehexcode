@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/libs/modernizr-2.6.2.min.js"></script>
 </head>
-<body onload="initContainer()">  <!--Gilmar: this onload thing doesn't look that semantic. any way we can avoid it??? (Hugo) -->
-<!-- Will replace with a clener version later. (G) -->
+<body onload="initContainer()">
 
     <div class="container">
         
@@ -32,51 +31,90 @@
 
         <div class="content">
             <section id="section-intro" class="content_section">
-                
-
-
                 <header>
-                    <h1>An Introduction</h1>
-                    <h2>Unravel the mysteries of the HEX code</h2>
+                    <h1>Unravel the mysteries of the HEX code</h1>
                 </header>
-                
                 <div class="section-content">
                     <p>The colors we use in web design have the power to turn emotions in the blink of an eye. With such great power, we must exhibit great care in their use. As technology progresses, so do the tools for harnessing this power. These tools might seem complicated at first, but it’s not so bad and not really that complicated at all.</p>
                     
                     <p>This website is an attempt to break down the mysteries of color reproduction on the web through the understanding of display technology and demystifying the hex code.</p>
                 </div>
-
             </section>
 
             <section id="section-technology" class="content_section">
-                <h1>Display Technology</h1>
+                <header>
+                    <h1>Display Technology</h1>
+                </header>
+                <div class="section-content">
+                    <h1 class="gamma">How Does Color Work?</h1>
+                    <p>Those pixels on your screen carry a vast amount of color information. Each pixel of color works because of a controlled variation of voltage that lets each pixels range from 256 shades of red, green or blue light. That’s 16.8 million colors!</p>
+                    <h1 class="gamma">Color Depth</h1>
+                    <p>The amount of colors displayed on your monitor is the color depth. Depending on your monitor and video card, the following colors may be available:</p>
+                    <ul>
+                        <li>1-bit - Monochrome</li>
+                        <li>4-bit - 16 Colors</li>
+                        <li>8-bit - 256 Colors</li>
+                        <li>16-bit - 65,000 Colors</li>
+                        <li>24-bit - Millions of Colors</li>
+                        <li>32-bit - Millions of Colors</li>
+                    </ul>
+                </div>
             </section>
 
             <section id="section-additivecolor" class="content_section">
-                <h1>Additive Color Model</h1>
+                <header>
+                    <h1>Additive Color Model</h1>
+                </header>
+                <div class="section-content">
+                    <h1 class="gamma">Additive &amp; Subtractive Color Models</h1>
+                    <p>On a computer screen, colors use the additive color model. It starts with the abcense of light - black - and the more light you add - with red, green, and blue values - the lighter the result will be. By adding all the colors together, you get pure white.</p>
+                    
+                    <p>The subtractive color model works the opposite, and is used in painting and printing. Subtractive color works by starting with white -- the more colors you add the darker the result will be. By adding all the colors together, you get pure black. 
+</p>
+                </div>
             </section>
 
             <section id="section-colorcode" class="content_section">
-                <h1>Color In Code</h1>
-                <div class="hex-interaction">                    
-                    <label>#<input type="text" placeholder="00ff00" onkeyup="colorize()" id="color-input" maxlength="6" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /></label>
+                <header>
+                    <h1>Color In Code</h1>
+                </header>
+                <div class="section-content">
+                    <h1 class="gamma">What is a Hex Code?</h1>
+                    <p>Computers communicate in a binary language, each color has a series of digits associated to it. This series of numbers and letters is called the hexadecimal code.</p> 
+                    <p>Hex numbers use 16 digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F</p>
+                    <p>The hex code represents the intensity or shade of red, green and blue. The 6-digit hex code is split up into 3 series of 2 digits representing red, green and blue, in that order. Starting at 0 represents the total absence of color, black. Ending at F is all the colors combined, white. Combining these digits creates different shades of color.</p>
+
+                    <h1 class="gamma">The Power of the Hex Code</h1>
+                    <p>Practical application by simply rearranging numbers or subtly changing the ones digit to keep the same tone or drastically change the tone. </p>
+                    <div class="hex-interaction">                    
+                        <label>#<input type="text" placeholder="00ff00" onkeyup="colorize()" id="color-input" maxlength="6" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /></label>
+                    </div>
                 </div>
             </section>
 
             <section id="section-resources" class="content_section">
-                <h1>Resources</h1>
+                <header>
+                    <h1>Resources</h1>
+                </header>
+                <div class="section-content">
+                    <p>to be added</p>
+                </div>
             </section>
 
             <section id="section-about" class="content_section">
-                <h1>About</h1>
-
+                <header>
+                    <h1>About</h1>
+                </header>
+                <div class="section-content">
+                    <h1 class="gamma">Why We Made This Site</h1>
+                    <p>Write something intelligent and thought provoking. Talk about the lack of knowledge the regular web designer/developer has on this subject including ourselves before we started the project. </p>
+                </div>
             </section>
         </div>
     </div>
     
     <footer class="footer">
-        <small>©2013 The HEX Code</small>  <!-- why Copyright? I'd do some sort of copy-left license, like a CC-BY license (Hugo) -->
-        <!-- It's just leftover from the original template. Change this as you please (G) -->
+        <small>CC-BY The HEX Code</small>
     </footer>
 
     <!-- HTML5 BP jQuery Technique -->
