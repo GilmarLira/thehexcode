@@ -6,13 +6,12 @@
 // * { @include outline; }
 
 body {
-	background: $color-body-bg;
+	background: $color-content-bg;
 }
 
 // Wraps the sidebar and the content window together
 .container {
 	@include outer-container;
-	background-color: $color-content-bg;
 }
 
 // Logo and nav reside here
@@ -23,7 +22,7 @@ body {
 	color: $color-nav-text;
 	.logo {
 		@include background(url('../img/logo.svg') no-repeat center / 80% 80%);
-		height: 20%; // 14.285% old value
+		height: 25%; // 14.285% old value
 	}
 	a {
 		color: rgba($color-body-bg, .8);
@@ -33,7 +32,7 @@ body {
 	}
 	.main_nav {
 		// nav height is 100% minus logo height
-		height: 80%;  //85.715% old value
+		height: 75%;  //85.715% old value
 		.nav_list {
 			height: 100%;
 			.nav_list_item {
@@ -44,9 +43,10 @@ body {
 				line-height: .8;
 				// Each has 1 / 6 of the nav total height
 				height: 16.666666667%;
+				overflow: hidden;
 				text-align: center;
 				padding-top: .55em;
-				border-top: 1px dotted $color-content-bg;
+				border-top: 1px dotted rgba($color-content-bg,.3);
 				span {
 					@include rhythm(-1);
 					display: block;
@@ -70,7 +70,8 @@ body {
 
 	.content_section { 
 		display: none;
-		padding: 100px;
+		padding: 50px;
+		max-width: 850px;
 		/*
 		&:nth-child(1) { background-color: $color-hex-red; }
 		&:nth-child(2) { background-color: $color-hex-green; }
