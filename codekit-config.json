@@ -276,17 +276,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/libs\/bourbon\/helpers\/_linear-positions-parser.scss" : {
-      "ignoreWasSetByUser" : 0,
+    "\/build\/js\/scripts\/color.js" : {
+      "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/helpers\/_linear-positions-parser.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_linear-positions-parser.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/build\/js\/scripts\/color.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/build\/js\/scripts\/color-ck.js",
+      "fileType" : 64
     },
     "\/build\/scss\/libs\/neat\/grid\/_pad.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -336,16 +335,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/www\/js\/color.js" : {
-      "ignoreWasSetByUser" : 1,
+    "\/build\/scss\/libs\/bourbon\/helpers\/_linear-positions-parser.scss" : {
+      "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/js\/color.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/www\/js\/color-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/helpers\/_linear-positions-parser.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_linear-positions-parser.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/build\/scss\/globals\/_grid_settings.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -407,17 +407,16 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/libs\/bourbon\/css3\/_background.scss" : {
+    "\/build\/js\/scripts\/data.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css3\/_background.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_background.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/build\/js\/scripts\/data.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/build\/js\/scripts\/data-ck.js",
+      "fileType" : 64
     },
     "\/build\/scss\/libs\/bourbon\/css3\/_placeholder.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -428,6 +427,27 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_placeholder.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/www\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/www\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/build\/scss\/libs\/bourbon\/css3\/_background.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css3\/_background.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_background.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -443,15 +463,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/www\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/www\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/build\/scss\/libs\/bourbon\/css3\/_columns.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -464,18 +475,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/globals\/_mixins.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/globals\/_mixins.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/css\/_mixins.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/build\/scss\/libs\/bourbon\/css3\/_animation.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -485,6 +484,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_animation.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/build\/scss\/globals\/_mixins.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/globals\/_mixins.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/css\/_mixins.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -627,18 +638,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/build\/scss\/libs\/bourbon\/_bourbon-deprecated-upcoming.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/_bourbon-deprecated-upcoming.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/css\/_bourbon-deprecated-upcoming.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/build\/scss\/libs\/bourbon\/_bourbon.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -648,6 +647,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/build\/scss\/libs\/css\/_bourbon.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/build\/scss\/libs\/bourbon\/_bourbon-deprecated-upcoming.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/_bourbon-deprecated-upcoming.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/css\/_bourbon-deprecated-upcoming.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -686,18 +697,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/build\/scss\/libs\/bourbon\/addons\/_clearfix.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/addons\/_clearfix.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_clearfix.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/build\/scss\/libs\/bourbon\/functions\/_tint-shade.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -707,6 +706,18 @@
       "outputStyle" : 0,
       "shouldRunBless" : 0,
       "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_tint-shade.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/build\/scss\/libs\/bourbon\/addons\/_clearfix.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/addons\/_clearfix.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/build\/scss\/libs\/bourbon\/css\/_clearfix.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -1164,7 +1175,7 @@
     {
       "type" : 1,
       "position" : 1,
-      "linkedFileAbbreviatedPath" : "\/www\/js\/color.js",
+      "linkedFileAbbreviatedPath" : "\/build\/js\/scripts\/color.js",
       "baseFileAbbreviatedPath" : "\/build\/js\/scripts.js",
       "followForSyntaxChecking" : 1
     }

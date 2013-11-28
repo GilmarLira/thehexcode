@@ -50,12 +50,7 @@ $(document).ready(function(){
         // });
 
         $(".content section").eq($index).show().siblings("section").hide();
+        // $(".content section").fadeOut(400).delay(400).eq($index).fadeIn(400);
     });
-
-
-    // $("#ring li").click(function(event){
-    //     console.log(event.target);
-
-    // });    
 });
 

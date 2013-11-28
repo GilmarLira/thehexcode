@@ -6,6 +6,7 @@
 // * { @include outline; }
 
 body {
+	@include transition(background-color .5s ease-in-out);
 	background: $color-content-bg;
 }
 

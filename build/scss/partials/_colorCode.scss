@@ -1,6 +1,7 @@
 
 // Color Code
 // ////////////////////////////////////////////////////
+
 // *{ @include outline; }
 
 #section-colorcode{  
@@ -40,27 +41,20 @@
     }
 
     #ring-container{
+        @include user-select(none);
         width: 80%;
-        height: 500px;
-        // background-color: white;
+        height: 400px;
 
         position: absolute;
-
-        /* make the perspective origin be the center of the screen */
-        -webkit-perspective-origin: 300px 250px;
-        /* set up the amount of perspective on the children of this container */
+        -webkit-perspective-origin: 300px 200px;
         -webkit-perspective: 1000;
 
-        /* base transform for this container, need a value to transition from */
         -webkit-transform: translateX(0);
 
-        /* set up core properties for the sliding transitions, the changes of
-        values is done directly by script */
         -webkit-transition-property: -webkit-transform;
         -webkit-transition-duration: 0.5s;
 
         #ring-aligner{
-            // height: 300px;
             position: absolute;
             text-align: center;    
 
@@ -69,30 +63,32 @@
 
             /* push back the content in the Z axis to cancel individual
             transforms set on ring items by script */
-            -webkit-transform: translateZ(-235px);
+            -webkit-transform: translateZ(-200px);
 
             .ring{
-                @include transition(all .5s ease-in-out);
+                @include transition(all .3s ease-in-out);
 
                 display:inline-block;
                 position: relative;
 
-                width: 100px;
-                /* position the ring to the center of the screen in height */
-                // left: 30px;
-                top: 250px;
+                width: 75px;
+                top: 200px;
 
                 /* override some user agent styles on <ol> elements */
-                margin: 0;
+                margin: 0 1px;
                 list-style-type: none;
                 -webkit-padding-start: 0;
                   
                 /* make sure the content lives in 3D space */
                 -webkit-transform-style: preserve-3d;
 
+                &:nth-child(2n){
+                    margin-right: 15px;
+                }
+
                 &:hover{
                     .letter{
-                        background-color: rgba(255, 255, 255, .3);
+                        background-color: rgba(255, 255, 255, .5);
                     }
                 }
 
@@ -100,28 +96,30 @@
                     @include rhythm(1);
                     @include transition(all .3s ease-in-out);
 
-                    background-color: rgba(0, 0, 0, .3);
-                    outline: 1px solid gray;
+                    font-family: $fontfamily-montserrat;
+                    background-color: rgba(255, 255, 255, .3);
+                    outline: 1px solid rgba(0, 0, 0, .8);
                     position: absolute;
                     text-align: center;
+                    text-transform: uppercase;
 
                     /* set the bounds of an item */
-                    width: 100px;
-                    height: 100px;
+                    width: 75px;
+                    height: 75px;
 
-                    padding-top: 1rem;
+                    padding-top: .5rem;
                       
                     /* offset each item by half its height so that they overlay
                       the center of the transform on the ring */
-                    top: -45px;
+                    top: -2.5rem;
 
                     /* hide the back of the elements so that we don't see anything
                       but the items currently in the front of the ring */
                     -webkit-backface-visibility: hidden;
 
                     &:hover{
-                        background-color: aqua;
-                        // color: white;
+                        background-color: rgba(0, 0, 0, .9);
+                        color: white;
                         cursor: pointer;
                     }
                 }
