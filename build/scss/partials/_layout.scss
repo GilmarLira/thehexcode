@@ -110,31 +110,25 @@ body {
 /////	Start Animated Portrait Styles           ///// 
 //////////////////////////////////////////////////////
 
-.img_wrap .static, .img_wrap:hover .animated {
-    display: inline-block;
-}
-.img_wrap .animated, .img_wrap:hover .static {
-    display: none;
-}
-
-.img_wrap{
+.img_wrap {
 	@include span-columns(3 of 9);
+	@include position(relative, 0 0 0 0);
+
+	height: 300px;
+
+	img {
+		@include position(absolute, 0 0 0 0);
+		@include transition( all .5s $ease-out-quad );
+		@include fill-parent;
+	}
+
+	.animated {
+		opacity: 0;
+	}
+
+	&:hover .animated {
+		opacity: 1;
+	
+	}
 }
-
-.img_wrap img{
-	@include fill-parent;
-	// @include span-columns(3 of 10);
-	// margin: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
 

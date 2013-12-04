@@ -30,8 +30,6 @@ function initContainer() {
     // $(".content>section").css({
     //     minHeight: containerHeight
     // });
-    
-    // console.log(containerHeight);
 
     colorInput = document.getElementById('color-input');
     colorInput.addEventListener('keyup', input_color, false);
@@ -54,28 +52,5 @@ $(document).ready(function(){
     };
 
     $('.content').panelSnap(options); 
-
-    // $(document).on('click', 'a[href*="#"]', function() {
-    //     var slashedHash = '#/' + this.hash.slice(1);
-    //     if ( this.hash ) {
-
-    //         if ( slashedHash === location.hash ) {
-    //             $.smoothScroll({scrollTarget: this.hash});
-    //         } else {
-    //             $.bbq.pushState(slashedHash);
-    //         }
-
-    //         return false;
-    //     }
-    // });
-
-    // $(window).bind('hashchange', function(event) {
-    //     var tgt = location.hash.replace(/^#\/?/,'');
-    //     if ( document.getElementById(tgt) ) {
-    //       $.smoothScroll({scrollTarget: '#' + tgt});
-    //     }
-    // });
-
-    // $(window).trigger('hashchange');
 });
 
