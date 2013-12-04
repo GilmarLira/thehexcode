@@ -93,3 +93,31 @@ body {
 .footer {
 	display: none;
 }
+
+//////////////////////////////////////////////////////
+/////	Start Animated Portrait Styles           ///// 
+//////////////////////////////////////////////////////
+
+#img_wrap #static, #img_wrap:hover #animated {
+    display: inline;
+}
+#img_wrap #animated, #img_wrap:hover #static {
+    display: none;
+}
+
+#img_wrap img{
+	@include span-columns(3);
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
