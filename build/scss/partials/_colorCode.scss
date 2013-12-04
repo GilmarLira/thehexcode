@@ -7,13 +7,6 @@
 #section-colorcode{  
     @include transition(all 1s ease-in-out);
 
-
-    /*.color-overlay{
-        @include position(absolute, 0 0 0 0);
-        width: 100%;
-        height: 100%;
-    }*/
-
     label{
         @include rhythm(4);
         font-family: $fontfamily-montserrat;

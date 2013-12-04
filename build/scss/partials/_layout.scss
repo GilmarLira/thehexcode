@@ -36,6 +36,8 @@ body {
 	.main_nav {
 		// nav height is 100% minus logo height
 		height: 75%;  //85.715% old value
+		z-index: 10;
+		
 		.nav_list {
 			height: 100%;
 			.nav_list_item {
@@ -67,8 +69,7 @@ body {
 
 // Area for the content
 .content {
-	@include span-columns(10);
-	@include shift(2);
+	@include span-columns(12);
 	@include position(0 0 0 0);
 	
 	height: 100%;
@@ -76,17 +77,10 @@ body {
 	.content_section { 
 		padding: 50px 0px 0px 0px;
 
-
-		&:first-child{ display: block; }
-
-		/*
-		&:nth-child(1) { background-color: $color-hex-red; }
-		&:nth-child(2) { background-color: $color-hex-green; }
-		&:nth-child(3) { background-color: $color-hex-blue; }
-		&:nth-child(4) { background-color: $color-hex-yellow; }
-		&:nth-child(5) { background-color: $color-hex-cyan; }
-		&:nth-child(6) { background-color: $color-hex-magenta; }
-		*/
+		.content-container{
+			@include span-columns(10 of 12);
+			@include shift(2);
+		}
 	}
 } 
 
