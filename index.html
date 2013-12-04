@@ -16,7 +16,7 @@
     <div class="container">
 
         <div class="content">
-            <section id="section-intro" class="content_section">
+            <section id="section-intro" class="content_section" data-panel="first">
                 <div class="content-container">
                     <header>
                         <h1>Unravel the mysteries of the HEX code</h1>
@@ -29,7 +29,7 @@
                 </div>
             </section>
 
-            <section id="section-technology" class="content_section">
+            <section id="section-technology" class="content_section" data-panel="second">
                 <div class="content-container">
                     <header>
                         <h1>Display Technology</h1>
@@ -51,7 +51,7 @@
                 </div>
             </section>
 
-            <section id="section-additivecolor" class="content_section">
+            <section id="section-additivecolor" class="content_section" data-panel="third">
                 <div class="content-container">
                     <header>
                         <h1>Additive Color Model</h1>
@@ -61,12 +61,12 @@
                         <p>On a computer screen, colors use the additive color model. It starts with the abcense of light - black - and the more light you add - with red, green, and blue values - the lighter the result will be. By adding all the colors together, you get pure white.</p>
                         
                         <p>The subtractive color model works the opposite, and is used in painting and printing. Subtractive color works by starting with white -- the more colors you add the darker the result will be. By adding all the colors together, you get pure black. 
-    </p>
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <section id="section-colorcode" class="content_section">
+            <section id="section-colorcode" class="content_section" data-panel="fourth">
                 <div class="content-container">
                     <header>
                         <h1>Color In Code</h1>
@@ -99,7 +99,7 @@
                 </div>
             </section>
 
-            <section id="section-resources" class="content_section">
+            <section id="section-resources" class="content_section" data-panel="fifth">
                 <div class="content-container">
                     <header>
                         <h1>Resources</h1>
@@ -111,7 +111,7 @@
                 </div>
             </section>
 
-            <section id="section-about" class="content_section">
+            <section id="section-about" class="content_section" data-panel="sixth">
                 <div class="content-container">
                     <header>
                         <h1>About</h1>
@@ -123,18 +123,18 @@
 
                     <div class="portraits">
                         <div class="img_wrap static gilmar">
-                            <img class="animated" src="img/gilmar.gif" title="" alt="" />
-                            <img class="static" src="img/gilmar.jpg" title="" alt="" />
+                            <img class="animated" src="img/gilmar.gif" />
+                            <img class="static" src="img/gilmar.jpg" />
                         </div>
 
                         <div class="img_wrap static hugo">
-                            <img class="animated" src="img/hugo.gif" title="" alt="" />
-                            <img class="static" src="img/hugo.jpg" title="" alt="" />
+                            <img class="animated" src="img/hugo.gif" />
+                            <img class="static" src="img/hugo.jpg" />
                         </div>
 
                         <div class="img_wrap static james">
-                            <img class="animated" src="img/james.gif" title="" alt="" />
-                            <img class="static" src="img/james.jpg" title="" alt="" />
+                            <img class="animated" src="img/james.gif" />
+                            <img class="static" src="img/james.jpg" />
                         </div>
 
 
@@ -147,12 +147,12 @@
             <div class="logo"></div>
             <nav class="main_nav">
                 <ul class="nav_list">
-                    <li class="nav_list_item"><a href="#section-intro">1 <span>An Introduction</span></a></li>
-                    <li class="nav_list_item"><a href="#section-technology">2 <span>Display Technology</span></a></li>
-                    <li class="nav_list_item"><a href="#section-additivecolor">3 <span>Additive Color Model</span></a></li>
-                    <li class="nav_list_item"><a href="#section-colorcode">4 <span>Color In Code</span></a></li>
-                    <li class="nav_list_item"><a href="#section-resources">5 <span>Resources</span></a></li>
-                    <li class="nav_list_item"><a href="#section-about">6 <span>About</span></a></li>
+                    <li class="nav_list_item"><a href="#section-intro" title="" alt="" data-panel="first">1 <span>An Introduction</span></a></li>
+                    <li class="nav_list_item"><a href="#section-technology" title="" alt="" data-panel="second">2 <span>Display Technology</span></a></li>
+                    <li class="nav_list_item"><a href="#section-additivecolor" title="" alt="" data-panel="third">3 <span>Additive Color Model</span></a></li>
+                    <li class="nav_list_item"><a href="#section-colorcode" title="" alt="" data-panel="fourth">4 <span>Color In Code</span></a></li>
+                    <li class="nav_list_item"><a href="#section-resources" title="" alt="" data-panel="fifth">5 <span>Resources</span></a></li>
+                    <li class="nav_list_item"><a href="#section-about" title="" alt="" data-panel="sixth">6 <span>About</span></a></li>
                 </ul>
             </nav>
         </aside>
@@ -167,8 +167,9 @@
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
 
     <!-- <script src="js/plugins.js"></script> -->
-    <script src="js/libs/jquery.smooth-scroll.js"></script>
-    <script src="js/libs/jquery.ba-bbq.js"></script>
+    <script src="js/libs/jquery.panelSnap.js"></script>    
+
     <script src="js/scripts.js"></script>
+
 </body>
 </html>
