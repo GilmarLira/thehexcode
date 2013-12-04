@@ -9,7 +9,7 @@ function input_color(){
 
 function colorize(color){    
     console.log("colorize! :"+color);
-    $("body").css("background-color","#"+color);
+    $("#section-colorcode").css("background-color","#"+color);
 }
 
 // the number of posters in the ring
@@ -25,7 +25,7 @@ const POSTER_PREFIX = 'posters/';
 const FULL_ROTATION = Math.PI * 2;
 
 // the screen width in pixels
-const SCREEN_WIDTH = 320;
+// const SCREEN_WIDTH = 320;
 
 // Globals
 // ////////////////////////////////////////////////////
@@ -67,7 +67,6 @@ function populate_ring (subring) {
 	    item.style.webkitTransform = 'rotateX(' + angle + 'rad) translateZ(' + RADIUS + 'px)';
 	    // track its index so we can retrieve it later when we select this item
 	    item.index = i;
-	    // item.addEventListener('mouseup', console.log("c"), false);
 	    // add the item to the ring's DOM tree
 	    subring.appendChild(item);
 	}
