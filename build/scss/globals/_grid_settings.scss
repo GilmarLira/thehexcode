@@ -7,13 +7,14 @@
 // Change the grid settings
 $grid-columns: 12;
 $max-width: 100%;
-$gutter: 0em;
+// $gutter: 0em;
 
 //Visual Grid Helper
 // $visual-grid: true;
 $visual-grid: false;
 $visual-grid-index: front;
-$visual-grid-opacity: 0.3;
+$visual-grid-opacity: 0.1;
+$visual-grid-color: #ff00ff;
 
 // Media Query Breakpoints
 //$small      :new-breakpoint( min-width 320px max-width 480px 16 );

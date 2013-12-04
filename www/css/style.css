@@ -180,8 +180,9 @@ body {
 .main_sidebar {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 16.66667%;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  position: fixed;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white; }
@@ -228,16 +229,16 @@ body {
 .content {
   float: left;
   display: block;
-  margin-right: 0%;
-  width: 83.33333%;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 17.05961%;
   position: relative;
+  margin-right: 0;
   height: 100%; }
   .content:last-child {
     margin-right: 0; }
   .content .content_section {
-    display: none;
-    padding: 50px;
-    max-width: 850px;
+    padding: 50px 0px 0px 0px;
     /*
     &:nth-child(1) { background-color: $color-hex-red; }
     &:nth-child(2) { background-color: $color-hex-green; }
@@ -256,6 +257,10 @@ body {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
+  #section-colorcode .color-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
   #section-colorcode label {
     font-size: 118px;
     line-height: 144px;

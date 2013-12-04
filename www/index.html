@@ -75,34 +75,36 @@
             </section>
 
             <section id="section-colorcode" class="content_section">
-                <header>
-                    <h1>Color In Code</h1>
-                </header>
-                <div class="section-content">
-                    <h1 class="gamma">What is a Hex Code?</h1>
-                    <p>Computers communicate in a binary language, each color has a series of digits associated to it. This series of numbers and letters is called the hexadecimal code.</p> 
-                    <p>Hex numbers use 16 digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F</p>
-                    <p>The hex code represents the intensity or shade of red, green and blue. The 6-digit hex code is split up into 3 series of 2 digits representing red, green and blue, in that order. Starting at 0 represents the total absence of color, black. Ending at F is all the colors combined, white. Combining these digits creates different shades of color.</p>
+                <div class="color-overlay">
+                    <header>
+                        <h1>Color In Code</h1>
+                    </header>
+                    <div class="section-content">
+                        <h1 class="gamma">What is a Hex Code?</h1>
+                        <p>Computers communicate in a binary language, each color has a series of digits associated to it. This series of numbers and letters is called the hexadecimal code.</p> 
+                        <p>Hex numbers use 16 digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F</p>
+                        <p>The hex code represents the intensity or shade of red, green and blue. The 6-digit hex code is split up into 3 series of 2 digits representing red, green and blue, in that order. Starting at 0 represents the total absence of color, black. Ending at F is all the colors combined, white. Combining these digits creates different shades of color.</p>
 
-                    <h1 class="gamma">The Power of the Hex Code</h1>
-                    <p>Practical application by simply rearranging numbers or subtly changing the ones digit to keep the same tone or drastically change the tone. </p>
-                    <div class="hex-interaction">                    
-                        <label>#<input type="text" placeholder="00ff00" id="color-input" maxlength="6" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /></label>
+                        <h1 class="gamma">The Power of the Hex Code</h1>
+                        <p>Practical application by simply rearranging numbers or subtly changing the ones digit to keep the same tone or drastically change the tone. </p>
+                        <div class="hex-interaction">                    
+                            <label>#<input type="text" placeholder="00ff00" id="color-input" maxlength="6" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" /></label>
+                        </div>
+                        
+                        <div id="ring-container">
+                            <div id="ring-aligner">
+                                <ol id="ring-red1" class="ring"></ol>
+                                <ol id="ring-red2" class="ring"></ol>
+
+                                <ol id="ring-green1" class="ring"></ol>
+                                <ol id="ring-green2" class="ring"></ol>
+
+                                <ol id="ring-blue1" class="ring"></ol>
+                                <ol id="ring-blue2" class="ring"></ol>
+                          </div>
+                        </div>
+
                     </div>
-                    
-                    <div id="ring-container">
-                        <div id="ring-aligner">
-                            <ol id="ring-red1" class="ring"></ol>
-                            <ol id="ring-red2" class="ring"></ol>
-
-                            <ol id="ring-green1" class="ring"></ol>
-                            <ol id="ring-green2" class="ring"></ol>
-
-                            <ol id="ring-blue1" class="ring"></ol>
-                            <ol id="ring-blue2" class="ring"></ol>
-                      </div>
-                    </div>
-
                 </div>
             </section>
 
@@ -136,6 +138,8 @@
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
 
     <!-- <script src="js/plugins.js"></script> -->
+    <script src="js/libs/jquery.smooth-scroll.js"></script>
+    <script src="js/libs/jquery.ba-bbq.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>

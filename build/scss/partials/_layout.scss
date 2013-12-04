@@ -18,6 +18,8 @@ body {
 // Logo and nav reside here
 .main_sidebar { 
 	@include span-columns(2);
+	@include position(fixed, 0 0 0 0);
+
 	height: 100%;
 	background-color: rgba($color-nav-bg, .8);
 	color: $color-nav-text;
@@ -66,13 +68,14 @@ body {
 // Area for the content
 .content {
 	@include span-columns(10);
-	@include position;
+	@include shift(2);
+	@include position(0 0 0 0);
+	@include omega;
 	height: 100%;
 
 	.content_section { 
-		display: none;
-		padding: 50px;
-		max-width: 850px;
+		padding: 50px 0px 0px 0px;
+
 
 		&:first-child{ display: block; }
 
