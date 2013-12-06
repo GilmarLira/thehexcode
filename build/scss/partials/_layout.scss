@@ -1,6 +1,6 @@
-
-// Layout
-// ////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//   Start Layout                                 ////
+//////////////////////////////////////////////////////
 
 // Uncomment this to see the layout structure
 // * { @include outline; }
@@ -22,7 +22,6 @@ body {
 	height: 100%;
 }
 
-
 // Area for the content
 .content {
 	@include span-columns(12);
@@ -38,13 +37,12 @@ body {
         min-height: 100%;		
 
 		.content-container{
-			@include span-columns(6 of 12);
+			@include span-columns(9 of 12);
 			@include shift(3);
 
 		}
 	}
-} 
-
+}
 
 // Logo and nav reside here
 .main_sidebar { 
@@ -98,10 +96,8 @@ body {
 				}
 			} 
 		}
-
 	}
 }
-
 
 .footer {
 	display: none;
@@ -128,7 +124,19 @@ body {
 	}
 
 	&:hover .animated {
-		opacity: 1;
+		opacity: 1;	
 	}
 }
+
+//////////////////////////////////////////////////////
+/////	End Animated Portrait Styles             ///// 
+//////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
 

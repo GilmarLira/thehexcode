@@ -185,8 +185,8 @@ body {
 .content {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 100%;
+  margin-right: 2.17235%;
+  width: 92.14059%;
   overflow: scroll;
   height: 100%; }
   .content:last-child {
@@ -200,7 +200,7 @@ body {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 48.82117%;
+      width: 74.41059%;
       margin-left: 25.58941%; }
       .content .content_section .content-container:last-child {
         margin-right: 0; }
@@ -208,8 +208,8 @@ body {
 .main_sidebar {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%;
+  margin-right: 2.17235%;
+  width: 13.54647%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
