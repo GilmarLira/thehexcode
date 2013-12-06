@@ -35,11 +35,12 @@ body {
 
         overflow: hidden;
         padding: 100px 0px 0px 0px;
-        height: 100%;		
+        min-height: 100%;		
 
 		.content-container{
 			@include span-columns(6 of 12);
 			@include shift(3);
+
 		}
 	}
 } 
@@ -128,7 +129,6 @@ body {
 
 	&:hover .animated {
 		opacity: 1;
-	
 	}
 }
 

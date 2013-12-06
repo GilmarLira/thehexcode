@@ -38,92 +38,66 @@
             outline: none;
         }
     }
+}
 
-    #ring-container{
-        @include user-select(none);
+    
+#ring-container{
+    @include user-select(none);
+    
+    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0));
+    overflow: hidden;    
 
-        width: 80%;
+
+
+    #ring-aligner{
+        @include position(relative, 200px 0 0 0);
+
+
+        text-align: center;    
         height: 400px;
 
-        position: absolute;
-        -webkit-perspective-origin: 300px 200px;
-        -webkit-perspective: 1000;
+        .ring{
+            @include transition(all .3s ease-in-out);
 
-        -webkit-transform: translateX(0);
+            display: inline-block;
+            position: relative;
+            width: 50px;
 
-        -webkit-transition-property: -webkit-transform;
-        -webkit-transition-duration: 0.5s;
+            &:nth-child(2n){
+                margin-right: 15px;
+            }
 
-        #ring-aligner{
-            position: absolute;
-            text-align: center;    
-
-            /* make sure the content lives in 3D space */
-            -webkit-transform-style: preserve-3d;
-
-            /* push back the content in the Z axis to cancel individual
-            transforms set on ring items by script */
-            -webkit-transform: translateZ(-200px);
-
-            .ring{
-                @include transition(all .3s ease-in-out);
-                // @include transform(rotateY(-90deg));
-
-
-                display: inline-block;
-                position: relative;
-
-                width: 75px;
-                top: 200px;
-
-                /* override some user agent styles on <ol> elements */
-                margin: 0 1px;
-                list-style-type: none;
-                -webkit-padding-start: 0;
-                  
-                /* make sure the content lives in 3D space */
-                -webkit-transform-style: preserve-3d;
-
-                &:nth-child(2n){
-                    margin-right: 15px;
+            &:hover{
+                .letter{
+                    background-color: rgba(255, 255, 255, .5);
                 }
+            }
+
+            .letter{
+                @include rhythm(0);
+                @include transition(background-color .3s ease-in-out, color .3s ease-in-out, position .5s $ease-out-quad);
+
+                font-family: $fontfamily-montserrat;
+                background-color: rgba(255, 255, 255, .3);
+                outline: 1px solid rgba(0, 0, 0, .8);
+                
+                text-align: center;
+                text-transform: uppercase;
+
+                /* set the bounds of an item */
+                width: 50px;
+                height: 50px;
+
+                padding-top: .8rem;
+                  
+                /* offset each item by half its height so that they overlay
+                  the center of the transform on the ring */
+                top: -25px;
 
                 &:hover{
-                    .letter{
-                        background-color: rgba(255, 255, 255, .5);
-                    }
-                }
-
-                .letter{
-                    @include rhythm(1);
-                    @include transition(all .3s ease-in-out);
-
-                    font-family: $fontfamily-montserrat;
-                    background-color: rgba(255, 255, 255, .3);
-                    outline: 1px solid rgba(0, 0, 0, .8);
-                    position: absolute;
-                    text-align: center;
-                    text-transform: uppercase;
-
-                    /* set the bounds of an item */
-                    width: 75px;
-                    height: 75px;
-
-                    padding-top: .5rem;
-                      
-                    /* offset each item by half its height so that they overlay
-                      the center of the transform on the ring */
-                    top: -2.5rem;
-
-                    /* hide the back of the elements so that we don't see anything
-                      but the items currently in the front of the ring */
-                    -webkit-backface-visibility: hidden;
-
-                    &:hover{
-                        background-color: rgba(0, 0, 0, .9);
-                        color: white;
-                        cursor: pointer;
-                    }
+                    background-color: rgba(0, 0, 0, .9);
+                    color: white;
+                    cursor: pointer;
                 }
             }
         }
