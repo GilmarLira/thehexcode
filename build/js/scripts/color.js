@@ -9,22 +9,22 @@ function input_color(){
 
 function colorize(color){    
 	console.log("colorize! :"+color);
-	$("#section-hex").css("background-color","#"+color);
+	$("#section-hex").css({
+		background: "#"+color
+	});
 }
 
 // the number of unit in the strip
 const NUM_POSTERS = 16;
 
-
 // Globals
 // ////////////////////////////////////////////////////
-var ring, ring_container, red1, red2, green1, green2, blue1, blue2, unit;
+var ring, ring_container, red1, red2, green1, green2, blue1, blue2, unit, color;
 
 
 // Init
 // ////////////////////////////////////////////////////
 function initRing () {
-	// register pointers to the DOM elements we'll be using
 	populate_ring(document.getElementById('ring-red1'));
 	populate_ring(document.getElementById('ring-red2'));
 	populate_ring(document.getElementById('ring-green1'));
@@ -44,22 +44,16 @@ function initRing () {
 // Ring population
 // ////////////////////////////////////////////////////
 function populate_ring (subring) {
-	// build each item one by one
 	for (var i = 0; i < NUM_POSTERS; ++i) {
-		// get a fresh item populated with data
 		var item = build_ring_element(data[i]);
-		// track its index so we can retrieve it later when we select this item
-		item.index = i;
-		// add the item to the ring's DOM tree
+		item.index = i;	
 		subring.appendChild(item);
 	}
 };
 
 
 function build_ring_element (item_data) {
-	// create a container for this new item
 	var item = document.createElement('li');
-	// build the element for the letter
 	item.className = "letter";
 	item.textContent = item_data.value;
 	item.addEventListener('mouseup', change_value, false);
@@ -70,29 +64,20 @@ function build_ring_element (item_data) {
 
 function change_value(event){    
 	var letter = event.target;
-	var position = -letter.index * letter.clientHeight;
-
-	// console.log("Letter is: "+letter.parentNode.clientHeight);
-	console.log("position: "+position);
-
+	var margin = parseInt(getComputedStyle(letter).marginTop);
+	var position = -letter.index * (letter.clientHeight + margin);
+	// console.log("Letter margin is: "+letter.style.marginBottom+0);
 
 	update_color(letter);
-	// ring_controller.setRotation(letter.parentNode, angle);
 	ring_controller.setPosition(letter.parentNode, position);
 }
-
-
 
 
 
 // Ring Controller
 // ////////////////////////////////////////////////////
 
-// set up our controller object which will be responsible to deal with
-// all interaction with the rings
-var ring_controller = {
-	currentRotation : 0 // stores the ring rotation at all times, in radians
-};
+var ring_controller = {};
 
 // performs all pre-flight operations needed to deal with interactions
 ring_controller.init = function () {
@@ -104,18 +89,13 @@ ring_controller.init = function () {
 	blue2 = document.getElementById('ring-blue2').childNodes[0].textContent;
 };
 
-// updates the rotation of the ring to the specified radians angle
-// ring_controller.setRotation = function (e, rotation) {
-// 	e.style.webkitTransform = 'rotateX(' + rotation + 'rad)';
-// };
 
 ring_controller.setPosition = function (e, position) {
 	e.style.webkitTransform = 'translateY(' + position + 'px)';
 };
 
 function update_color(e){
-	console.log("update_color");
-
+	// console.log("update_color");
 	switch(e.parentNode.id) {
 		case 'ring-red1' :
 			red1 = e.textContent;
@@ -143,7 +123,6 @@ function update_color(e){
 			break;    
 	}
 
-	var color = red1 + red2 + green1 + green2 + blue1 + blue2;
-	document.getElementById("color-input").setAttribute("value", color);
+	color = red1 + red2 + green1 + green2 + blue1 + blue2;
 	colorize(color);
 }

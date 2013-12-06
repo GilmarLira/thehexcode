@@ -40,64 +40,76 @@
     }
 }
 
-    
-#ring-container{
-    @include user-select(none);
-    
-    -webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,1), rgba(0,0,0,0));
-    overflow: hidden;    
 
+#section-hex{
+    height: 100%;
+    padding: 0;
 
+    .content-container{
+        @include position(20% 0 0 0);
 
-    #ring-aligner{
-        @include position(relative, 200px 0 0 0);
+        max-height: 50%;
+        overflow: hidden;
+        -webkit-mask-image: -webkit-linear-gradient(transparent, transparent, black, black, transparent, transparent);
 
+        #ring-container{
+            @include position(250px 0 0 0);
+            @include user-select(none);
+            @include span-columns(5 of 9);
+            @include shift(2);
 
-        text-align: center;    
-        height: 400px;
+            #ring-aligner{
 
-        .ring{
-            @include transition(all .3s ease-in-out);
+                text-align: center;    
 
-            display: inline-block;
-            position: relative;
-            width: 50px;
+                .ring{
+                    // Styles for the whole hex column
+                    @include transition(all .3s ease-in-out);
 
-            &:nth-child(2n){
-                margin-right: 15px;
-            }
+                    display: inline-block;
+                    position: relative;
+                    width: 50px;
+                    margin-right: 2px;
+                    font-family: $fontfamily-montserrat;
+                    text-align: center;
+                    text-transform: uppercase;
 
-            &:hover{
-                .letter{
-                    background-color: rgba(255, 255, 255, .5);
-                }
-            }
+                    &:nth-child(2), &:nth-child(4) {
+                        margin-right: 20px;
+                    }
 
-            .letter{
-                @include rhythm(0);
-                @include transition(background-color .3s ease-in-out, color .3s ease-in-out, position .5s $ease-out-quad);
+                    &:nth-child(2n) {
+                        color: rgba(0, 0, 0, .5);
+                    }
 
-                font-family: $fontfamily-montserrat;
-                background-color: rgba(255, 255, 255, .3);
-                outline: 1px solid rgba(0, 0, 0, .8);
-                
-                text-align: center;
-                text-transform: uppercase;
+                    &:hover { 
+                        // Styles for the whole hex column on hover
+                        * {
+                            background-color: rgba(255, 255, 255, 1);
+                            outline: 1px solid rgba(200, 200, 200, 1);
+                        }
+                    }
 
-                /* set the bounds of an item */
-                width: 50px;
-                height: 50px;
+                    .letter{
+                        // Styles for the letters in the hex column
+                        @include rhythm(0);
+                        @include transition(background-color .3s ease-in-out, color .3s ease-in-out, position .5s $ease-out-quad);
 
-                padding-top: .8rem;
-                  
-                /* offset each item by half its height so that they overlay
-                  the center of the transform on the ring */
-                top: -25px;
+                        background-color: rgba(255, 255, 255, .8);
+                        outline: 1px solid rgba(128, 128, 128, .5);
+                        width: 50px;
+                        height: 50px;
+                        padding-top: .8rem;
 
-                &:hover{
-                    background-color: rgba(0, 0, 0, .9);
-                    color: white;
-                    cursor: pointer;
+                        &:nth-child(n+2) {
+                            margin: 5px 0;
+                        }
+
+                        &:hover{
+                            // Styles for the letters in the hex column, on hover
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }

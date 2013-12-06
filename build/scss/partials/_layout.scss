@@ -24,22 +24,20 @@ body {
 
 // Area for the content
 .content {
-	@include span-columns(12);
+	@include span-columns(13);
 
 	overflow: scroll;
 	height: 100%;
 
 	.content_section { 
-		@include position(relative, 0 0 0 0);
-
+		@include span-columns(13 of 13);
         overflow: hidden;
         padding: 100px 0px 0px 0px;
         min-height: 100%;		
 
 		.content-container{
-			@include span-columns(9 of 12);
+			@include span-columns(9 of 13);
 			@include shift(3);
-
 		}
 	}
 }
