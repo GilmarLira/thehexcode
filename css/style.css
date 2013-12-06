@@ -186,22 +186,27 @@ body {
   float: left;
   display: block;
   margin-right: 2.17235%;
-  width: 92.14059%;
+  width: 100%;
   overflow: scroll;
   height: 100%; }
   .content:last-child {
     margin-right: 0; }
   .content .content_section {
-    position: relative;
+    float: left;
+    display: block;
+    margin-right: 2.17235%;
+    width: 100%;
     overflow: hidden;
     padding: 100px 0px 0px 0px;
     min-height: 100%; }
+    .content .content_section:last-child {
+      margin-right: 0; }
     .content .content_section .content-container {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 74.41059%;
-      margin-left: 25.58941%; }
+      margin-right: 2.17235%;
+      width: 68.56235%;
+      margin-left: 23.57824%; }
       .content .content_section .content-container:last-child {
         margin-right: 0; }
 
@@ -311,48 +316,61 @@ body {
     #section-colorcode #color-input:focus {
       outline: none; }
 
-#ring-container {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-mask-image: -webkit-linear-gradient(top, black, rgba(0, 0, 0, 0));
-  overflow: hidden; }
-  #ring-container #ring-aligner {
+#section-hex {
+  height: 100%;
+  padding: 0; }
+  #section-hex .content-container {
     position: relative;
-    top: 200px;
-    text-align: center;
-    height: 400px; }
-    #ring-container #ring-aligner .ring {
-      -webkit-transition: all 0.3s ease-in-out;
-      -moz-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      display: inline-block;
+    top: 20%;
+    max-height: 50%;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-linear-gradient(transparent, transparent, black, black, transparent, transparent); }
+    #section-hex .content-container #ring-container {
       position: relative;
-      width: 50px; }
-      #ring-container #ring-aligner .ring:nth-child(2n) {
-        margin-right: 15px; }
-      #ring-container #ring-aligner .ring:hover .letter {
-        background-color: rgba(255, 255, 255, 0.5); }
-      #ring-container #ring-aligner .ring .letter {
-        font-size: 18px;
-        line-height: 28.8px;
-        -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        font-family: "Montserrat", sans-serif;
-        background-color: rgba(255, 255, 255, 0.3);
-        outline: 1px solid rgba(0, 0, 0, 0.8);
-        text-align: center;
-        text-transform: uppercase;
-        /* set the bounds of an item */
-        width: 50px;
-        height: 50px;
-        padding-top: .8rem;
-        /* offset each item by half its height so that they overlay
-          the center of the transform on the ring */
-        top: -25px; }
-        #ring-container #ring-aligner .ring .letter:hover {
-          background-color: rgba(0, 0, 0, 0.9);
-          color: white;
-          cursor: pointer; }
+      top: 250px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      float: left;
+      display: block;
+      margin-right: 3.16844%;
+      width: 54.14736%;
+      margin-left: 22.92632%; }
+      #section-hex .content-container #ring-container:last-child {
+        margin-right: 0; }
+      #section-hex .content-container #ring-container #ring-aligner {
+        text-align: center; }
+        #section-hex .content-container #ring-container #ring-aligner .ring {
+          -webkit-transition: all 0.3s ease-in-out;
+          -moz-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+          display: inline-block;
+          position: relative;
+          width: 50px;
+          margin-right: 2px;
+          font-family: "Montserrat", sans-serif;
+          text-align: center;
+          text-transform: uppercase; }
+          #section-hex .content-container #ring-container #ring-aligner .ring:nth-child(2), #section-hex .content-container #ring-container #ring-aligner .ring:nth-child(4) {
+            margin-right: 20px; }
+          #section-hex .content-container #ring-container #ring-aligner .ring:nth-child(2n) {
+            color: rgba(0, 0, 0, 0.5); }
+          #section-hex .content-container #ring-container #ring-aligner .ring:hover * {
+            background-color: white;
+            outline: 1px solid #c8c8c8; }
+          #section-hex .content-container #ring-container #ring-aligner .ring .letter {
+            font-size: 18px;
+            line-height: 28.8px;
+            -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background-color: rgba(255, 255, 255, 0.8);
+            outline: 1px solid rgba(128, 128, 128, 0.5);
+            width: 50px;
+            height: 50px;
+            padding-top: .8rem; }
+            #section-hex .content-container #ring-container #ring-aligner .ring .letter:nth-child(n+2) {
+              margin: 5px 0; }
+            #section-hex .content-container #ring-container #ring-aligner .ring .letter:hover {
+              cursor: pointer; }
