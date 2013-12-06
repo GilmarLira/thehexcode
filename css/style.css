@@ -195,7 +195,7 @@ body {
     position: relative;
     overflow: hidden;
     padding: 100px 0px 0px 0px;
-    height: 100%; }
+    min-height: 100%; }
     .content .content_section .content-container {
       float: left;
       display: block;
@@ -310,70 +310,49 @@ body {
     text-shadow: 2px 0px 0px rgba(255, 255, 255, 0.3), -2px 0px 0px rgba(255, 255, 255, 0.3), 0px 2px 0px rgba(255, 255, 255, 0.3), 0px -2px 0px rgba(255, 255, 255, 0.3); }
     #section-colorcode #color-input:focus {
       outline: none; }
-  #section-colorcode #ring-container {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    width: 80%;
-    height: 400px;
-    position: absolute;
-    -webkit-perspective-origin: 300px 200px;
-    -webkit-perspective: 1000;
-    -webkit-transform: translateX(0);
-    -webkit-transition-property: -webkit-transform;
-    -webkit-transition-duration: 0.5s; }
-    #section-colorcode #ring-container #ring-aligner {
-      position: absolute;
-      text-align: center;
-      /* make sure the content lives in 3D space */
-      -webkit-transform-style: preserve-3d;
-      /* push back the content in the Z axis to cancel individual
-      transforms set on ring items by script */
-      -webkit-transform: translateZ(-200px); }
-      #section-colorcode #ring-container #ring-aligner .ring {
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        display: inline-block;
-        position: relative;
-        width: 75px;
-        top: 200px;
-        /* override some user agent styles on <ol> elements */
-        margin: 0 1px;
-        list-style-type: none;
-        -webkit-padding-start: 0;
-        /* make sure the content lives in 3D space */
-        -webkit-transform-style: preserve-3d; }
-        #section-colorcode #ring-container #ring-aligner .ring:nth-child(2n) {
-          margin-right: 15px; }
-        #section-colorcode #ring-container #ring-aligner .ring:hover .letter {
-          background-color: rgba(255, 255, 255, 0.5); }
-        #section-colorcode #ring-container #ring-aligner .ring .letter {
-          font-size: 29px;
-          line-height: 57.6px;
-          margin-top: 0px;
-          margin-bottom: 0px;
-          -webkit-transition: all 0.3s ease-in-out;
-          -moz-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
-          font-family: "Montserrat", sans-serif;
-          background-color: rgba(255, 255, 255, 0.3);
-          outline: 1px solid rgba(0, 0, 0, 0.8);
-          position: absolute;
-          text-align: center;
-          text-transform: uppercase;
-          /* set the bounds of an item */
-          width: 75px;
-          height: 75px;
-          padding-top: .5rem;
-          /* offset each item by half its height so that they overlay
-            the center of the transform on the ring */
-          top: -2.5rem;
-          /* hide the back of the elements so that we don't see anything
-            but the items currently in the front of the ring */
-          -webkit-backface-visibility: hidden; }
-          #section-colorcode #ring-container #ring-aligner .ring .letter:hover {
-            background-color: rgba(0, 0, 0, 0.9);
-            color: white;
-            cursor: pointer; }
+
+#ring-container {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-mask-image: -webkit-linear-gradient(top, black, rgba(0, 0, 0, 0));
+  overflow: hidden; }
+  #ring-container #ring-aligner {
+    position: relative;
+    top: 200px;
+    text-align: center;
+    height: 400px; }
+    #ring-container #ring-aligner .ring {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      display: inline-block;
+      position: relative;
+      width: 50px; }
+      #ring-container #ring-aligner .ring:nth-child(2n) {
+        margin-right: 15px; }
+      #ring-container #ring-aligner .ring:hover .letter {
+        background-color: rgba(255, 255, 255, 0.5); }
+      #ring-container #ring-aligner .ring .letter {
+        font-size: 18px;
+        line-height: 28.8px;
+        -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        -moz-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, position 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        font-family: "Montserrat", sans-serif;
+        background-color: rgba(255, 255, 255, 0.3);
+        outline: 1px solid rgba(0, 0, 0, 0.8);
+        text-align: center;
+        text-transform: uppercase;
+        /* set the bounds of an item */
+        width: 50px;
+        height: 50px;
+        padding-top: .8rem;
+        /* offset each item by half its height so that they overlay
+          the center of the transform on the ring */
+        top: -25px; }
+        #ring-container #ring-aligner .ring .letter:hover {
+          background-color: rgba(0, 0, 0, 0.9);
+          color: white;
+          cursor: pointer; }
