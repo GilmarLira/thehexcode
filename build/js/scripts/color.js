@@ -10,7 +10,7 @@ function input_color(){
 function colorize(color){    
 	console.log("colorize! :"+color);
 	$("#section-hex").css({
-		background: "#"+color
+		"background-color": "#"+color
 	});
 }
 

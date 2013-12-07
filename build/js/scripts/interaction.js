@@ -3,6 +3,14 @@
 // ////////////////////////////////////////////////////
 
 window.addEventListener('load', initContainer, false);
+// document.getElementById("tech-slider").onchange=techSlider(this.value);
+// var techImageContainer = document.getElementById("tech-slider-image-container");
+
+function techSlider(value) {
+    console.log("Slider value: "+value);
+
+    $("#tech-slider-image-container div").hide().eq(value).show();
+}
 
 // var containerWidth, containerHeight, colorInput;
 
