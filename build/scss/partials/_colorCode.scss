@@ -34,9 +34,7 @@
             0px 2px 0px rgba(255, 255, 255, 0.3), 
             0px -2px 0px rgba(255, 255, 255, 0.3);
 
-        &:focus{
-            outline: none;
-        }
+        &:focus{ outline: none; }
     }
 }
 
@@ -74,17 +72,17 @@
                     text-align: center;
                     text-transform: uppercase;
 
-                    &:nth-child(2), &:nth-child(4) {
+                    &:nth-child(2), &:nth-child(4){
                         margin-right: 20px;
                     }
 
-                    &:nth-child(2n) {
+                    &:nth-child(2n){
                         color: rgba(0, 0, 0, .5);
                     }
 
-                    &:hover { 
+                    &:hover{ 
                         // Styles for the whole hex column on hover
-                        * {
+                        *{
                             background-color: rgba(255, 255, 255, 1);
                             outline: 1px solid rgba(200, 200, 200, 1);
                         }
@@ -101,7 +99,7 @@
                         height: 50px;
                         padding-top: .8rem;
 
-                        &:nth-child(n+2) {
+                        &:nth-child(n+2){
                             margin: 5px 0;
                         }
 
