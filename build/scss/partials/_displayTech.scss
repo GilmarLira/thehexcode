@@ -1,33 +1,105 @@
 
-.tech-slider-container {
-    @include outline(orange);
-    @include fill-parent;
-    
-    #tech-slider-image-container {
-        @include fill-parent;
+// Color Code
+// ////////////////////////////////////////////////////
+
+#section-technology{
+    // @include outline(green);
+    width: 100%;
+    height: 100%;
+
+    .section-viewbox{
+        @include span-columns(13 of 13);
         @include position(0 0 0 0);
 
-        height: 14rem;
+        width: 100%;
+        height: 100%;
+        overflow-x: scroll;
 
-        div {
-            @include span-columns(9 of 9);
-            @include position(absolute, 0 0 0 0);
+        &>section{
+            @include span-columns(13 of 13);
+            @include position(absolute,0 0 0 0);
 
-            height: 14rem;
-
-            &:nth-child(n+2){ display: none; }
-
-            &:nth-child(1){ background: rgba(0, 0, 0, .15); }
-            &:nth-child(2){ background: rgba(0, 0, 0, .30); }
-            &:nth-child(3){ background: rgba(0, 0, 0, .45); }
-            &:nth-child(4){ background: rgba(0, 0, 0, .60); }
-            &:nth-child(5){ background: rgba(0, 0, 0, .75); }
-            &:nth-child(6){ background: rgba(0, 0, 0, .90); }
+            // width: 100%;
+            height: 100%;
         }
-    }
 
-    #tech-slider {
-        @include fill-parent;
-        height: 50px;
+        &>section:nth-child(2){
+            left: 90%;
+
+            .bit-image-container{
+                @include fill-parent;
+                height: 100%;
+            
+                &:nth-child(1){ @include background(url('../img/section2/1bit.gif') center / cover ); }
+                &:nth-child(2){ @include background(url('../img/section2/4bit.jpg') center / cover ); }
+                &:nth-child(3){ @include background(url('../img/section2/8bit.jpg') center / cover ); }
+                &:nth-child(4){ @include background(url('../img/section2/16bit.jpg') center / cover ); }
+                &:nth-child(5){ @include background(url('../img/section2/8bit.jpg') center / cover ); }
+                &:nth-child(6){ @include background(url('../img/section2/4bit.jpg') center / cover ); }
+
+                &:nth-child(n+2){ display:none; }
+            }               
+
+            .tech-controller-wrapper{
+
+                .tech-controller{
+                    @include span-columns(6 of 13);
+                    @include shift(4);
+                    @include position(absolute, 0 0 8% 0);
+                    @include paddings(1,1);
+                    
+                    background-color: lightgray;
+                    text-align: center;
+
+                    li{
+                        display: inline-block;
+                        background-color: black;
+                        color: white;
+                        width: 11%;
+                        margin: 0 2.5%;
+
+                        &.selected{
+                            background-color: purple;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
+
+
+
+// .tech-slider-container {
+//     @include outline(orange);
+//     @include fill-parent;
+    
+//     #tech-slider-image-container {
+//         @include fill-parent;
+//         @include position(0 0 0 0);
+
+//         height: 14rem;
+
+//         div {
+//             @include span-columns(9 of 9);
+//             @include position(absolute, 0 0 0 0);
+
+//             height: 14rem;
+
+//             &:nth-child(n+2){ display: none; }
+
+//             &:nth-child(1){ background: rgba(0, 0, 0, .15); }
+//             &:nth-child(2){ background: rgba(0, 0, 0, .30); }
+//             &:nth-child(3){ background: rgba(0, 0, 0, .45); }
+//             &:nth-child(4){ background: rgba(0, 0, 0, .60); }
+//             &:nth-child(5){ background: rgba(0, 0, 0, .75); }
+//             &:nth-child(6){ background: rgba(0, 0, 0, .90); }
+//         }
+//     }
+
+//     #tech-slider {
+//         @include fill-parent;
+//         height: 50px;
+//     }
+// }

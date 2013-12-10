@@ -32,12 +32,13 @@ body {
 	.content_section { 
 		@include span-columns(13 of 13);
         overflow: hidden;
-        padding: 100px 0px 0px 0px;
         min-height: 100%;		
 
 		.content-container{
-			@include span-columns(9 of 13);
+			@include span-columns(8 of 13);
 			@include shift(3);
+        	padding: 100px 0px 0px 0px;
+
 		}
 	}
 }
