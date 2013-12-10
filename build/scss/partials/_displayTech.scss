@@ -1,71 +1,138 @@
 
 // Color Code
 // ////////////////////////////////////////////////////
+// *{ @include outline; }
 
 #section-technology{
-    // @include outline(green);
     width: 100%;
     height: 100%;
 
-    .section-viewbox{
-        @include span-columns(13 of 13);
-        @include position(0 0 0 0);
+    .content-container{
+        @include span-columns(7 of 13);
 
+        .section-content{
+            @include clearfix;
+            @include margins(4,0);
+            
+            .column{
+                @include span-columns(5 of 12);
+                padding-right:1rem;
+                
+                &:nth-child(2){
+                    h1{
+                        @include paddings(.91,0);
+                    }
+                }
+            }
+        }
+    }
+
+    .interaction-teaser{
+        @include span-columns(4);
+        @include omega;
+        @include shift(-1);
+
+        height: 100%;
+
+        img{
+            @include position(15% 0 0 0);
+            @include transition(all 300ms ease);
+
+            padding: 2rem 2rem;
+            height: 70%;
+            background-color: white;
+            border: 1px dotted gray;
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+
+            &:hover{
+                @include transform(scale(1.1));
+                cursor: pointer;
+            }
+        }
+    }
+
+    .interaction{
+        @include span-columns(13 of 13);
+        @include position(absolute, 0 0 0 0);
+
+        display: none;
         width: 100%;
         height: 100%;
         overflow-x: scroll;
 
-        &>section{
-            @include span-columns(13 of 13);
-            @include position(absolute,0 0 0 0);
-
-            // width: 100%;
-            height: 100%;
-        }
-
-        &>section:nth-child(2){
-            left: 90%;
-
-            .bit-image-container{
-                @include fill-parent;
-                height: 100%;
+        .bit-image-container{
+            @include fill-parent;
             
-                &:nth-child(1){ @include background(url('../img/section2/1bit.gif') center / cover ); }
-                &:nth-child(2){ @include background(url('../img/section2/4bit.jpg') center / cover ); }
-                &:nth-child(3){ @include background(url('../img/section2/8bit.jpg') center / cover ); }
-                &:nth-child(4){ @include background(url('../img/section2/16bit.jpg') center / cover ); }
-                &:nth-child(5){ @include background(url('../img/section2/8bit.jpg') center / cover ); }
-                &:nth-child(6){ @include background(url('../img/section2/4bit.jpg') center / cover ); }
+            height: 100%;
+        
+            &:nth-child(1){ @include background(url('../img/section2/1bit.gif') center / cover ); }
+            &:nth-child(2){ @include background(url('../img/section2/4bit.jpg') center / cover ); }
+            &:nth-child(3){ @include background(url('../img/section2/8bit.jpg') center / cover ); }
+            &:nth-child(4){ @include background(url('../img/section2/16bit.jpg') center / cover ); }
+            &:nth-child(5){ @include background(url('../img/section2/8bit.jpg') center / cover ); }
+            &:nth-child(6){ @include background(url('../img/section2/4bit.jpg') center / cover ); }
 
-                &:nth-child(n+2){ display:none; }
-            }               
+            &:nth-child(n+2){ display:none; }
+        }               
 
-            .tech-controller-wrapper{
+        .tech-controller-wrapper{
 
-                .tech-controller{
-                    @include span-columns(6 of 13);
-                    @include shift(4);
-                    @include position(absolute, 0 0 8% 0);
-                    @include paddings(1,1);
-                    
-                    background-color: lightgray;
-                    text-align: center;
+            .tech-controller{
+                @include span-columns(6 of 13);
+                @include shift(4);
+                @include position(absolute, 0 0 8% 0);
+                @include paddings(1,1);
+                
+                background-color: lightgray;
+                text-align: center;
 
-                    li{
-                        display: inline-block;
-                        background-color: black;
-                        color: white;
-                        width: 11%;
-                        margin: 0 2.5%;
+                li{
+                    display: inline-block;
+                    background-color: black;
+                    color: white;
+                    width: 11%;
+                    margin: 0 2.5%;
 
-                        &.selected{
-                            background-color: purple;
-                        }
+                    &.selected{
+                        background-color: purple;
                     }
                 }
             }
         }
 
+        .close {
+            background-color: white;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .close::before,
+        .close::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            height: 1px;
+            background: #888;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .close::after {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .close:hover::before,
+        .close:hover::after {
+            background: #333;
+        }
     }
 }
 

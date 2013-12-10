@@ -29,15 +29,16 @@ body {
 	overflow: scroll;
 	height: 100%;
 
-	.content_section { 
+	.content_section {
 		@include span-columns(13 of 13);
+		@include position(0 0 0 0);
         overflow: hidden;
         min-height: 100%;		
 
 		.content-container{
-			@include span-columns(8 of 13);
+			@include span-columns(7 of 13);
 			@include shift(3);
-        	padding: 100px 0px 0px 0px;
+        	padding: 12% 0px 0px 0px;
 
 		}
 	}

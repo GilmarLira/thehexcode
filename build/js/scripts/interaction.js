@@ -4,11 +4,10 @@
 
 window.addEventListener('load', initContainer, false);
 
-
-function techSlider(value) {
-    console.log("Slider value: "+value);
-    $("#tech-slider-image-container div").hide().eq(value).show();
-}
+// Nav reset
+$(".main_nav li").click(function(){
+  $(".interaction").fadeOut();
+});
 
 
 // Get viewport dimensions
@@ -23,8 +22,16 @@ function initContainer() {
 $(".bit").click(function(){
   $(".bit-image-container").css('display', 'none').eq($(this).index()).css('display', 'block');
   $(this).toggleClass("selected", true).siblings(".bit").toggleClass("selected", false);
+});
 
-})
+$("#section-technology .interaction-teaser img").click(function(){
+  $("#section-technology .interaction").fadeIn();
+});
+
+$(".interaction .close").click(function(){
+  $(".interaction").fadeOut();
+});
+
 
 
 $(document).ready(function(){
