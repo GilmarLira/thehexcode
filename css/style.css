@@ -197,7 +197,6 @@ body {
     margin-right: 2.17235%;
     width: 100%;
     overflow: hidden;
-    padding: 100px 0px 0px 0px;
     min-height: 100%; }
     .content .content_section:last-child {
       margin-right: 0; }
@@ -205,8 +204,9 @@ body {
       float: left;
       display: block;
       margin-right: 2.17235%;
-      width: 68.56235%;
-      margin-left: 23.57824%; }
+      width: 60.70294%;
+      margin-left: 23.57824%;
+      padding: 100px 0px 0px 0px; }
       .content .content_section .content-container:last-child {
         margin-right: 0; }
 
@@ -375,37 +375,73 @@ body {
             #section-hex .content-container #ring-container #ring-aligner .ring .letter:hover {
               cursor: pointer; }
 
-.tech-slider-container {
-  width: 100%; }
-  .tech-slider-container * {
-    outline: 1px solid orange; }
-  .tech-slider-container #tech-slider-image-container {
+#section-technology {
+  width: 100%;
+  height: 100%; }
+  #section-technology .section-viewbox {
+    float: left;
+    display: block;
+    margin-right: 2.17235%;
     width: 100%;
     position: relative;
-    height: 14rem; }
-    .tech-slider-container #tech-slider-image-container div {
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll; }
+    #section-technology .section-viewbox:last-child {
+      margin-right: 0; }
+    #section-technology .section-viewbox > section {
       float: left;
       display: block;
-      margin-right: 3.16844%;
+      margin-right: 2.17235%;
       width: 100%;
       position: absolute;
-      height: 14rem; }
-      .tech-slider-container #tech-slider-image-container div:last-child {
+      height: 100%; }
+      #section-technology .section-viewbox > section:last-child {
         margin-right: 0; }
-      .tech-slider-container #tech-slider-image-container div:nth-child(n+2) {
-        display: none; }
-      .tech-slider-container #tech-slider-image-container div:nth-child(1) {
-        background: rgba(0, 0, 0, 0.15); }
-      .tech-slider-container #tech-slider-image-container div:nth-child(2) {
-        background: rgba(0, 0, 0, 0.3); }
-      .tech-slider-container #tech-slider-image-container div:nth-child(3) {
-        background: rgba(0, 0, 0, 0.45); }
-      .tech-slider-container #tech-slider-image-container div:nth-child(4) {
-        background: rgba(0, 0, 0, 0.6); }
-      .tech-slider-container #tech-slider-image-container div:nth-child(5) {
-        background: rgba(0, 0, 0, 0.75); }
-      .tech-slider-container #tech-slider-image-container div:nth-child(6) {
-        background: rgba(0, 0, 0, 0.9); }
-  .tech-slider-container #tech-slider {
-    width: 100%;
-    height: 50px; }
+    #section-technology .section-viewbox > section:nth-child(2) {
+      left: 90%; }
+      #section-technology .section-viewbox > section:nth-child(2) .bit-image-container {
+        width: 100%;
+        height: 100%; }
+        #section-technology .section-viewbox > section:nth-child(2) .bit-image-container:nth-child(1) {
+          background: url("../img/section2/1bit.gif") center/cover;
+          background: url("../img/section2/1bit.gif") center/cover; }
+        #section-technology .section-viewbox > section:nth-child(2) .bit-image-container:nth-child(2) {
+          background: url("../img/section2/4bit.jpg") center/cover;
+          background: url("../img/section2/4bit.jpg") center/cover; }
+        #section-technology .section-viewbox > section:nth-child(2) .bit-image-container:nth-child(3) {
+          background: url("../img/section2/8bit.jpg") center/cover;
+          background: url("../img/section2/8bit.jpg") center/cover; }
+        #section-technology .section-viewbox > section:nth-child(2) .bit-image-container:nth-child(4) {
+          background: url("../img/section2/16bit.jpg") center/cover;
+          background: url("../img/section2/16bit.jpg") center/cover; }
+        #section-technology .section-viewbox > section:nth-child(2) .bit-image-container:nth-child(5) {
+          background: url("../img/section2/8bit.jpg") center/cover;
+          background: url("../img/section2/8bit.jpg") center/cover; }
+        #section-technology .section-viewbox > section:nth-child(2) .bit-image-container:nth-child(6) {
+          background: url("../img/section2/4bit.jpg") center/cover;
+          background: url("../img/section2/4bit.jpg") center/cover; }
+        #section-technology .section-viewbox > section:nth-child(2) .bit-image-container:nth-child(n+2) {
+          display: none; }
+      #section-technology .section-viewbox > section:nth-child(2) .tech-controller-wrapper .tech-controller {
+        float: left;
+        display: block;
+        margin-right: 2.17235%;
+        width: 44.98412%;
+        margin-left: 31.43765%;
+        position: absolute;
+        bottom: 8%;
+        padding-top: 28.8px;
+        padding-bottom: 28.8px;
+        background-color: lightgray;
+        text-align: center; }
+        #section-technology .section-viewbox > section:nth-child(2) .tech-controller-wrapper .tech-controller:last-child {
+          margin-right: 0; }
+        #section-technology .section-viewbox > section:nth-child(2) .tech-controller-wrapper .tech-controller li {
+          display: inline-block;
+          background-color: black;
+          color: white;
+          width: 11%;
+          margin: 0 2.5%; }
+          #section-technology .section-viewbox > section:nth-child(2) .tech-controller-wrapper .tech-controller li.selected {
+            background-color: purple; }
