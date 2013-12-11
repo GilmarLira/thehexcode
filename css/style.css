@@ -284,6 +284,35 @@ body {
   .img_wrap:hover .animated {
     opacity: 1; }
 
+p.name {
+  position: inherit;
+  text-align: center;
+  margin-top: 120%; }
+
+.resources {
+  clear: both; }
+
+.resources h1.gamma {
+  margin-bottom: 10px; }
+
+.link_wrap {
+  float: left;
+  display: block;
+  margin-right: 3.16844%;
+  width: 31.22104%; }
+  .link_wrap:last-child {
+    margin-right: 0; }
+
+.link_wrap a {
+  text-decoration: none;
+  color: #333333;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  -moz-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+.link_wrap a:hover {
+  color: #ef00fe; }
+
 #section-colorcode {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
