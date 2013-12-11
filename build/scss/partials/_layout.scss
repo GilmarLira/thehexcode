@@ -128,9 +128,39 @@ body {
 	}
 }
 
+p.name{
+	position: inherit;
+	text-align: center;
+	margin-top: 120%;
+}
 //////////////////////////////////////////////////////
 /////	End Animated Portrait Styles             ///// 
 //////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+/////	Start Resources Styles     		         ///// 
+//////////////////////////////////////////////////////
+.resources{
+	clear: both;
+}
+
+.resources h1.gamma{
+	margin-bottom: 10px;
+}
+
+.link_wrap {
+	@include span-columns(3 of 9);
+}
+
+.link_wrap a{
+	text-decoration: none;
+	color: $color-link;
+	@include transition( all .5s $ease-out-quad );
+}
+
+.link_wrap a:hover{
+	color: $color-link-hover;
+}
+
 
 
 
