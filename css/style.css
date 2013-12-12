@@ -360,7 +360,6 @@ p.name {
       padding: 2rem 2rem;
       height: 70%;
       background-color: white;
-      border: 1px dotted gray;
       box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); }
       #section-technology .interaction-teaser img:hover {
         -webkit-transform: scale(1.1);
@@ -672,6 +671,8 @@ p.name {
           height: 36px;
           width: 36px;
           border-radius: 50%; }
+        #section-additivecolor .interaction .rgb-controller-wrapper input[type='range']:nth-child(1) {
+          margin-bottom: 3rem; }
     #section-additivecolor .interaction .close {
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
