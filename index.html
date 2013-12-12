@@ -85,14 +85,83 @@
             <section id="section-additivecolor" class="content_section" data-panel="third">
                 <div class="content-container">
                     <header>
-                        <h1>Additive Color Model</h1>
+                        <h1>Additive<br /> Color Model</h1>
                     </header>
                     <div class="section-content">
-                        <h1 class="gamma">Additive &amp; Subtractive Color Models</h1>
-                        <p>On a computer screen, colors use the additive color model. The additive color model works by starting with black— the more colors you add the lighter the results. By adding all the colors together, you get pure white.</p>
-                        
-                        <p>The subtractive color model works the opposite, and is used in painting and printing. Subtractive color works by starting with white— the more colors you add the darker the results. By adding all the colors together, you get pure black.</p>
+                        <h1 class="gamma">Additive &amp; Subtractive<br /> Color Models</h1>
+                        <div class="column">
+
+                            <p>On a computer screen, colors use the additive color model. The additive color model works by starting with black— the more colors you add the lighter the results. By adding all the colors together, you get pure white.</p>
+                        </div>
+                        <div class="column">
+                            <p>The subtractive color model works the opposite, and is used in painting and printing. Subtractive color works by starting with white— the more colors you add the darker the results. By adding all the colors together, you get pure black.</p>
+                        </div>
                     </div>
+                </div>
+
+                 <div class="interaction-teaser">
+                    <div class="teaser">
+                        <svg viewBox="0 0 800 800">
+                            <g id="Layer_1_copy_4">
+                                <circle fill="#00FF00" cx="288.376" cy="504.73" r="243.324"/>
+                                <circle fill="#FF0000" cx="406.545" cy="293.27" r="243.324"/>
+                                <circle fill="#0000FF" cx="524.714" cy="504.73" r="243.324"/>
+                            </g>
+                            <g id="Layer_1_copy_2">
+                                <path fill="#00FFFF" d="M406.545,291.995c-74.647,41.554-125.157,121.24-125.157,212.735s50.509,171.18,125.157,212.735
+                                    C481.192,675.912,531.7,596.226,531.7,504.73C531.702,413.235,481.192,333.548,406.545,291.995z"/>
+                            </g>
+                            <g id="Layer_1_copy">
+                                <path fill="#FF00FF" d="M281.424,501.989c36.562,21.965,79.363,34.605,125.121,34.605c133.469,0,241.819-107.464,243.29-240.584
+                                    c-36.562-21.965-79.363-34.605-125.121-34.605C391.247,261.405,282.897,368.87,281.424,501.989z"/>
+                            </g>
+                            <g id="Layer_1_1_">
+                                <path fill="#FFFF00" d="M163.255,296.011c1.472,133.119,109.823,240.584,243.29,240.584c45.758,0,88.56-12.641,125.121-34.605
+                                    c-1.472-133.121-109.823-240.584-243.29-240.584C242.618,261.405,199.818,274.046,163.255,296.011z"/>
+                            </g>
+                            <g id="Layer_1_copy_3">
+                                <path fill="#FFFFFF" d="M281.424,501.989c36.562,21.965,79.363,34.605,125.121,34.605s88.56-12.641,125.121-34.605
+                                    c-0.998-90.342-51.222-168.856-125.121-209.994C332.646,333.133,282.424,411.647,281.424,501.989z"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="interaction">
+                    <div class="rgb-container">
+                        <svg viewBox="0 0 800 800">
+                            <g id="Layer_1_copy_4">
+                                <circle id="circle-g" cx="288.376" cy="504.73" r="243.324"/>
+                                <circle id="circle-r" cx="406.545" cy="293.27" r="243.324"/>
+                                <circle id="circle-b" cx="524.714" cy="504.73" r="243.324"/>
+                            </g>
+                            <g id="Layer_1_copy_2">
+                                <path id="petal-c" d="M406.545,291.995c-74.647,41.554-125.157,121.24-125.157,212.735s50.509,171.18,125.157,212.735
+                                    C481.192,675.912,531.7,596.226,531.7,504.73C531.702,413.235,481.192,333.548,406.545,291.995z"/>
+                            </g>
+                            <g id="Layer_1_copy">
+                                <path id="petal-m" d="M281.424,501.989c36.562,21.965,79.363,34.605,125.121,34.605c133.469,0,241.819-107.464,243.29-240.584
+                                    c-36.562-21.965-79.363-34.605-125.121-34.605C391.247,261.405,282.897,368.87,281.424,501.989z"/>
+                            </g>
+                            <g id="Layer_1_1_">
+                                <path id="petal-y" d="M163.255,296.011c1.472,133.119,109.823,240.584,243.29,240.584c45.758,0,88.56-12.641,125.121-34.605
+                                    c-1.472-133.121-109.823-240.584-243.29-240.584C242.618,261.405,199.818,274.046,163.255,296.011z"/>
+                            </g>
+                            <g id="Layer_1_copy_3">
+                                <path id="core" d="M281.424,501.989c36.562,21.965,79.363,34.605,125.121,34.605s88.56-12.641,125.121-34.605
+                                    c-0.998-90.342-51.222-168.856-125.121-209.994C332.646,333.133,282.424,411.647,281.424,501.989z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+
+                    <div class="rgb-controller-wrapper">
+                        <input id="r" type="range" min="0" max="255" step="1" value="255" onchange="updateSlider(this)" />
+                        <input id="g" type="range" min="0" max="255" step="1" value="255" onchange="updateSlider(this)" />
+                        <input id="b" type="range" min="0" max="255" step="1" value="255" onchange="updateSlider(this)" />
+                    </div>
+
+                    <span class="close"></span>
                 </div>
             </section>
 
