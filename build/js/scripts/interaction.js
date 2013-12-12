@@ -52,27 +52,27 @@ function updateSlider(target){
   	switch(target.id) {
 		case 'r' :
 			sliderR = target.value;
-			// console.log("updated sliderR: "+sliderR);
 			break;
 		case 'g' :
 			sliderG = target.value;
-			// console.log("updated sliderG: "+sliderG);
 			break;
 		case 'b' :
 			sliderB = target.value;
-			// console.log("updated sliderB: "+sliderB);
+			break;
+		case 'l' :
+			sliderL = target.value/255;
 			break;
 	}
 
-	$("#circle-r").css('fill','rgb('+sliderR+',0,0)');
-	$("#circle-g").css('fill','rgb(0,'+sliderG+',0)');
-	$("#circle-b").css('fill','rgb(0,0,'+sliderB+')');
+	$("#circle-r").css('fill','rgba('+sliderR+',0,0,'+sliderL+')');
+	$("#circle-g").css('fill','rgba(0,'+sliderG+',0,'+sliderL+')');
+	$("#circle-b").css('fill','rgba(0,0,'+sliderB+','+sliderL+')');
 
-	$("#petal-c").css('fill','rgb(0,'+sliderG+','+sliderB+')');
-	$("#petal-m").css('fill','rgb('+sliderR+',0,'+sliderB+')');
-	$("#petal-y").css('fill','rgb('+sliderR+','+sliderG+',0)');
+	$("#petal-c").css('fill','rgba(0,'+sliderG+','+sliderB+','+sliderL+')');
+	$("#petal-m").css('fill','rgba('+sliderR+',0,'+sliderB+','+sliderL+')');
+	$("#petal-y").css('fill','rgba('+sliderR+','+sliderG+',0,'+sliderL+')');
 
-	$("#core").css('fill','rgb('+sliderR+','+sliderG+','+sliderB+')');
+	$("#core").css('fill','rgba('+sliderR+','+sliderG+','+sliderB+','+sliderL+')');
 }
 
 
