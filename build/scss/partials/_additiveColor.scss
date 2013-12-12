@@ -1,0 +1,172 @@
+//////////////////////////////////////////////////////
+/////   Additive Color Section                   /////
+//////////////////////////////////////////////////////
+
+#section-additivecolor{
+    width: 100%;
+    height: 100%;
+
+    .content-container{
+        @include span-columns(7 of 13);
+
+        .section-content{
+            @include clearfix;
+            @include margins(4,0);
+            
+            .column{
+                @include span-columns(5 of 12);
+                padding-right:1rem;
+                
+                &:nth-child(2){
+                    h1{
+                        @include paddings(.91,0);
+                    }
+                }
+            }
+        }
+    }
+
+    .interaction-teaser{
+        @include span-columns(4);
+        @include omega;
+        @include shift(-1);
+
+        height: 100%;
+
+        .teaser{
+            @include position(15% 0 0 0);
+            @include transition(all 300ms ease);
+
+            padding: 2rem 2rem;
+            width: auto;
+            height: 70%;
+            // border: 1px dotted gray;
+            box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+            background-color: white;
+            overflow: hidden;
+
+            svg{
+                width: 180%;
+                height: 100%;
+                background-color: black;
+            }
+
+            &:hover{
+                @include transform(scale(1.1));
+                cursor: pointer;
+            }
+        }
+    }
+
+    .interaction{
+        @include span-columns(13 of 13);
+        @include position(absolute, 0 0 0 0);
+
+        display: none;
+        width: 100%;
+        height: 100%;
+        overflow-x: scroll;
+        background-color: black;
+
+        .rgb-container{
+            @include fill-parent;
+            
+            height: 50%;
+            margin: 5% auto;
+
+            svg{
+                #circle-r{
+                    fill: #f00;
+                }
+
+                #circle-g{
+                    fill: #0f0;
+                }
+
+                #circle-b{
+                    fill: #00f;
+                }
+
+                #petal-c{
+                    fill: #0ff;
+                }
+
+                #petal-m{
+                    fill: #f0f;
+                }
+
+                #petal-y{
+                    fill: #ff0;
+                }
+
+                #core{
+                    fill: #fff;
+                }
+            }
+            
+        }               
+
+        .rgb-controller-wrapper{
+            @include span-columns(5 of 13);
+            @include shift(4);
+
+            // background-color: gray;
+
+            input[type='range']{
+                @include span-columns(4 of 6);
+                @include shift(1);
+
+                @include appearance(none);
+                background-color: rgb(80, 80, 80);
+                height: 24px;
+                margin-bottom: 1rem;
+                border-radius: 15px;
+
+                &::-webkit-slider-thumb {  
+                    @include appearance(none);
+                    
+                    background-color: rgb(200, 200, 200);
+                    height: 36px;
+                    width: 36px;
+                    border-radius: 50%;
+                }               
+            }
+            
+        }
+
+        .close {
+            @include transition( all .3s ease );
+            background-color: rgba(255, 255, 255, .2);
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .close::before,
+        .close::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            height: 1px;
+            background: #000;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .close::after {
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .close:hover,
+        .close:hover {
+            background-color: rgba(255, 255, 255, .6);
+        }
+    }
+}
