@@ -40,8 +40,45 @@ body {
 			@include shift(3);
         	padding: 12% 0px 0px 0px;
 
+
+
 		}
 	}
+
+	.close {
+        @include transition( all .3s ease );
+        background-color: rgba(255, 255, 255, .2);
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .close::before,
+    .close::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        height: 1px;
+        background: #000;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .close::after {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .close:hover,
+    .close:hover {
+        background-color: rgba(255, 255, 255, .6);
+    }
 }
 
 // Logo and nav reside here

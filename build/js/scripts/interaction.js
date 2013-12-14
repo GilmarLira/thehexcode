@@ -1,6 +1,7 @@
 
 // Interaction
 // ////////////////////////////////////////////////////
+
 window.addEventListener('load', initContainer, false);
 
 // globals
@@ -21,14 +22,6 @@ $(".interaction .close").click(function(){
 });
 
 
-// Get viewport dimensions
-function initContainer() {
-	colorInput = document.getElementById('color-input');
-	colorInput.addEventListener('keyup', input_color, false);
-	initRing();
-}
-
-
 // Color depth-interaction
 $("#section-technology .interaction-teaser img").click(function(){
  	$("#section-technology .interaction").fadeIn();
@@ -38,7 +31,6 @@ $(".bit").click(function(){
   	$(".bit-image-container").css('display', 'none').eq($(this).index()).css('display', 'block');
   	$(this).toggleClass("selected", true).siblings(".bit").toggleClass("selected", false);
 });
-
 
 
 // Additive Color interactions
@@ -75,8 +67,42 @@ function updateSlider(target){
 	$("#core").css('fill','rgba('+sliderR+','+sliderG+','+sliderB+','+sliderL+')');
 }
 
+// Color Code Interactions
+$("#section-colorcode .interaction-teaser > div").click(function(){
+  	$("#section-colorcode .interaction").fadeIn();
+});
 
+$(".interaction .unit-value").click(function(){
+	console.log("scale animation");
 
+	$(".interaction .unit").toggleClass("unit-collapsed");
+	
+	// $(".scale .unit").animate({
+	// 	color: "transparent",
+	// 	left: 50 + "%"
+	// }, 1000, function(){});
+});
+
+$(".unit .unit-control-up").click(function(){
+	logPositions();
+});
+
+$(".unit .unit-control-down").click(function(){
+	logPositions();
+});
+
+function logPositions(){
+	// var thisring = document.getElementByID("ring-red1");
+	console.log( "Ring offset: "+$("#ring-red1").position().top );
+	// $("#ring-red1 .letter").each(function(index){
+	// 	console.log( "Letter "+index+": "+$(this).position().top );
+	// });
+
+	var ringPositionTop = $("#ring-red1").position().top;
+	var letterIndex = ringPositionTop / 150;
+}
+
+// Snapping behavior
 $(document).ready(function(){
 	var options = {
 	  	$menu: $('.nav_list'),
@@ -92,4 +118,10 @@ $(document).ready(function(){
 
 	$('.content').panelSnap(options); 
 });
+
+
+// Other functions
+function initContainer() {
+	initRing();
+}
 
