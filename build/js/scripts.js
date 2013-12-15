@@ -167,7 +167,7 @@ sliderL = 255;
 
 
 // Nav reset
-$(".main_nav li").click(function(){
+$(".main-nav li").click(function(){
   	$(".interaction").fadeOut();
 });
 
@@ -278,7 +278,7 @@ function logPositions(container, way){
 // Snapping behavior
 $(document).ready(function(){
 	var options = {
-	  	$menu: $('.nav_list'),
+	  	$menu: $('.nav-list'),
 		menuSelector: 'a',
 		panelSelector: 'section',
 		namespace: '.panelSnap',

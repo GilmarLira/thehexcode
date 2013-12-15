@@ -12,7 +12,7 @@ html {
 body {
 	@include transition(background-color .5s ease-in-out);
 	/* background: $color-content-bg; */
-	background-color: blue;
+	background-color: #efefef;
 	height: 100%;
 }
 
@@ -28,7 +28,7 @@ body {
 	overflow: scroll;
 	height: 100%;
 
-	.content_section {
+	.content-section {
 		@include span-columns(13 of 13);
 		@include position(0 0 0 0);
         overflow: hidden;
@@ -37,48 +37,48 @@ body {
 		.content-container{
 			@include span-columns(7 of 13);
 			@include shift(3);
-	        	padding: 12% 0px 0px 0px;
+	        padding: 12% 0px 0px 0px;
 		}
 	}
 
 	.close {
-        	@include transition( all .3s ease );
-        	background-color: rgba(255, 255, 255, .2);
-        	position: absolute;
-        	width: 80px;
-        	height: 80px;
-        	top: 20px;
-        	right: 20px;
-        	cursor: pointer;
-    }
-
-    .close::before,
-    .close::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        height: 1px;
-        background: #000;
-        -webkit-transform: rotate(45deg);
-        -moz-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-
-    .close::after {
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-
-    .close:hover,
-    .close:hover {
-        background-color: rgba(255, 255, 255, .6);
+    	@include transition( all .3s ease );
+    	background-color: rgba(255, 255, 255, .1);
+    	position: absolute;
+    	width: 50px;
+    	height: 50px;
+    	top: 20px;
+    	right: 20px;
+    	cursor: pointer;
+    	display: block;
+    	span {
+    		display: none;
+    	}
+		&:before,
+	    &:after {
+	        content: '';
+	        position: absolute;
+	        width: 100%;
+	        top: 50%;
+	        height: 3px;
+	        background: #000;
+	        -webkit-transform: rotate(45deg);
+	        -moz-transform: rotate(45deg);
+	        transform: rotate(45deg);
+	    }
+	    &:after {
+	        -webkit-transform: rotate(-45deg);
+	        -moz-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+	    }
+	    &:hover {
+	        background-color: rgba(255, 255, 255, .6);
+	    }
     }
 }
 
 // Logo and nav reside here
-.main_sidebar { 
+.main-sidebar { 
 	@include span-columns(2);
 	@include position(fixed, 0 0 0 0);
 
@@ -98,15 +98,15 @@ body {
 		}
 	}
 
-	.main_nav {
+	.main-nav {
 		// nav height is 100% minus logo height
 		height: 75%;  //85.715% old value
 		z-index: 10;
 
-		.nav_list {
+		.nav-list {
 			height: 100%;
 
-			.nav_list_item {
+			.nav-list-item {
 				font-family: $fontfamily-montserrat;
 				font-weight: 700;
 				text-transform: uppercase;
@@ -140,7 +140,7 @@ body {
 /////	Start Animated Portrait Styles           ///// 
 //////////////////////////////////////////////////////
 
-.img_wrap {
+.img-wrap {
 	@include span-columns(3 of 9);
 	@include position(relative, 0 0 0 0);
 	height: 300px;
@@ -179,17 +179,17 @@ p.name{
 	margin-bottom: 10px;
 }
 
-.link_wrap {
+.link-wrap {
 	@include span-columns(3 of 9);
 }
 
-.link_wrap a{
+.link-wrap a{
 	@include transition( all .5s $ease-out-quad );
 	text-decoration: none;
 	color: $color-link;
 }
 
-.link_wrap a:hover{
+.link-wrap a:hover{
 	color: $color-link-hover;
 }
 
