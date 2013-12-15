@@ -4,8 +4,16 @@
 
 window.addEventListener('load', initContainer, false);
 
-// globals
-var sliderR, sliderG, sliderB, sliderL;
+function initContainer() {
+	initRing();
+}
+
+// the number of unit in the strip
+const NUM_POSTERS = 16;
+
+// Globals
+// ////////////////////////////////////////////////////
+var ring, ring_container, red1, red2, green1, green2, blue1, blue2, unit, color, sliderR, sliderG, sliderB, sliderL;
 sliderR = 255;
 sliderG = 255;
 sliderB = 255;
@@ -75,7 +83,7 @@ $("#section-colorcode .interaction-teaser > div").click(function(){
 $(".interaction .unit-value").click(function(){
 	console.log("scale animation");
 
-	$(".interaction .unit").toggleClass("unit-collapsed");
+	$(".interaction .unit").toggleClass("unit-collapsed", true);
 	
 	// $(".scale .unit").animate({
 	// 	color: "transparent",
@@ -84,22 +92,41 @@ $(".interaction .unit-value").click(function(){
 });
 
 $(".unit .unit-control-up").click(function(){
-	logPositions();
+	logPositions($(this).parent(), "up");
 });
 
 $(".unit .unit-control-down").click(function(){
-	logPositions();
+	logPositions($(this).parent(), "down");
 });
 
-function logPositions(){
-	// var thisring = document.getElementByID("ring-red1");
-	console.log( "Ring offset: "+$("#ring-red1").position().top );
-	// $("#ring-red1 .letter").each(function(index){
-	// 	console.log( "Letter "+index+": "+$(this).position().top );
-	// });
 
+function logPositions(container, way){
+	var $currentRing = container.find(".ring");
 	var ringPositionTop = $("#ring-red1").position().top;
-	var letterIndex = ringPositionTop / 150;
+	var currentLetterIndex = -ringPositionTop / 150;
+		 
+	if ( way == "up" ){
+		console.log("Goin up");
+		if ( currentLetterIndex < 15 ){
+			$currentRing.css({
+				top: '-=150px'   
+			});
+			currentLetterIndex++;
+		}
+	}
+	else if ( way == "down" ){
+		console.log("goin down");
+		if ( currentLetterIndex > 0 ){
+			$currentRing.css({
+				top: '+=150px'   
+			});
+			currentLetterIndex--;
+		}
+	}
+	
+/* 	var $currentLetterElement = $currentRing.find('.letter')[currentLetterIndex].textContent; */
+	var $currentLetterElement = $currentRing.find('.letter')[currentLetterIndex];
+	update_color($currentLetterElement);
 }
 
 // Snapping behavior
@@ -121,7 +148,114 @@ $(document).ready(function(){
 
 
 // Other functions
-function initContainer() {
-	initRing();
+function colorize(color){    
+	console.log("colorize! :"+color);
+	$("#section-colorcode .interaction").css({
+		"background-color": "#"+color
+	});
 }
+
+
+// Init
+function initRing () {
+	populate_ring(document.getElementById('ring-red1'));
+	populate_ring(document.getElementById('ring-red2'));
+	populate_ring(document.getElementById('ring-green1'));
+	populate_ring(document.getElementById('ring-green2'));
+	populate_ring(document.getElementById('ring-blue1'));
+	populate_ring(document.getElementById('ring-blue2'));
+
+	ring_controller.init();
+
+	// hide the address bar once everything has loaded
+	// window.setTimeout(function() { window.scrollTo(0, 0); }, 2000);  
+};
+
+
+// Ring population
+function populate_ring (subring) {
+	for (var i = 0; i < NUM_POSTERS; ++i) {
+		var item = build_ring_element(data[i]);
+		item.index = i;	
+		subring.appendChild(item);
+	}
+};
+
+// Ring construction
+function build_ring_element (item_data) {
+	var item = document.createElement('li');
+	item.className = "letter";
+	item.textContent = item_data.value;
+	return item;
+};
+
+// Ring Controller
+var ring_controller = {};
+
+// performs all pre-flight operations needed to deal with interactions
+ring_controller.init = function () {
+	red1 = document.getElementsByClassName('ring')[0].childNodes[0].textContent;
+/*  	red2 = document.getElementById('ring-red2').childNodes[0].textContent;
+	green1 = document.getElementById('ring-green1').childNodes[0].textContent;
+	green2 = document.getElementById('ring-green2').childNodes[0].textContent;
+	blue1 = document.getElementById('ring-blue1').childNodes[0].textContent;
+	blue2 = document.getElementById('ring-blue2').childNodes[0].textContent; */
+	red2 = "f";
+	green1 = "f";
+	green2 = "f";
+	blue1 = "f";
+	blue2 = "f";
+};
+
+function update_color(e){
+	switch(e.parentNode.id) {
+		case 'ring-red1' :
+			red1 = e.textContent;
+			console.log("updated r1: "+red1);
+			break;
+		case 'ring-red2' :
+			red2 = e.textContent;
+			console.log("updated r2: "+red2);
+			break;
+		case 'ring-green1' :
+			green1 = e.textContent;
+			console.log("updated g1: "+green1);
+			break;
+		case 'ring-green2' :
+			green2 = e.textContent;
+			console.log("updated g2: "+green2);
+			break;
+		case 'ring-blue1' :
+			blue1 = e.textContent;
+			console.log("updated b1: "+blue1);
+			break;
+		case 'ring-blue2' :
+			blue2 = e.textContent;
+			console.log("updated b2: "+blue2);
+			break;    
+	}
+
+	red2 = "f";
+	green1 = "f";
+	green2 = "f";
+	blue1 = "f";
+	blue2 = "f";
+	
+	color = red1 + red2 + green1 + green2 + blue1 + blue2;
+	colorize(color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

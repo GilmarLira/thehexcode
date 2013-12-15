@@ -68,12 +68,8 @@
     }
 
     .scale{
-        @include position(30% 0 0 0);
-        // @include outline;
-
-        // white-space: nowrap;
-        // white-space: no-drop;
-
+        	@include position(30% 0 0 0);
+		@include user-select(none);
 
         .unit-collapsed{
             // @include transform(scale(2));

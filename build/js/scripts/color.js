@@ -2,18 +2,12 @@
 // Color.js
 // ////////////////////////////////////////////////////
 
-function input_color(){
+/* function input_color(){
 	var color = colorInput.value;
 	colorize(color);
-}
+} */
 
-function colorize(color){    
-	console.log("colorize! :"+color);
-	$("#section-hex").css({
-		"background-color": "#"+color
-	});
-}
-
+/* 
 // the number of unit in the strip
 const NUM_POSTERS = 16;
 
@@ -125,4 +119,4 @@ function update_color(e){
 
 	color = red1 + red2 + green1 + green2 + blue1 + blue2;
 	colorize(color);
-}
+} */
