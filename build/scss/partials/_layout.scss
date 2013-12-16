@@ -3,7 +3,7 @@
 //////////////////////////////////////////////////////
 
 // Uncomment this to see the layout structure
-/* * { @include outline; } */
+// * { @include outline; }
 
 html {
 	height: 100%;
@@ -11,8 +11,7 @@ html {
 
 body {
 	@include transition(background-color .5s ease-in-out);
-	/* background: $color-content-bg; */
-	background-color: #efefef;
+	background: $color-content-bg;
 	height: 100%;
 }
 
@@ -22,20 +21,21 @@ body {
 	height: 100%;
 }
 
+
 // Area for the content
 .content {
-	@include span-columns(13);
+	@include span-columns(14);
 	overflow: scroll;
 	height: 100%;
 
 	.content-section {
-		@include span-columns(13 of 13);
+		@include span-columns(14 of 14);
 		@include position(0 0 0 0);
         overflow: hidden;
         min-height: 100%;		
 
 		.content-container{
-			@include span-columns(7 of 13);
+			@include span-columns(7 of 14);
 			@include shift(3);
 	        padding: 12% 0px 0px 0px;
 		}
