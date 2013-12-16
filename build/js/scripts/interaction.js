@@ -49,6 +49,7 @@ $("#section-additivecolor .interaction-teaser > div").click(function(){
 function updateSlider(target){
   	// console.log(target.id + ": " + target.value);
 
+
   	switch(target.id) {
 		case 'r' :
 			sliderR = target.value;
@@ -82,15 +83,18 @@ $("#section-colorcode .interaction-teaser > div").click(function(){
   	$("#section-colorcode .interaction").fadeIn();
 });
 
+
 $("#section-colorcode .content-container .next-button").click(function(){
 	console.log("Color Code interaction fullscreen");
 	$("#section-colorcode .interaction").toggleClass("fullscreen", true);
 });
 
+
 $("#section-colorcode .interaction .next-button").click(function(){
 	console.log("scale animation");
 	$("#section-colorcode .interaction .scale").toggleClass("unit-collapsed", true);
 });
+
 
 $("#section-colorcode .interaction .close").unbind().click(function(){
   	$("#section-colorcode .interaction").toggleClass("fullscreen", false);
@@ -110,7 +114,6 @@ $(".unit-control-down").click(function(){
 
 
 
-
 // Slot machine functionality
 var slotMachineAnimationSpeed = 400;
 
@@ -119,12 +122,11 @@ function logPositions(container, way){
 	var ringPositionTop = $("#ring-red1").position().top;
 	var currentLetterIndex = -ringPositionTop / 150;
 
-	console.log("container: ");
-	console.log(container);
-	
-	console.log("currentRing: ");
-	console.log($currentRing);
-	console.log("currentLetterIndex: "+currentLetterIndex);
+	// console.log("container: ");
+	// console.log(container);	
+	// console.log("currentRing: ");
+	// console.log($currentRing);
+	// console.log("currentLetterIndex: "+currentLetterIndex);
 
 	
 	if ( $currentRing.is(":animated") ) {

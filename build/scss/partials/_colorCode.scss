@@ -25,7 +25,6 @@
         @include position(absolute, 0 0 0 50%);
         @include transition(all 1s ease);
         @include transform(scale(.8));
-        background-color: transparent;
         height: 100%;
 
         .interaction-box{
@@ -41,11 +40,23 @@
         left: 0px;
     }
 
+    .interaction{
+        @include span-columns(14 of 14);
+        @include position(absolute, 0 0 0 0);
+        height: 100%;
+        background-color: #eee;
+
+        .interaction-box{
+            @include span-columns(10 of 14);
+            @include shift(3);
+            height: 100%;
+        }
+    }
+
     .next-button{
         @include position(absolute, 0 40% 10% 0);
         @include span-columns(2);
         @include button(black, white, '');
-        @include transition(all 1s ease 1s);
         text-align: center;
         text-transform: uppercase;
     }
