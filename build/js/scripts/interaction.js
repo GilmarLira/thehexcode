@@ -22,7 +22,7 @@ sliderL = 255;
 
 // Nav reset
 $(".main-nav li").click(function(){
-  	$(".interaction").fadeOut();
+  	// $(".interaction").fadeOut();
 });
 
 $(".interaction .close").click(function(){
@@ -80,10 +80,10 @@ $("#section-colorcode .interaction-teaser > div").click(function(){
   	$("#section-colorcode .interaction").fadeIn();
 });
 
-$(".interaction .unit-value").click(function(){
+$("#section-colorcode .interaction .next-button").click(function(){
 	console.log("scale animation");
 
-	$(".interaction .unit").toggleClass("unit-collapsed", true);
+	$("#section-colorcode .interaction .scale").toggleClass("unit-collapsed", true);
 	
 	// $(".scale .unit").animate({
 	// 	color: "transparent",
@@ -91,43 +91,58 @@ $(".interaction .unit-value").click(function(){
 	// }, 1000, function(){});
 });
 
-$(".unit .unit-control-up").click(function(){
+$(".unit-control-up").click(function(){
 	logPositions($(this).parent(), "up");
 });
 
-$(".unit .unit-control-down").click(function(){
+$(".unit-control-down").click(function(){
 	logPositions($(this).parent(), "down");
 });
 
+
+// Slot machine functionality
+var slotMachineAnimationSpeed = 400;
 
 function logPositions(container, way){
 	var $currentRing = container.find(".ring");
 	var ringPositionTop = $("#ring-red1").position().top;
 	var currentLetterIndex = -ringPositionTop / 150;
-		 
+
+	console.log("container: ");
+	console.log(container);
+	
+	console.log("currentRing: ");
+	console.log($currentRing);
+	console.log("currentLetterIndex: "+currentLetterIndex);
+
+	
+	if ( $currentRing.is(":animated") ) {
+		return false;
+	}
+
 	if ( way == "up" ){
 		console.log("Goin up");
 		if ( currentLetterIndex < 15 ){
-			$currentRing.css({
-				top: '-=150px'   
-			});
 			currentLetterIndex++;
+			$currentRing.animate({
+				top: '-=150px'   
+			}, slotMachineAnimationSpeed);
 		}
 	}
 	else if ( way == "down" ){
 		console.log("goin down");
 		if ( currentLetterIndex > 0 ){
-			$currentRing.css({
-				top: '+=150px'   
-			});
 			currentLetterIndex--;
+			$currentRing.animate({
+				top: '+=150px'   
+			}, slotMachineAnimationSpeed);
 		}
 	}
 	
-/* 	var $currentLetterElement = $currentRing.find('.letter')[currentLetterIndex].textContent; */
 	var $currentLetterElement = $currentRing.find('.letter')[currentLetterIndex];
 	update_color($currentLetterElement);
 }
+
 
 // Snapping behavior
 $(document).ready(function(){
@@ -159,11 +174,11 @@ function colorize(color){
 // Init
 function initRing () {
 	populate_ring(document.getElementById('ring-red1'));
-	populate_ring(document.getElementById('ring-red2'));
-	populate_ring(document.getElementById('ring-green1'));
-	populate_ring(document.getElementById('ring-green2'));
-	populate_ring(document.getElementById('ring-blue1'));
-	populate_ring(document.getElementById('ring-blue2'));
+	// populate_ring(document.getElementById('ring-red2'));
+	// populate_ring(document.getElementById('ring-green1'));
+	// populate_ring(document.getElementById('ring-green2'));
+	// populate_ring(document.getElementById('ring-blue1'));
+	// populate_ring(document.getElementById('ring-blue2'));
 
 	ring_controller.init();
 

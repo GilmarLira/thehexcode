@@ -30,6 +30,13 @@ module.exports = function(grunt) {
 			options: {
 				livereload: true,
 			},
+            html{
+                files: ['www/*.*'],
+                tasks: [],
+                options: {
+                    spawn: false,
+                }
+            },
 			cssFirst: {
 				files: ['www/css/style.css'],
 				tasks: [],
@@ -39,7 +46,9 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: [
-					'build/scss/*.scss'
+					'build/scss/*.scss',
+                    'build/scss/partials/*.scss',
+                    'build/scss/globals/*.scss'
 					],
 				tasks: ['sass'],
 				options: {

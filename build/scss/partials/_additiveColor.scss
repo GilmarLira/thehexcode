@@ -3,11 +3,10 @@
 //////////////////////////////////////////////////////
 
 #section-additivecolor{
-    width: 100%;
     height: 100%;
 
     .content-container{
-        @include span-columns(7 of 13);
+        @include span-columns(7 of 14);
 
         .section-content{
             @include clearfix;
@@ -29,14 +28,11 @@
     .interaction-teaser{
         @include span-columns(4);
         @include omega;
-        @include shift(-1);
-
         height: 100%;
 
         .teaser{
             @include position(15% 0 0 0);
             @include transition(all 300ms ease);
-
             padding: 2rem 2rem;
             width: auto;
             height: 70%;
@@ -58,20 +54,24 @@
     }
 
     .interaction{
-        @include span-columns(13 of 13);
+        @include span-columns(14 of 14);
         @include position(absolute, 0 0 0 0);
-
         display: none;
-        width: 100%;
-        height: 100%;
         overflow-x: scroll;
         background-color: black;
+        height: 100%;
+
+        .interaction-box{
+            @include span-columns(10 of 14);
+            @include shift(3);
+            height: 100%;
+        }
 
         .rgb-container{
-            @include fill-parent;
-            
+            @include span-columns(8 of 10);
+            // @include shift(1);
             height: 50%;
-            margin: 5% auto;
+            margin-top: 5%;
 
             svg{
                 #circle-r{
@@ -106,15 +106,13 @@
         }               
 
         .rgb-controller-wrapper{
-            @include span-columns(5 of 13);
-            @include shift(4);
-
-            // background-color: gray;
+            @include span-columns(6 of 10);
+            @include shift(1);
+            @include margins(2, 0);
 
             input[type='range']{
                 @include span-columns(4 of 6);
                 @include shift(1);
-
                 @include appearance(none);
                 background-color: rgb(80, 80, 80);
                 height: 24px;
@@ -123,7 +121,6 @@
 
                 &::-webkit-slider-thumb {  
                     @include appearance(none);
-                    
                     background-color: rgb(200, 200, 200);
                     height: 36px;
                     width: 36px;
