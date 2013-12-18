@@ -260,7 +260,9 @@
                                 </div>
                                 
                                 <div class="rgb-controller-wrapper">
-                                    <input id="l" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    <label>Light
+                                        <input id="l" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    </label>
                                 </div>
                             </div><!-- .interaction-widget -->
 
@@ -323,9 +325,15 @@
                                 </div><!-- .interaction-widget -->
                                 
                                 <div class="rgb-controller-wrapper">
-                                    <input id="r" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    <label>Red
+                                        <input id="r" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    </label>
+                                    <label>Green
                                     <input id="g" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    </label>
+                                    <label>Blue
                                     <input id="b" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    </label>
                                 </div>
                             </div>
 
