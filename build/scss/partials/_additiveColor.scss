@@ -3,7 +3,7 @@
 // ////////////////////////////////////
 
 #section-additivecolor {
-    @include outline;
+    // @include outline;
     height: 100%;
 
     .interaction-teaser {
@@ -73,13 +73,13 @@
         background-color: #eee;
     }
 
-    .interaction.second{
+    .interaction.second,
+    .interaction.third{
         @include background-image(url('../img/pattern.svg'),
             radial-gradient(100% 10%, circle cover, #212121, #2a2a2a) );
         // overflow-x: scroll;
         height: 100%;
-
-        
+        color: #fff;
 
         .rgb-container{
             @include span-columns(8 of 10);
@@ -137,12 +137,7 @@
                     width: 36px;
                     border-radius: 50%;
                 }
-
-                &:nth-child(1){
-                    margin-bottom: 3rem;
-                }               
             }
-            
         }
 
         .close {
@@ -152,9 +147,5 @@
                 background-color: rgba(255, 255, 255, .6);
             }
         }
-    }
-
-    .interaction.third{
-        background-color: blue;
     }
 }

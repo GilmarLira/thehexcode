@@ -51,20 +51,17 @@ $("#section-additivecolor .interaction-teaser > div").click(function(){
 
 $("#section-additivecolor .interaction .nav-next").click(function(){
 	var currentInteraction = $(this).parents(".interaction");
-	currentInteraction.fadeOut().delay(400, function(){
-		console.log(currentInteraction.next(".interaction"));
-		currentInteraction.next(".interaction").show().fadeIn();
-	});
-
+	
+	currentInteraction.hide().next().show();
 });
 
 $("#section-additivecolor .interaction .nav-prev").click(function(){
 	var currentInteraction = $(this).parents(".interaction");
-	currentInteraction.fadeOut().delay(400, function(){
-		console.log(currentInteraction.prev(".interaction"));
-		currentInteraction.prev(".interaction").show().fadeIn();
-	});
-
+	currentInteraction.hide().prev().show();
+	// currentInteraction.fadeOut().hide().delay(400, function(){
+	// 	console.log(currentInteraction.prev(".interaction"));
+	// 	currentInteraction.prev(".interaction").show().fadeIn();
+	// });
 });
 
 
