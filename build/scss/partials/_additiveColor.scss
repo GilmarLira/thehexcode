@@ -52,7 +52,7 @@
                 height: 100%;
 
                 .interaction-container{
-                    @include span-columns(5 of 14);
+                    @include span-columns(6 of 14);
                     @include shift(1);
                     padding-top: 10%;
                     p {
@@ -61,8 +61,10 @@
                 }
 
                 .interaction-widget{
-                    @include span-columns(8 of 14);
+                    @include span-columns(7 of 14);
                     @include omega;
+                    @include position(-10% 0% 0 0);
+
                     height: 100%;
                 }
             }
@@ -70,23 +72,23 @@
     }
 
     .interaction.first{
-        // background-color: #eee;
     }
 
     .interaction.second,
     .interaction.third{
         @include background-image(url('../img/pattern.svg'),
             radial-gradient(100% 10%, circle cover, #212121, #2a2a2a) );
-        // overflow-x: scroll;
         height: 100%;
-        color: #fff;
-
+        color: #fff;        
+           
         .rgb-container{
-            @include span-columns(8 of 10);
-            height: 50%;
-            margin-top: 5%;
+            @include span-columns(8 of 8);
+
             svg{
-                // fill: rgba(0, 0, 0, 1);
+                @include animation(carroussel 60s linear infinite);
+                width: 120%;
+                height: 120%;
+
                 #circle-r{
                     fill: rgba(0, 0, 0, 1);
                 }
@@ -118,28 +120,37 @@
         }               
 
         .rgb-controller-wrapper{
-            @include span-columns(6 of 10);
+            @include span-columns(6 of 8);
             @include shift(1);
-            @include margins(2, 0);
+            // @include margins(2, 0);
 
-            input[type='range']{
+            label{
                 @include span-columns(4 of 6);
                 @include shift(1);
-                @include appearance(none);
-                background-color: rgb(80, 80, 80);
-                height: 24px;
-                margin-bottom: 1rem;
-                border-radius: 15px;
+                text-align: right;
+                white-space: nowrap;
 
-                &::-webkit-slider-thumb {  
+                input[type='range']{
                     @include appearance(none);
-                    background-color: rgb(200, 200, 200);
-                    height: 36px;
-                    width: 36px;
-                    border-radius: 50%;
+                    vertical-align: top;
+                    background-color: rgb(80, 80, 80);
+                    width: 70%;
+                    height: 24px;
+                    margin-left: 10px;
+                    margin-bottom: 1rem;
+                    border-radius: 15px;
+
+                    &::-webkit-slider-thumb {  
+                        @include appearance(none);
+                        background-color: rgb(200, 200, 200);
+                        height: 36px;
+                        width: 36px;
+                        border-radius: 50%;
+                    }
                 }
             }
         }
+
 
         .close {
             background-color: rgba(255, 255, 255, .2);
@@ -147,44 +158,6 @@
             &:hover {
                 background-color: rgba(255, 255, 255, .6);
             }
-        }
-    }
-
-    .interaction.third{
-        .rgb-container{
-            @include span-columns(8 of 10);
-            height: 50%;
-            margin-top: 5%;
-            svg{
-                // fill: rgba(0, 0, 0, 1);
-                #circle-r{
-                    fill: rgba(0, 0, 0, 1);
-                }
-
-                #circle-g{
-                    fill: rgba(0, 0, 0, 1);
-                }
-
-                #circle-b{
-                    fill: rgba(0, 0, 0, 1);
-                }
-
-                #petal-c{
-                    fill: rgba(0, 0, 0, 1);
-                }
-
-                #petal-m{
-                    fill: rgba(0, 0, 0, 1);
-                }
-
-                #petal-y{
-                    fill: rgba(0, 0, 0, 1);
-                }
-
-                #core{
-                    fill: rgba(0, 0, 0, 1);
-                }
-            }    
         }
     }
 }
