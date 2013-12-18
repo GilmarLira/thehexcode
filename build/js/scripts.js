@@ -197,19 +197,16 @@ $("#section-additivecolor .interaction-teaser > div").click(function(){
 
 $("#section-additivecolor .interaction .nav-next").click(function(){
 	var currentInteraction = $(this).parents(".interaction");
-	// currentInteraction.hide().next().show();1
-	currentInteraction.fadeOut(400, function(){
+	currentInteraction.fadeOut(300, function(){
 		$(this).next().fadeIn();
 	});
 });
 
 $("#section-additivecolor .interaction .nav-prev").click(function(){
-	var currentInteraction = $(this).parents(".interaction");
-	currentInteraction.hide().prev().show();
-	// currentInteraction.fadeOut().hide().delay(400, function(){
-	// 	console.log(currentInteraction.prev(".interaction"));
-	// 	currentInteraction.prev(".interaction").show().fadeIn();
-	// });
+	var currentInteraction = $(this).parents(".interaction");	
+	currentInteraction.fadeOut(300, function(){
+		$(this).prev().fadeIn();
+	});
 });
 
 
@@ -227,8 +224,6 @@ function updateSlider(target){
 		$currentFlower.find("#petal-y").css('fill','rgba('+target.value+','+target.value+',0,'+sliderL+')');
 		$currentFlower.find("#core").css('fill','rgba('+target.value+','+target.value+','+target.value+','+sliderL+')');
 	} else {
-		
-
 		switch(target.id) {
 			case 'r' :
 				sliderR = target.value;

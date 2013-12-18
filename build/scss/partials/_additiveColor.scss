@@ -35,13 +35,19 @@
         @include span-columns(16 of 16);
         @include position(absolute, 0 0 0 0);
         @include typeface-robotoslab;
-        background-color: rgba(240, 240, 240, 1);
+        @include background-image(url('../img/pattern.svg'),
+            radial-gradient(100% 10%, circle cover, #212121, #2a2a2a) );
         display: none;
         height: 100%;
+
+        .nav-next{
+            @include position(absolute, 0 0 0px 70%);
+        }
 
         .interaction{
             @include span-columns(16 of 16);
             @include position(absolute, 0 0 0 0);
+            @include user-select(none);
             height: 100%;
 
             &.interaction{ display: none; }
@@ -72,6 +78,7 @@
     }
 
     .interaction.first{
+        background-color: #eee;
     }
 
     .interaction.second,
@@ -83,6 +90,7 @@
            
         .rgb-container{
             @include span-columns(8 of 8);
+            overflow: hidden;
 
             svg{
                 @include animation(carroussel 60s linear infinite);
@@ -122,7 +130,8 @@
         .rgb-controller-wrapper{
             @include span-columns(6 of 8);
             @include shift(1);
-            // @include margins(2, 0);
+            @include margins(1, 0);
+            z-index: 1;
 
             label{
                 @include span-columns(4 of 6);

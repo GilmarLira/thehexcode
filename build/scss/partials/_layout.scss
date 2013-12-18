@@ -135,6 +135,7 @@ body {
     .interaction-teaser-action a {
     	@include button();
     	@include position(absolute, 0 0 0px 0);
+        white-space: nowrap;
     }
 
     .nav-next a:after {
@@ -150,7 +151,7 @@ body {
         @include position(absolute, 0px 0 0 0);
         width: 100px;
 
-        a:before{
+        a:after{
             display: inline-block;
             margin-right: 15px;
             @include position(relative, 5px 0 0 0);
