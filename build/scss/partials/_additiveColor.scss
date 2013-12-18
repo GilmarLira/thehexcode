@@ -34,14 +34,14 @@
     .interaction-block{
         @include span-columns(16 of 16);
         @include position(absolute, 0 0 0 0);
-        background-color: #eee;
+        @include typeface-robotoslab;
+        background-color: rgba(240, 240, 240, 1);
         display: none;
         height: 100%;
 
         .interaction{
             @include span-columns(16 of 16);
             @include position(absolute, 0 0 0 0);
-
             height: 100%;
 
             &.interaction{ display: none; }
@@ -70,7 +70,7 @@
     }
 
     .interaction.first{
-        background-color: #eee;
+        // background-color: #eee;
     }
 
     .interaction.second,
@@ -86,34 +86,35 @@
             height: 50%;
             margin-top: 5%;
             svg{
+                // fill: rgba(0, 0, 0, 1);
                 #circle-r{
-                    fill: #f00;
+                    fill: rgba(0, 0, 0, 1);
                 }
 
                 #circle-g{
-                    fill: #0f0;
+                    fill: rgba(0, 0, 0, 1);
                 }
 
                 #circle-b{
-                    fill: #00f;
+                    fill: rgba(0, 0, 0, 1);
                 }
 
                 #petal-c{
-                    fill: #0ff;
+                    fill: rgba(0, 0, 0, 1);
                 }
 
                 #petal-m{
-                    fill: #f0f;
+                    fill: rgba(0, 0, 0, 1);
                 }
 
                 #petal-y{
-                    fill: #ff0;
+                    fill: rgba(0, 0, 0, 1);
                 }
 
                 #core{
-                    fill: #fff;
+                    fill: rgba(0, 0, 0, 1);
                 }
-            }    
+            }
         }               
 
         .rgb-controller-wrapper{
@@ -146,6 +147,44 @@
             &:hover {
                 background-color: rgba(255, 255, 255, .6);
             }
+        }
+    }
+
+    .interaction.third{
+        .rgb-container{
+            @include span-columns(8 of 10);
+            height: 50%;
+            margin-top: 5%;
+            svg{
+                // fill: rgba(0, 0, 0, 1);
+                #circle-r{
+                    fill: rgba(0, 0, 0, 1);
+                }
+
+                #circle-g{
+                    fill: rgba(0, 0, 0, 1);
+                }
+
+                #circle-b{
+                    fill: rgba(0, 0, 0, 1);
+                }
+
+                #petal-c{
+                    fill: rgba(0, 0, 0, 1);
+                }
+
+                #petal-m{
+                    fill: rgba(0, 0, 0, 1);
+                }
+
+                #petal-y{
+                    fill: rgba(0, 0, 0, 1);
+                }
+
+                #core{
+                    fill: rgba(0, 0, 0, 1);
+                }
+            }    
         }
     }
 }

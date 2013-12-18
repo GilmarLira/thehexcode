@@ -160,10 +160,10 @@ const NUM_POSTERS = 16;
 // Globals
 // ////////////////////////////////////////////////////
 var ring, ring_container, red1, red2, green1, green2, blue1, blue2, unit, color, sliderR, sliderG, sliderB, sliderL;
-sliderR = 255;
-sliderG = 255;
-sliderB = 255;
-sliderL = 255;
+sliderR = 0;
+sliderG = 0;
+sliderB = 0;
+sliderL = 1;
 
 
 // Nav reset
@@ -197,8 +197,10 @@ $("#section-additivecolor .interaction-teaser > div").click(function(){
 
 $("#section-additivecolor .interaction .nav-next").click(function(){
 	var currentInteraction = $(this).parents(".interaction");
-	
-	currentInteraction.hide().next().show();
+	// currentInteraction.hide().next().show();1
+	currentInteraction.fadeOut(400, function(){
+		$(this).next().fadeIn();
+	});
 });
 
 $("#section-additivecolor .interaction .nav-prev").click(function(){
@@ -215,32 +217,56 @@ $("#section-additivecolor .interaction .nav-prev").click(function(){
 function updateSlider(target){
 	var $superParent = $(target).parents(".interaction-widget");
 	var $currentFlower = $superParent.find(".rgb-container");
-	console.log($superParent);
-  	// console.log(target.id + ": " + target.value);
-  	switch(target.id) {
-		case 'r' :
-			sliderR = target.value;
-			break;
-		case 'g' :
-			sliderG = target.value;
-			break;
-		case 'b' :
-			sliderB = target.value;
-			break;
-		case 'l' :
-			sliderL = target.value/255;
-			break;
+	
+	if (target.id == 'l'){
+		$currentFlower.find("#circle-r").css('fill','rgba('+target.value+',0,0,'+sliderL+')');
+		$currentFlower.find("#circle-g").css('fill','rgba(0,'+target.value+',0,'+sliderL+')');
+		$currentFlower.find("#circle-b").css('fill','rgba(0,0,'+target.value+','+sliderL+')');
+		$currentFlower.find("#petal-c").css('fill','rgba(0,'+target.value+','+target.value+','+sliderL+')');
+		$currentFlower.find("#petal-m").css('fill','rgba('+target.value+',0,'+target.value+','+sliderL+')');
+		$currentFlower.find("#petal-y").css('fill','rgba('+target.value+','+target.value+',0,'+sliderL+')');
+		$currentFlower.find("#core").css('fill','rgba('+target.value+','+target.value+','+target.value+','+sliderL+')');
+	} else {
+		
+
+		switch(target.id) {
+			case 'r' :
+				sliderR = target.value;
+				break;
+			case 'g' :
+				sliderG = target.value;
+				break;
+			case 'b' :
+				sliderB = target.value;
+				break;
+		}
+		$currentFlower.find("#circle-r").css('fill','rgb('+sliderR+',0,0)');
+		$currentFlower.find("#circle-g").css('fill','rgb(0,'+sliderG+',0)');
+		$currentFlower.find("#circle-b").css('fill','rgb(0,0,'+sliderB+')');
+		$currentFlower.find("#petal-c").css('fill','rgb(0,'+sliderG+','+sliderB+')');
+		$currentFlower.find("#petal-m").css('fill','rgb('+sliderR+',0,'+sliderB+')');
+		$currentFlower.find("#petal-y").css('fill','rgb('+sliderR+','+sliderG+',0)');
+		$currentFlower.find("#core").css('fill','rgb('+sliderR+','+sliderG+','+sliderB+')');
 	}
 
-	$currentFlower.find("#circle-r").css('fill','rgba('+sliderR+',0,0,'+sliderL+')');
-	$currentFlower.find("#circle-g").css('fill','rgba(0,'+sliderG+',0,'+sliderL+')');
-	$currentFlower.find("#circle-b").css('fill','rgba(0,0,'+sliderB+','+sliderL+')');
-	$currentFlower.find("#petal-c").css('fill','rgba(0,'+sliderG+','+sliderB+','+sliderL+')');
-	$currentFlower.find("#petal-m").css('fill','rgba('+sliderR+',0,'+sliderB+','+sliderL+')');
-	$currentFlower.find("#petal-y").css('fill','rgba('+sliderR+','+sliderG+',0,'+sliderL+')');
-	$currentFlower.find("#core").css('fill','rgba('+sliderR+','+sliderG+','+sliderB+','+sliderL+')');
+	// $currentFlower.find("#circle-r").css('fill','rgba('+sliderR+',0,0,'+sliderL+')');
+	// $currentFlower.find("#circle-g").css('fill','rgba(0,'+sliderG+',0,'+sliderL+')');
+	// $currentFlower.find("#circle-b").css('fill','rgba(0,0,'+sliderB+','+sliderL+')');
+	// $currentFlower.find("#petal-c").css('fill','rgba(0,'+sliderG+','+sliderB+','+sliderL+')');
+	// $currentFlower.find("#petal-m").css('fill','rgba('+sliderR+',0,'+sliderB+','+sliderL+')');
+	// $currentFlower.find("#petal-y").css('fill','rgba('+sliderR+','+sliderG+',0,'+sliderL+')');
+	// $currentFlower.find("#core").css('fill','rgba('+sliderR+','+sliderG+','+sliderB+','+sliderL+')');
 }
 
+// function flowerColor($target){
+// 	$target.find("#circle-r").css('fill','rgb('+sliderR+',0,0)');
+// 	$target.find("#circle-g").css('fill','rgb(0,'+sliderG+',0)');
+// 	$target.find("#circle-b").css('fill','rgb(0,0,'+sliderB+')');
+// 	$target.find("#petal-c").css('fill','rgb(0,'+sliderG+','+sliderB+')');
+// 	$target.find("#petal-m").css('fill','rgb('+sliderR+',0,'+sliderB+')');
+// 	$target.find("#petal-y").css('fill','rgb('+sliderR+','+sliderG+',0)');
+// 	$target.find("#core").css('fill','rgb('+sliderR+','+sliderG+','+sliderB+')');
+// }
 
 
 // Color Code Interactions
