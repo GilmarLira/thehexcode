@@ -67,9 +67,10 @@ $("#section-additivecolor .interaction .nav-prev").click(function(){
 
 
 function updateSlider(target){
+	var $superParent = $(target).parents(".interaction-widget");
+	var $currentFlower = $superParent.find(".rgb-container");
+	console.log($superParent);
   	// console.log(target.id + ": " + target.value);
-
-
   	switch(target.id) {
 		case 'r' :
 			sliderR = target.value;
@@ -85,15 +86,13 @@ function updateSlider(target){
 			break;
 	}
 
-	$("#circle-r").css('fill','rgba('+sliderR+',0,0,'+sliderL+')');
-	$("#circle-g").css('fill','rgba(0,'+sliderG+',0,'+sliderL+')');
-	$("#circle-b").css('fill','rgba(0,0,'+sliderB+','+sliderL+')');
-
-	$("#petal-c").css('fill','rgba(0,'+sliderG+','+sliderB+','+sliderL+')');
-	$("#petal-m").css('fill','rgba('+sliderR+',0,'+sliderB+','+sliderL+')');
-	$("#petal-y").css('fill','rgba('+sliderR+','+sliderG+',0,'+sliderL+')');
-
-	$("#core").css('fill','rgba('+sliderR+','+sliderG+','+sliderB+','+sliderL+')');
+	$currentFlower.find("#circle-r").css('fill','rgba('+sliderR+',0,0,'+sliderL+')');
+	$currentFlower.find("#circle-g").css('fill','rgba(0,'+sliderG+',0,'+sliderL+')');
+	$currentFlower.find("#circle-b").css('fill','rgba(0,0,'+sliderB+','+sliderL+')');
+	$currentFlower.find("#petal-c").css('fill','rgba(0,'+sliderG+','+sliderB+','+sliderL+')');
+	$currentFlower.find("#petal-m").css('fill','rgba('+sliderR+',0,'+sliderB+','+sliderL+')');
+	$currentFlower.find("#petal-y").css('fill','rgba('+sliderR+','+sliderG+',0,'+sliderL+')');
+	$currentFlower.find("#core").css('fill','rgba('+sliderR+','+sliderG+','+sliderB+','+sliderL+')');
 }
 
 

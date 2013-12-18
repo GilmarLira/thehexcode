@@ -52,7 +52,7 @@
                 height: 100%;
 
                 .interaction-container{
-                    @include span-columns(8 of 14);
+                    @include span-columns(5 of 14);
                     @include shift(1);
                     padding-top: 10%;
                     p {
@@ -61,7 +61,7 @@
                 }
 
                 .interaction-widget{
-                    @include span-columns(5 of 14);
+                    @include span-columns(8 of 14);
                     @include omega;
                     height: 100%;
                 }
