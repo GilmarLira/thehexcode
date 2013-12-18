@@ -7,7 +7,7 @@
 #section-colorcode{  
     height: 100%;
 
-    .content-container{
+    .section-container{
         @include span-columns(9 of 14);
 
         .section-content{
@@ -56,7 +56,7 @@
     .next-button{
         @include position(absolute, 0 40% 10% 0);
         @include span-columns(2);
-        @include button(black, white, '');
+        @include button();
         text-align: center;
         text-transform: uppercase;
     }

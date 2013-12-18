@@ -230,7 +230,7 @@ $("#section-colorcode .interaction-teaser > div").click(function(){
 });
 
 
-$("#section-colorcode .content-container .next-button").click(function(){
+$("#section-colorcode .section-container .next-button").click(function(){
 	console.log("Color Code interaction fullscreen");
 	$("#section-colorcode .interaction").toggleClass("fullscreen", true);
 });

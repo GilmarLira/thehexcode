@@ -10,18 +10,24 @@
    Buttons
 
    ========================================================================== */
-@mixin button( $bg-color: $color-button, $color: $color-text, $radius: $button-radius ){
-  display:inline-block;
-  cursor:pointer;
-  padding: 0.5em 1em;
-  color: $color;
-  background-color: $bg-color;
-  border-radius: $radius;
-  &:hover{
-    color: lighten( $color, 10% );
-    background-color: darken( $bg-color, 10% );
-  }
-  @include margins($before: 1, $after: 1);
+@mixin button( $color: $color-text, $radius: 3px ){
+	display:inline-block;
+	cursor:pointer;
+	padding: 0.5em 1em;
+	color: $color;
+	background-color: rgba(white,.1);
+	border-radius: $radius;
+	box-shadow: 0 0 0 1px rgba(black,.3);
+  opacity: .5;
+	@include typeface-montserrat;
+	&:after {
+		content: '';
+		
+	}
+	&:hover{
+    opacity: 1;
+	}
+	@include margins($before: 1, $after: 1);
 }
 
 

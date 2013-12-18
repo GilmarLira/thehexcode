@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html class="no-js">
 
 <head>
@@ -14,49 +13,68 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="content">
 
-            <section id="section-intro" class="content-section" data-panel="first">
-                <div class="content-container">
+    <div class="site-container">
+
+
+        <header class="site-header">
+            <h1 class="site-title">The Hex Code</h1>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#section-intro" title="Introduction" data-panel="first">1</a></li>
+                    <li><a href="#section-technology" title="Display Technology" data-panel="second">2</a></li>
+                    <li><a href="#section-additivecolor" title="Additive Color Model" data-panel="third">3</a></li>
+                    <li><a href="#section-colorcode" title="Color In Code" data-panel="fourth">4</a></li>
+                    <li><a href="#section-resources" title="Resources" data-panel="fifth">5</a></li>
+                    <li><a href="#section-about" title="About" ata-panel="sixth">6</a></li>
+                </ul>
+            </nav>
+        </header><!-- .site-header -->
+
+        <div class="site-content">
+
+
+            <section id="section-intro" class="section-block" data-panel="first">
+
+                <div class="section-container">
                     <header>
                         <h1>Unravel the mysteries of the HEX code</h1>
                     </header>
                     <div class="section-content">
-                        <p>The colors you use in web design have the power to turn emotions in the blink of an eye. With such enormous power, we must exhibit great care in their use. As technology progresses, so do the tools for harnessing that power. These tools might seem complicated at first, but it’s not so bad and not really that complicated at all.</p>
-                        <p>Take your web design further by learning the HEX code.</p>
+                        <p>This website is an attempt to break down the mysteries of color reproduction on the web through the understanding of display technology and demystifying the hexadecimal color&nbsp;code.</p>
                     </div>
-                </div>
-            </section>
+                    <nav class="nav-next">
+                        <a href="#section-technology">Get started!</a>
+                    </nav>
+                </div><!-- .section-container -->
 
-            <section id="section-technology" class="content-section" data-panel="second">
-                <div class="content-container">
+            </section><!-- #section-intro -->
+
+
+            <section id="section-technology" class="section-block" data-panel="second">
+
+                <div class="section-container">
                     <header>
                         <h1>Display Technology</h1>
                     </header>
                     <div class="section-content">
-                        <div class="column">
-                            <h1 class="gamma">How Does Color Work?</h1>
-                            <p>Those pixels on your screen carry a vast amount of color information. Each pixel of color works because of a controlled variation of voltage that lets each pixels range from 256 shades of red, green or blue light. That’s 16.8 million colors!</p>
-                        </div>
-                        <div class="column">
-                            <h1 class="gamma">Color Depth</h1>
-                            <p>The amount of colors displayed on your monitor is the color depth.</p>
-                            <ul>
-                                <li>1-bit - Monochrome</li>
-                                <li>4-bit - 16 Colors</li>
-                                <li>8-bit - 256 Colors</li>
-                                <li>16-bit - 65,000 Colors</li>
-                                <li>24-bit - Millions of Colors</li>
-                                <li>32-bit - Millions of Colors</li>
-                            </ul>
-                        </div>
+                        <p>Those pixels on your screen carry a vast amount of color information. Each pixel of color works because of a controlled variation of voltage that lets each pixels range from 256 shades of red, green or blue light. That’s 16.8 million colors! woow!</p>
                     </div>
+                    <nav class="nav-next">
+                        <a href="#section-additivecolor">Color me silly!</a>
+                    </nav>
+                </div><!-- .section-container -->
+
+                <div class="interaction-teaser">
+                    <img src="img/section2/1bit.jpg" title="" alt="A sunset displayed in 1bit color depth" />
+                    <!-- 
+                    <div class="interaction-teaser-action">
+                        <a href="#interaction-technology">What does this all mean?</a>
+                    </div>
+                    -->
                 </div>
 
-                <div class="interaction-teaser"><img src="img/section2/16bit.jpg" title="" alt="" /></div>
-
-                <div class="interaction">
+                <div class="interaction" id="interaction-technology">
                     <div class="bit-image-container"></div>
                     <div class="bit-image-container"></div>
                     <div class="bit-image-container"></div>
@@ -65,92 +83,118 @@
                     <div class="bit-image-container"></div>
                     <div class="interaction-box">
                         <ul class="tech-controller">
-                            <li class="bit selected">1-bit
-                            <li class="bit">4-bit
-                            <li class="bit">8-bit
-                            <li class="bit">16-bit
-                            <li class="bit">24-bit
-                            <li class="bit">32-bit
+                            <li class="bit selected">1-bit</li>
+                            <li class="bit">4-bit</li>
+                            <li class="bit">8-bit</li>
+                            <li class="bit">16-bit</li>
+                            <li class="bit">24-bit</li>
+                            <li class="bit">32-bit</li>
                         </ul>
+                        <small>Disclaimer: This is a dramatization of color depth. In reality there's way less drama. It's like reality TV, way more interesting than actual reality!</small>
                     </div>
                     <div class="close"><span>Close</span></div>
-                </div>
-            </section>
+                </div><!-- .interaction -->
 
-            <section id="section-additivecolor" class="content-section" data-panel="third">
-                <div class="content-container">
+            </section><!-- #section-technology -->
+
+
+            <section id="section-additivecolor" class="section-block" data-panel="third">
+
+                <div class="section-container">
                     <header>
-                        <h1>Additive Color Model</h1>
+                        <h1>Additive Color&nbsp;Model</h1>
                     </header>
                     <div class="section-content">
-                        <h1 class="gamma">Additive &amp; Subtractive<br /> Color Models</h1>
-                        <div class="column">
-
-                            <p>On a computer screen, colors use the additive color model. The additive color model works by starting with black— the more colors you add the lighter the results. By adding all the colors together, you get pure white.</p>
-                        </div>
-                        <div class="column">
-                            <p>The subtractive color model works the opposite, and is used in painting and printing. Subtractive color works by starting with white— the more colors you add the darker the results. By adding all the colors together, you get pure black.</p>
-                        </div>
+                        <p>This is how colors are generated on a screen! It works by using variable light intensity with red, green and blue colors. Abscence of light equals black. The more light you add the lighter/whiter the results are. <br />Go on, give it a try!</p>
                     </div>
-                </div>
+                    <nav class="nav-next">
+                        <a href="#section-colorcode">HEX code wut?</a>
+                    </nav>
+                </div><!-- .section-container -->
 
                  <div class="interaction-teaser">
                     <div class="teaser">
                         <svg viewBox="0 0 800 800">
-                            <g id="Layer_1_copy_4">
-                                <circle fill="#00FF00" cx="288.376" cy="504.73" r="243.324"/>
-                                <circle fill="#FF0000" cx="406.545" cy="293.27" r="243.324"/>
-                                <circle fill="#0000FF" cx="524.714" cy="504.73" r="243.324"/>
+                            <g id="tease-primary">
+                                <path id="tease-circle-g" fill="#00FF00" d="M562.525,346.962c18.452,16.465,29.49,49.76,24.529,73.987l-41.177,201.113
+                                    c-4.96,24.227-28.253,50.33-51.762,58.005l-195.147,63.716c-23.509,7.676-57.84,0.484-76.291-15.982L68.357,590.089
+                                    c-18.451-16.465-29.49-49.76-24.529-73.987L85.004,314.99c4.96-24.227,28.253-50.33,51.762-58.005l195.147-63.716
+                                    c23.509-7.676,57.84-0.484,76.291,15.982L562.525,346.962z"/>
+                                <path id="tease-circle-r" fill="#FF0000" d="M619.348,500.404c-7.829,23.458-34.047,46.759-58.262,51.781l-201.008,41.687
+                                    c-24.215,5.022-57.399-6.054-73.744-24.613L150.659,415.201c-16.344-18.559-23.311-52.936-15.482-76.394l65.482-196.193
+                                    c7.829-23.458,34.047-46.759,58.262-51.781l201.008-41.687c24.215-5.022,57.399,6.054,73.744,24.613l135.675,154.059
+                                    c16.344,18.559,23.311,52.936,15.482,76.394L619.348,500.404z"/>
+                                <path id="tease-circle-b" fill="#0000FF" d="M704.058,282.954c22.195,10.907,41.766,40.015,43.493,64.685l14.33,204.784
+                                    c1.726,24.67-13.703,56.067-34.288,69.773L556.717,735.965c-20.585,13.705-55.586,15.995-77.781,5.088L293.308,649.83
+                                    c-22.195-10.907-41.766-40.015-43.493-64.685l-14.33-204.784c-1.726-24.67,13.703-56.067,34.288-69.773l170.876-113.769
+                                    c20.585-13.705,55.586-15.995,77.781-5.088L704.058,282.954z"/>
                             </g>
-                            <g id="Layer_1_copy_2">
-                                <path fill="#00FFFF" d="M406.545,291.995c-74.647,41.554-125.157,121.24-125.157,212.735s50.509,171.18,125.157,212.735
-                                    C481.192,675.912,531.7,596.226,531.7,504.73C531.702,413.235,481.192,333.548,406.545,291.995z"/>
+                            <g id="tease-BG">
+                                <path id="tease-petal-c" fill="#00FFFF" d="M562.952,346.639L414.096,213.804l-144.725,96.358c-20.643,13.744-36.116,45.231-34.385,69.97
+                                    l14.37,205.364c1.731,24.74,21.358,53.93,43.616,64.868l117.458,57.722l83.92-27.4c23.575-7.697,46.934-33.874,51.909-58.17
+                                    l41.293-201.683C592.526,396.539,581.456,363.151,562.952,346.639z"/>
                             </g>
-                            <g id="Layer_1_copy">
-                                <path fill="#FF00FF" d="M281.424,501.989c36.562,21.965,79.363,34.605,125.121,34.605c133.469,0,241.819-107.464,243.29-240.584
-                                    c-36.562-21.965-79.363-34.605-125.121-34.605C391.247,261.405,282.897,368.87,281.424,501.989z"/>
+                            <g id="tease-RB">
+                                <path id="tease-petal-m" fill="#FF00FF" d="M619.696,500.648l65.626-196.626c2.915-8.734,3.78-18.978,2.88-29.358l-169.647-83.369
+                                    c-22.244-10.931-57.322-8.637-77.953,5.099l-171.253,114.02c-20.63,13.736-36.094,45.203-34.364,69.927l9.992,142.794l40.97,46.521
+                                    c16.38,18.6,49.638,29.7,73.906,24.667l201.452-41.779C585.573,547.51,611.849,524.157,619.696,500.648z"/>
                             </g>
-                            <g id="Layer_1_1_">
-                                <path fill="#FFFF00" d="M163.255,296.011c1.472,133.119,109.823,240.584,243.29,240.584c45.758,0,88.56-12.641,125.121-34.605
-                                    c-1.472-133.121-109.823-240.584-243.29-240.584C242.618,261.405,199.818,274.046,163.255,296.011z"/>
+                            <g id="tease-GR">
+                                <path id="tease-petal-y" fill="#FFFF00" d="M562.969,346.862l-154.66-138.013c-18.492-16.502-52.898-23.709-76.458-16.017l-166.645,54.41
+                                    l-30.521,91.447c-7.846,23.509-0.864,57.962,15.516,76.561l135.973,154.396c16.38,18.6,49.637,29.7,73.905,24.667l200.505-41.583
+                                    l26.969-131.72C592.523,396.73,581.461,363.363,562.969,346.862z"/>
                             </g>
-                            <g id="Layer_1_copy_3">
-                                <path fill="#FFFFFF" d="M281.424,501.989c36.562,21.965,79.363,34.605,125.121,34.605s88.56-12.641,125.121-34.605
-                                    c-0.998-90.342-51.222-168.856-125.121-209.994C332.646,333.133,282.424,411.647,281.424,501.989z"/>
+                            <g id="tease-center">
+                                <path id="tease-core" fill="#FFFFFF" d="M563.085,346.747L414.098,213.796l-144.852,96.443c-20.661,13.756-36.148,45.271-34.416,70.032
+                                    l10.007,143.009l41.031,46.591c16.405,18.628,49.713,29.745,74.017,24.704l200.81-41.646l27.01-131.92
+                                    C592.684,396.691,581.605,363.273,563.085,346.747z"/>
                             </g>
                         </svg>
                     </div>
-                </div>
+                </div><!-- .interaction-teaser -->
 
                 <div class="interaction">
                     <div class="interaction-box">
                         <div class="rgb-container">
                             <svg viewBox="0 0 800 800">
-                                <g id="Layer_1_copy_4">
-                                    <circle id="circle-g" cx="288.376" cy="504.73" r="243.324"/>
-                                    <circle id="circle-r" cx="406.545" cy="293.27" r="243.324"/>
-                                    <circle id="circle-b" cx="524.714" cy="504.73" r="243.324"/>
+                                <g id="primary">
+                                    <path id="circle-g" fill="#00FF00" d="M562.525,346.962c18.452,16.465,29.49,49.76,24.529,73.987l-41.177,201.113
+                                        c-4.96,24.227-28.253,50.33-51.762,58.005l-195.147,63.716c-23.509,7.676-57.84,0.484-76.291-15.982L68.357,590.089
+                                        c-18.451-16.465-29.49-49.76-24.529-73.987L85.004,314.99c4.96-24.227,28.253-50.33,51.762-58.005l195.147-63.716
+                                        c23.509-7.676,57.84-0.484,76.291,15.982L562.525,346.962z"/>
+                                    <path id="circle-r" fill="#FF0000" d="M619.348,500.404c-7.829,23.458-34.047,46.759-58.262,51.781l-201.008,41.687
+                                        c-24.215,5.022-57.399-6.054-73.744-24.613L150.659,415.201c-16.344-18.559-23.311-52.936-15.482-76.394l65.482-196.193
+                                        c7.829-23.458,34.047-46.759,58.262-51.781l201.008-41.687c24.215-5.022,57.399,6.054,73.744,24.613l135.675,154.059
+                                        c16.344,18.559,23.311,52.936,15.482,76.394L619.348,500.404z"/>
+                                    <path id="circle-b" fill="#0000FF" d="M704.058,282.954c22.195,10.907,41.766,40.015,43.493,64.685l14.33,204.784
+                                        c1.726,24.67-13.703,56.067-34.288,69.773L556.717,735.965c-20.585,13.705-55.586,15.995-77.781,5.088L293.308,649.83
+                                        c-22.195-10.907-41.766-40.015-43.493-64.685l-14.33-204.784c-1.726-24.67,13.703-56.067,34.288-69.773l170.876-113.769
+                                        c20.585-13.705,55.586-15.995,77.781-5.088L704.058,282.954z"/>
                                 </g>
-                                <g id="Layer_1_copy_2">
-                                    <path id="petal-c" d="M406.545,291.995c-74.647,41.554-125.157,121.24-125.157,212.735s50.509,171.18,125.157,212.735
-                                        C481.192,675.912,531.7,596.226,531.7,504.73C531.702,413.235,481.192,333.548,406.545,291.995z"/>
+                                <g id="BG">
+                                    <path id="petal-c" fill="#00FFFF" d="M562.952,346.639L414.096,213.804l-144.725,96.358c-20.643,13.744-36.116,45.231-34.385,69.97
+                                        l14.37,205.364c1.731,24.74,21.358,53.93,43.616,64.868l117.458,57.722l83.92-27.4c23.575-7.697,46.934-33.874,51.909-58.17
+                                        l41.293-201.683C592.526,396.539,581.456,363.151,562.952,346.639z"/>
                                 </g>
-                                <g id="Layer_1_copy">
-                                    <path id="petal-m" d="M281.424,501.989c36.562,21.965,79.363,34.605,125.121,34.605c133.469,0,241.819-107.464,243.29-240.584
-                                        c-36.562-21.965-79.363-34.605-125.121-34.605C391.247,261.405,282.897,368.87,281.424,501.989z"/>
+                                <g id="RB">
+                                    <path id="petal-m" fill="#FF00FF" d="M619.696,500.648l65.626-196.626c2.915-8.734,3.78-18.978,2.88-29.358l-169.647-83.369
+                                        c-22.244-10.931-57.322-8.637-77.953,5.099l-171.253,114.02c-20.63,13.736-36.094,45.203-34.364,69.927l9.992,142.794l40.97,46.521
+                                        c16.38,18.6,49.638,29.7,73.906,24.667l201.452-41.779C585.573,547.51,611.849,524.157,619.696,500.648z"/>
                                 </g>
-                                <g id="Layer_1_1_">
-                                    <path id="petal-y" d="M163.255,296.011c1.472,133.119,109.823,240.584,243.29,240.584c45.758,0,88.56-12.641,125.121-34.605
-                                        c-1.472-133.121-109.823-240.584-243.29-240.584C242.618,261.405,199.818,274.046,163.255,296.011z"/>
+                                <g id="GR">
+                                    <path id="petal-y" fill="#FFFF00" d="M562.969,346.862l-154.66-138.013c-18.492-16.502-52.898-23.709-76.458-16.017l-166.645,54.41
+                                        l-30.521,91.447c-7.846,23.509-0.864,57.962,15.516,76.561l135.973,154.396c16.38,18.6,49.637,29.7,73.905,24.667l200.505-41.583
+                                        l26.969-131.72C592.523,396.73,581.461,363.363,562.969,346.862z"/>
                                 </g>
-                                <g id="Layer_1_copy_3">
-                                    <path id="core" d="M281.424,501.989c36.562,21.965,79.363,34.605,125.121,34.605s88.56-12.641,125.121-34.605
-                                        c-0.998-90.342-51.222-168.856-125.121-209.994C332.646,333.133,282.424,411.647,281.424,501.989z"/>
+                                <g id="center">
+                                    <path id="core" fill="#FFFFFF" d="M563.085,346.747L414.098,213.796l-144.852,96.443c-20.661,13.756-36.148,45.271-34.416,70.032
+                                        l10.007,143.009l41.031,46.591c16.405,18.628,49.713,29.745,74.017,24.704l200.81-41.646l27.01-131.92
+                                        C592.684,396.691,581.605,363.273,563.085,346.747z"/>
                                 </g>
                             </svg>
+
                         </div>
                         
-
                         <div class="rgb-controller-wrapper">
                             <input id="l" type="range" min="0" max="255" step="1" value="255" onchange="updateSlider(this)" />
                             <input id="r" type="range" min="0" max="255" step="1" value="255" onchange="updateSlider(this)" />
@@ -158,35 +202,33 @@
                             <input id="b" type="range" min="0" max="255" step="1" value="255" onchange="updateSlider(this)" />
                         </div>
 
-                        <span class="close"></span>
+                        <div class="close"><span>Close</span></div>
                     </div>
                 </div>
-            </section>
+            
+            </section><!-- #section-additivecolor -->
 
-            <section id="section-colorcode" class="content-section" data-panel="fourth">
-                <div class="content-section">
-                    <div class="content-container">
+
+            <section id="section-colorcode" class="section-block" data-panel="fourth">
+
+                <div class="section-block">
+                    <div class="section-container">
                         <header>
                             <h1>Color In Code</h1>
                         </header>
                         <div class="section-content">
-                            <div class="column">
-                                <h1 class="gamma">What is a Hex Code?</h1>
-                                <p>Computers communicate in a binary language, each color has a series of digits associated to it. This series of numbers and letters is called the HEX code. It’s an awesome tool you can use to quickly change the colors on your website.</p> 
-                                <p>HEX numbers use 16 digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F</p>
-                            </div>
-                            <div class="column">
-                                <h1 class="gamma">The Power of HEX Code</h1>
-                                <p>The 6-digit HEX code is split up into 3 series of 2 digits representing red, green and blue, always in that order. Starting at 0 is the total absence of color, black. Ending at F is all the colors combined, white.</p>
-                                <p>Try changing the left-hand numbers to make a significant change to the color.</p>
-                            </div>
-                            <div class="next-button">interaction</div>
+                            <p>Computers communicate in a binary language, each color has a series of digits associated to it. This series of numbers and letters is called HEX - or Hexadecimal, usually represented by the # sign. It’s an awesome method you can use to quickly change the colors on your website.</p> 
+                            
+                            <div class="next-button">interaction</div>  <!-- NOT SURE IF THIS IS THE RIGHT PLACE FOR THIS, BUT EITHER WAY, LETS GIVE IT A BETTER CLASS NAME, LIKE .interaction-open FOR EXAMPLE -->
                         </div>
-                    </div>
+                        <nav class="nav-next">
+                            <a href="#section-resources">Learn more?</a>
+                        </nav>
+                    </div><!-- .section-container -->
 
                     <div class="interaction">
                         <div class="interaction-box">
-                            <span class="close"></span>
+                            <div class="close"><span>Close</span></div>
                             <ol class="scale">                                
                                 <li class="unit">
                                     <div class="unit-caption">0</div>
@@ -277,128 +319,94 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            
+            </section><!-- #section-colorcode -->
 
-            <section id="section-resources" class="content-section" data-panel="fifth">
-                <div class="content-container">
+
+            <section id="section-resources" class="section-block" data-panel="fifth">
+
+                <div class="section-container">
                     <header>
-                        <h1>Resources</h1>
+                        <h1>Extend Your Knowledge</h1>
                     </header>
                     <div class="section-content">
-                        <h1 class="gamma">Extend Your Knowledge</h1>
                         <p>There are many places to learn about color around the internet. Here are some of our favorites!</p>
-
-                        <div class="resources">
-
-                            <div class="link-wrap">
-                                <a target="_blank" href="http://0to255.com/fd2b82">
-                                <h1 class="gamma">0 To<br />255</h1>
-                                <p>•Find lighter and darker colors based on any color</p></a>
-                            </div>
-
-                            <div class="link-wrap">
-                                <a target="_blank" href="http://www.colormatters.com/">
-                                <h1 class="gamma">Color<br />Matters</h1>
-                                <p>•Everything about color</p></a>
-                            </div>
-
-                            <div class="link-wrap">
-                                <a target="_blank" href="http://www.colorsontheweb.com/">
-                                <h1 class="gamma">Colors<br />on&nbsp;the&nbsp;Web</h1>
-                                <p>•A color resource for web designers</p></a>
-                            </div>
-
-                        </div>
-
-                        <div class="resources">
-
-                            <div class="link-wrap">
-                                <a target="_blank" href="http://www.color-hex.com/">
-                                <h1 class="gamma">Color<br />Hex</h1>
-                                <p>•Hex color generator for web designers</p></a>
-                            </div>
-
-                            <div class="link-wrap">
-                                <a target="_blank" href="http://www.colourlovers.com/">
-                                <h1 class="gamma">Colour<br />Lovers</h1>
-                                <p>•Create and share colors, palettes and patterns</p></a>
-                            </div>
-
-                            <div class="link-wrap">
-                                <a target="_blank" href="http://www.colorhexa.com/">
-                                <h1 class="gamma">Color<br />Hexa</h1>
-                                <p>•Color encyclopedia: Information and conversion</p></a>
-                            </div>
-
-                        </div>
-
                     </div>
-                </div>
-            </section>
+                    <ul class="resources-list">
+                        <li>
+                            <h2><a href="http://0to255.com/fd2b82" title="0 to 255">0 to 255</a></h2>
+                            <p>Find lighter and darker colors based on any color</p>
+                        </li>
+                        <li>
+                            <h2><a href="http://www.colormatters.com" title="Color Matters">Color Matters</a></h2>
+                            <p>Everything about color</p>
+                        </li>
+                        <li>
+                            <h2><a href="http://www.colorsontheweb.com" title="Colors on the Web">Colors on the Web</a></h2>
+                            <p>A color resource for web&nbsp;designers</p>
+                        </li>
+                        <li>
+                            <h2><a href="http://www.color-hex.com" title="Color Hex">Color Hex</a></h2>
+                            <p>Hex color generator for web&nbsp;designers</p>
+                        </li>
+                        <li>
+                            <h2><a href="http://www.colourlovers.com" title="Colour Lovers">Colour Lovers</a></h2>
+                            <p>Create and share colors, palettes and patterns</p>
+                        </li>
+                        <li>
+                            <h2><a href="http://www.colorhexa.com" title="Color Hexa">Color Hexa</a></h2>
+                            <p>Color encyclopedia: Information and conversion</p>
+                        </li>
+                    </ul><!-- .resources-list -->
+                    <nav class="nav-next">
+                        <a href="#section-about">Why y'all did this?</a>
+                    </nav>
+                </div><!-- .section-container -->
+            
+            </section><!-- #section-resources -->
 
-            <section id="section-about" class="content-section" data-panel="sixth">
-                <div class="content-container">
+
+            <section id="section-about" class="section-block" data-panel="sixth">
+
+                <div class="section-container">
                     <header>
-                        <h1>About</h1>
+                        <h1>Why We Made This</h1>
                     </header>
                     <div class="section-content">
-                        <h1 class="gamma">Why We Made This Site</h1>
-                        <p>We felt that the general understanding of the HEX code was lacking in the web development community. Developing this site gave us the opportunity to take our own color knowledge to the next level and share that insight via an interactive website. Our goal with this site is to be the top resource in unraveling the mystery of the HEX code.</p>
-                    
-                        <div class="portraits">
-
-                            <div class="img-wrap">
-                                <a target="_blank" href="http://gilmarlira.com/">
-                                <img class="static" src="img/gilmar.jpg" />
-                                <img class="animated" src="img/gilmar.gif" /></a>
-                                <p class="name">Gilmar</p>
-                            </div>
-
-                            <div class="img-wrap">
-                                <a target="_blank" href="http://hugobaeta.com/">
-                                <img class="static" src="img/hugo.jpg" />
-                                <img class="animated" src="img/hugo.gif" /></a>
-                                <p class="name">Hugo</p>
-                            </div>
-
-                            <div class="img-wrap">
-                                <a target="_blank" href="http://jameshellesen.com/">
-                                <img class="static" src="img/james.jpg" />
-                                <img class="animated" src="img/james.gif" /></a>
-                                <p class="name">James</p>
-                            </div>
+                        <p>We felt the general understanding of screen color and the way the hex code is formed was lacking in the web development community. In fact, in the making of this website we learned a ton! We're glad to share it with you! Why don't you do the same? <br />Spread the love!</p>
+                    </div>
+                    <div class="portraits">
+                        <div class="portraits-item">
+                            <a href="http://gilmarlira.com/"><img class="static" src="img/avatar-gilmar.png" /></a>
+                            <h2 class="name"><a href="http://gilmarlira.com/">Gilmar Lira</a></h2>
                         </div>
 
-                    </div>                 
+                        <div class="portraits-item">
+                            <a href="http://hugobaeta.com/"><img class="static" src="img/avatar-hugo.png" /></a>
+                            <h2 class="name"><a href="http://hugobaeta.com/">Hugo Baeta</a></h2>
+                        </div>
+
+                        <div class="portraits-item">
+                            <a href="http://jameshellesen.com/"><img class="static" src="img/avatar-james.png" /></a>
+                            <h2 class="name"><a href="http://jameshellesen.com/">James Hellesen</a></h2>
+                        </div>
+                    </div><!-- .portraits -->          
                 </div>
-            </section>
-        </div>
+            
+            </section><!-- #section-about -->
 
-        <aside class="main-sidebar">
-            <div class="logo"></div>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li class="nav-list-item"><a href="#section-intro" title="" alt="" data-panel="first">1 <span>An Introduction</span></a></li>
-                    <li class="nav-list-item"><a href="#section-technology" title="" alt="" data-panel="second">2 <span>Display Technology</span></a></li>
-                    <li class="nav-list-item"><a href="#section-additivecolor" title="" alt="" data-panel="third">3 <span>Additive Color Model</span></a></li>
-                    <li class="nav-list-item"><a href="#section-colorcode" title="" alt="" data-panel="fourth">4 <span>Color In Code</span></a></li>
-                    <li class="nav-list-item"><a href="#section-resources" title="" alt="" data-panel="fifth">5 <span>Resources</span></a></li>
-                    <li class="nav-list-item"><a href="#section-about" title="" alt="" data-panel="sixth">6 <span>About</span></a></li>
-                </ul>
-            </nav>
-        </aside>
-    </div>
+
+        </div><!-- .site-content -->
+
+
+    </div><!-- .site-container -->
     
-    <footer class="footer">
-        <small>CC-BY The HEX Code</small>
-    </footer>
 
-    <!-- HTML5 BP jQuery Technique -->
+    <!-- The scripts live down under -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
-
-    <!-- <script src="js/plugins.js"></script> -->
     <script src="js/libs/jquery.panelSnap.js"></script>    
     <script src="js/scripts.js"></script>
+
 </body>
 </html>

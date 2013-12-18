@@ -3,21 +3,32 @@
 
 $fontfamily-robotoslab: 'Roboto Slab', sans-serif;
 $fontfamily-montserrat: 'Montserrat', sans-serif;
+
 $body-font-size: 18px;
 $body-line-height: 1.6;
 $scale-factor: 1.6; // http://modularscale.com/
 
+
+@mixin typeface-montserrat {
+  font-family: $fontfamily-montserrat;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin typeface-robotoslab {
+  font-family: $fontfamily-robotoslab;
+  font-weight: 300;
+}
+
 body { 
-	font-family: $fontfamily-robotoslab;
-	font-weight: 300;
+	@include typeface-robotoslab;
 	@include rhythm(0);
+	color: $color-text;
 }
 
 h1, h2, h3, h4, h5, h6,
 .alpha, .beta, .gamma, .delta, .epsilon, .zeta {
-	font-family: $fontfamily-montserrat;
-	font-weight: 700;
-	text-transform: uppercase;
+	@include typeface-montserrat;
 }
 
 h1,.alpha { 

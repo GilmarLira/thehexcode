@@ -1,0 +1,21 @@
+// LINKS
+// ////////////////////////////////////
+
+a {
+	color: $color-link;
+	@include transition(all .5s ease-out);
+	&:hover {
+		color: $color-link-hover;
+		@include transition(all .1s ease-in);
+	}
+}
+
+
+// Sections
+
+.nav-list li:nth-child(1) a:hover { color: $color-hex-red; }
+.nav-list li:nth-child(2) a:hover { color: $color-hex-green; }
+.nav-list li:nth-child(3) a:hover { color: lighten($color-hex-blue, 10%); }
+.nav-list li:nth-child(4) a:hover { color: lighten($color-hex-magenta, 10%); }
+.nav-list li:nth-child(5) a:hover { color: lighten($color-hex-yellow, 10%) }
+.nav-list li:nth-child(6) a:hover { color: lighten($color-hex-cyan, 5%); }

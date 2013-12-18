@@ -1,0 +1,22 @@
+// 6. ABOUT
+// ////////////////////////////////////
+
+#section-about {
+	.section-containter {
+		@include span-columns(12 of 16);
+	}
+	.section-content {
+		@include span-columns(8 of 12);
+	}
+	.portraits {
+		@include span-columns(4 of 12);
+		@include omega;
+		.portraits-item {
+			@include span-columns(2 of 12);
+			@include shift(2);
+		}
+		.name {
+			@include rhythm(1, 0, 0); 
+		}
+	}
+}

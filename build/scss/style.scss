@@ -20,11 +20,16 @@
 @import "globals/colors";
 @import "globals/typography";
 @import "globals/forms";
+@import "globals/links";
 
 
 // Partials
 // ////////////////////////////////////////////////////
 @import "partials/layout";
+
+@import "partials/intro";
 @import "partials/displayTech";
-@import "partials/colorCode";
 @import "partials/additiveColor";
+@import "partials/colorCode";
+@import "partials/resources";
+@import "partials/about";
