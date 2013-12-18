@@ -168,11 +168,12 @@ sliderL = 255;
 
 // Nav reset
 $(".main-nav li").click(function(){
-  	// $(".interaction").fadeOut();
+  	$(".interaction").fadeOut();
 });
 
 $(".interaction .close").click(function(){
   	$(".interaction").fadeOut();
+  	$(".interaction-block").fadeOut();
 });
 
 
@@ -189,8 +190,30 @@ $(".bit").click(function(){
 
 // Additive Color interactions
 $("#section-additivecolor .interaction-teaser > div").click(function(){
-  	$("#section-additivecolor .interaction").fadeIn();
+  	$("#section-additivecolor .interaction-block").fadeIn(function(){
+  		$("#section-additivecolor .interaction.first").fadeIn();	
+  	});
 });
+
+$("#section-additivecolor .interaction .nav-next").click(function(){
+	var currentInteraction = $(this).parents(".interaction");
+	currentInteraction.fadeOut().delay(400, function(){
+		console.log(currentInteraction.next(".interaction"));
+		currentInteraction.next(".interaction").show().fadeIn();
+	});
+
+});
+
+$("#section-additivecolor .interaction .nav-prev").click(function(){
+	var currentInteraction = $(this).parents(".interaction");
+	currentInteraction.fadeOut().delay(400, function(){
+		console.log(currentInteraction.prev(".interaction"));
+		currentInteraction.prev(".interaction").show().fadeIn();
+	});
+
+});
+
+
 
 function updateSlider(target){
   	// console.log(target.id + ": " + target.value);
@@ -242,11 +265,11 @@ $("#section-colorcode .interaction .next-button").click(function(){
 });
 
 
-$("#section-colorcode .interaction .close").unbind().click(function(){
-  	$("#section-colorcode .interaction").toggleClass("fullscreen", false);
-  	$("#section-colorcode .interaction .scale").toggleClass("unit-collapsed", false);
-  	colorize("transparent");
-});
+// $("#section-colorcode .interaction .close").unbind().click(function(){
+//   	$("#section-colorcode .interaction").toggleClass("fullscreen", false);
+//   	$("#section-colorcode .interaction .scale").toggleClass("unit-collapsed", false);
+//   	colorize("transparent");
+// });
 
 
 $(".unit-control-up").click(function(){

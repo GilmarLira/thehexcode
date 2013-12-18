@@ -136,12 +136,27 @@ body {
     	@include button();
     	@include position(absolute, 0 0 0px 0);
     }
+
     .nav-next a:after {
         display: inline-block;
         margin-left: 15px;
         @include position(relative, 5px 0 0 0);
 		@include triangle(16px, rgba(0,0,0,.8), down);
 		opacity: .5;
+    }
+
+    .nav-prev{
+        @include button();
+        @include position(absolute, 0px 0 0 0);
+        width: 100px;
+
+        a:before{
+            display: inline-block;
+            margin-right: 15px;
+            @include position(relative, 5px 0 0 0);
+            @include triangle(16px, rgba(0,0,0,.8), left);
+            opacity: .5;
+        }
     }
 }
 
