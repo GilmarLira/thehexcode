@@ -2,6 +2,7 @@
 // ////////////////////////////////////
 
 #section-about {
+	// @include outline;
 	.section-container {
 		@include span-columns(13 of 16);
 	}
@@ -13,13 +14,28 @@
 		// @include shift(1);
 		@include omega;
 		.portraits-item {
+			@include position(0 0 0 0);
 			@include span-columns(2 of 4);
 			@include shift(1);
+
+			height: 260px;
 			img{
+				// @include span-columns(2 of 4);
+				// @include omega;
+				@include position(absolute, 0 0 0 0);
 				width: 100%;
+
+				
+				.static{ 	opacity: 1; }
+				.colorful{ 	opacity: 0;	}
+			}
+
+			&:hover{
+				.colorful{ opacity: 1; }
 			}
 		}
 		.name {
+			@include position(80% 0 0 0);
 			@include rhythm(0, 0, 0); 
 			text-align: center;
 			white-space: nowrap;
