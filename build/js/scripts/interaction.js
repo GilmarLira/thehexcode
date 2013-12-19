@@ -1,7 +1,6 @@
 
-// Interaction
+// INTERACTION
 // ////////////////////////////////////////////////////
-
 window.addEventListener('load', initContainer, false);
 
 function initContainer() {
@@ -11,16 +10,20 @@ function initContainer() {
 // the number of unit in the strip
 const NUM_POSTERS = 16;
 
-// Globals
+
+
+// GLOBALS
 // ////////////////////////////////////////////////////
-var ring, ring_container, red1, red2, green1, green2, blue1, blue2, unit, color, sliderR, sliderG, sliderB, sliderL;
+var ring, ring_container, red1, red2, green1, green2, blue1, blue2, unit, color, sliderR, sliderG, sliderB, sliderL, rred, rgreen, rblue;
 sliderR = 0;
 sliderG = 0;
 sliderB = 0;
 sliderL = 1;
 
 
-// Nav reset
+
+// NAV RESET
+// ////////////////////////////////////////////////////
 $(".main-nav li").click(function(){
   	$(".interaction").fadeOut();
 });
@@ -31,7 +34,9 @@ $(".interaction .close").click(function(){
 });
 
 
-// Color depth-interaction
+
+// COLOR DEPTH INTERACTION
+// ////////////////////////////////////////////////////
 $("#section-technology .interaction-teaser img").click(function(){
  	$("#section-technology .interaction").fadeIn();
 });
@@ -42,7 +47,9 @@ $(".bit").click(function(){
 });
 
 
-// Additive Color interactions
+
+// ADDITIVE COLOR INTERACTION
+// ////////////////////////////////////////////////////
 $("#section-additivecolor .interaction-teaser > div").click(function(){
   	$("#section-additivecolor .interaction-block").fadeIn(function(){
   		$("#section-additivecolor .interaction.first").fadeIn();	
@@ -62,6 +69,36 @@ $("#section-additivecolor .interaction .nav-prev").click(function(){
 		$(this).prev().fadeIn();
 	});
 });
+
+
+
+// COLOR CODE INTERACTION
+// ////////////////////////////////////////////////////
+$("#section-colorcode .interaction-teaser > div").click(function(){
+  	$("#section-colorcode .interaction-block").fadeIn(function(){
+  		$(this).find(".interaction").eq(0).fadeIn();
+  	});
+});
+
+$("#section-colorcode .interaction-block .nav-next").click(function(){
+	// console.log("scale animation");
+	// $("#section-colorcode .interaction .scale").toggleClass("unit-collapsed", true);
+	// $("#section-colorcode .interaction .scale").clone().appendTo("#section-colorcode .interaction-widget");
+	var currentInteraction = $(this).parents(".interaction");
+	currentInteraction.fadeOut(300, function(){
+		$(this).next().fadeIn();
+	});
+});
+
+
+$(".unit-control-up").click(function(){
+	logPositions($(this).parent(), "up");
+});
+
+$(".unit-control-down").click(function(){
+	logPositions($(this).parent(), "down");
+});
+
 
 
 
@@ -100,56 +137,21 @@ function updateSlider(target){
 }
 
 
-// Color Code Interactions
-$("#section-colorcode .interaction-teaser > div").click(function(){
-  	$("#section-colorcode .interaction").fadeIn();
-});
 
-
-$("#section-colorcode .section-container .next-button").click(function(){
-	console.log("Color Code interaction fullscreen");
-	$("#section-colorcode .interaction").toggleClass("fullscreen", true);
-});
-
-
-$("#section-colorcode .interaction .next-button").click(function(){
-	console.log("scale animation");
-	$("#section-colorcode .interaction .scale").toggleClass("unit-collapsed", true);
-});
-
-
-// $("#section-colorcode .interaction .close").unbind().click(function(){
-//   	$("#section-colorcode .interaction").toggleClass("fullscreen", false);
-//   	$("#section-colorcode .interaction .scale").toggleClass("unit-collapsed", false);
-//   	colorize("transparent");
-// });
-
-
-$(".unit-control-up").click(function(){
-	logPositions($(this).parent(), "up");
-});
-
-$(".unit-control-down").click(function(){
-	logPositions($(this).parent(), "down");
-});
-
-
-
-
-// Slot machine functionality
+// SLOT MACHINE ENGINE
+// ////////////////////////////////////////////////////
 var slotMachineAnimationSpeed = 400;
 
 function logPositions(container, way){
 	var $currentRing = container.find(".ring");
 	var ringPositionTop = $("#ring-red1").position().top;
-	var currentLetterIndex = -ringPositionTop / 150;
+	var currentLetterIndex = -ringPositionTop / 200;
 
-	// console.log("container: ");
-	// console.log(container);	
-	// console.log("currentRing: ");
-	// console.log($currentRing);
-	// console.log("currentLetterIndex: "+currentLetterIndex);
-
+	console.log("container: ");
+ 	console.log(container);
+ 	console.log("currentRing: ");
+ 	console.log($currentRing);
+ 	console.log("currentLetterIndex: "+currentLetterIndex);
 	
 	if ( $currentRing.is(":animated") ) {
 		return false;
@@ -160,7 +162,7 @@ function logPositions(container, way){
 		if ( currentLetterIndex < 15 ){
 			currentLetterIndex++;
 			$currentRing.animate({
-				top: '-=150px'   
+				top: '-=200px'   
 			}, slotMachineAnimationSpeed);
 		}
 	}
@@ -169,7 +171,7 @@ function logPositions(container, way){
 		if ( currentLetterIndex > 0 ){
 			currentLetterIndex--;
 			$currentRing.animate({
-				top: '+=150px'   
+				top: '+=200px'   
 			}, slotMachineAnimationSpeed);
 		}
 	}
@@ -179,7 +181,9 @@ function logPositions(container, way){
 }
 
 
-// Snapping behavior
+
+// SNAPPING
+// ////////////////////////////////////////////////////
 $(document).ready(function(){
 	var options = {
 	  	$menu: $('.nav-list'),
@@ -197,7 +201,8 @@ $(document).ready(function(){
 });
 
 
-// Other functions
+// OTHER FUNCTIONS
+// ////////////////////////////////////////////////////
 function colorize(color){    
 	console.log("colorize! :"+color);
 	if (color == "transparent"){
@@ -212,19 +217,21 @@ function colorize(color){
 }
 
 
-// Init
+// RING
+// ////////////////////////////////////////////////////
 function initRing () {
+	// populate_ring(document.getElementById('rred'));
+	// populate_ring(document.getElementById('rgreen'));
+	// populate_ring(document.getElementById('rblue'));
+
 	populate_ring(document.getElementById('ring-red1'));
-	// populate_ring(document.getElementById('ring-red2'));
-	// populate_ring(document.getElementById('ring-green1'));
-	// populate_ring(document.getElementById('ring-green2'));
-	// populate_ring(document.getElementById('ring-blue1'));
-	// populate_ring(document.getElementById('ring-blue2'));
+	populate_ring(document.getElementById('ring-red2'));
+	populate_ring(document.getElementById('ring-green1'));
+	populate_ring(document.getElementById('ring-green2'));
+	populate_ring(document.getElementById('ring-blue1'));
+	populate_ring(document.getElementById('ring-blue2'));
 
 	ring_controller.init();
-
-	// hide the address bar once everything has loaded
-	// window.setTimeout(function() { window.scrollTo(0, 0); }, 2000);  
 };
 
 
@@ -250,21 +257,32 @@ var ring_controller = {};
 
 // performs all pre-flight operations needed to deal with interactions
 ring_controller.init = function () {
-	red1 = document.getElementsByClassName('ring')[0].childNodes[0].textContent;
-/*  	red2 = document.getElementById('ring-red2').childNodes[0].textContent;
+	// rred = document.getElementById('rred').childNodes[0].textContent;	
+	// rgreen = document.getElementById('rgreen').childNodes[0].textContent;
+	// rblue = document.getElementById('rblue').childNodes[0].textContent;
+
+	red1 = document.getElementById('ring-red1').childNodes[0].textContent;
+  	red2 = document.getElementById('ring-red2').childNodes[0].textContent;
 	green1 = document.getElementById('ring-green1').childNodes[0].textContent;
 	green2 = document.getElementById('ring-green2').childNodes[0].textContent;
 	blue1 = document.getElementById('ring-blue1').childNodes[0].textContent;
-	blue2 = document.getElementById('ring-blue2').childNodes[0].textContent; */
-	red2 = "f";
-	green1 = "f";
-	green2 = "f";
-	blue1 = "f";
-	blue2 = "f";
+	blue2 = document.getElementById('ring-blue2').childNodes[0].textContent; 
 };
 
 function update_color(e){
 	switch(e.parentNode.id) {
+		// case 'rred' :
+		// 	red1 = e.textContent;
+		// 	console.log("updated rr: "+rred);
+		// 	break;
+		// case 'rgreen' :
+		// 	red1 = e.textContent;
+		// 	console.log("updated rg: "+rgreen);
+		// 	break;
+		// case 'rblue' :
+		// 	red1 = e.textContent;
+		// 	console.log("updated rb: "+rblue);
+		// 	break;
 		case 'ring-red1' :
 			red1 = e.textContent;
 			console.log("updated r1: "+red1);
@@ -291,11 +309,6 @@ function update_color(e){
 			break;    
 	}
 
-	red2 = "f";
-	green1 = "f";
-	green2 = "f";
-	blue1 = "f";
-	blue2 = "f";
 	
 	color = red1 + red2 + green1 + green2 + blue1 + blue2;
 	colorize(color);

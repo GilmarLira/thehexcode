@@ -68,9 +68,7 @@ body {
 	.nav-list {
 		height: 100%;
 		li {
-			font-family: $fontfamily-montserrat;
-			font-weight: 700;
-			text-transform: uppercase;
+			@include typeface-montserrat;
 			@include rhythm(2);
 			line-height: .8;
 			width: 100%;

@@ -11,199 +11,219 @@
         @include position(relative, 30% 0 0 0);
         @include span-columns(5);
         @include omega;
-        background-color: white;
-        padding: 1rem 0rem 1rem 1rem;
         // height: 100%;
 
-        &:hover{
-            cursor: pointer;
+        .teaser{
+            @include transition(all 300ms ease);
+            padding: 1rem 1rem;
+            height: 70%;
+
+            &:hover{
+                @include transform(scale(1.05));
+                cursor: pointer;
+                opacity: 1;
+            }
         }
 
         .scale{
-            @include span-columns(10 of 10);
+            @include span-columns(2 of 5);
+            @include shift(1);
             @include user-select(none);            
-            // height: 150px;
             text-align: center;
             white-space: nowrap;
             overflow: hidden;
             margin-bottom: 0px;
+            background-color: rgba(255, 255, 255, .6);
+            padding: 1rem;
 
             .unit{
                 @include transition(all 1s ease, color .4s ease);
                 @include typeface-montserrat;
-                @include rhythm(2);
-                // vertical-align: bottom;
-                display: inline-block;
-                // display: table-cell;
-                text-align: center;
-                vertical-align: middle;
-                // @include position(relative, 0 0 0 0);
-
-                width: 50px;
-                height: 75px;
-
-                &:nth-child(1) .unit-value{ background-color: #000; color: #999; left: 0px; }
-                &:nth-child(2) .unit-value{ background-color: #111; color: #aaa; left: 50px; }
-                &:nth-child(3) .unit-value{ background-color: #222; color: #bbb; left: 100px; }
-                &:nth-child(4) .unit-value{ background-color: #333; color: #ccc; left: 150px; }
-                &:nth-child(5) .unit-value{ background-color: #444; color: #ddd; left: 200px; }
-                &:nth-child(6) .unit-value{ background-color: #555; color: #eee; left: 250px; }
-                &:nth-child(7) .unit-value{ background-color: #666; color: #fff; left: 300px; }
-                &:nth-child(8) .unit-value{ background-color: #777; color: #eee; left: 350px; }
-                &:nth-child(9) .unit-value{ background-color: #888; color: #ccc; left: 400px; }
-                &:nth-child(10) .unit-value{ background-color: #999; color: #aaa; left: 450px; }
-                &:nth-child(11) .unit-value{ background-color: #aaa; color: #888; left: 500px; }
-                &:nth-child(12) .unit-value{ background-color: #bbb; color: #666; left: 550px; }
-                &:nth-child(13) .unit-value{ background-color: #ccc; color: #444; left: 600px; }
-                &:nth-child(14) .unit-value{ background-color: #ddd; color: #222; left: 650px; }
-                &:nth-child(15) .unit-value{ background-color: #eee; color: #111; left: 700px; }
-                &:nth-child(16) .unit-value{ background-color: #fff; color: #000; left: 750px; }
-            }
-
-            .unit-value{
-                @include transition(all 1s ease, color .4s ease);
-                position: relative;
-                left: 0px !important;
-                outline: 1px solid rgb(40, 40, 40);
-                height: 100%;
-                // padding-top: 45%;
-                overflow: hidden;
-            }
-        }
-    }
-
-    .interaction{
-        @include span-columns(14 of 14);
-        @include position(absolute, 0 0 0 0);
-        @include transition(all 1s ease);
-        // @include transform(scale(.8));
-        height: 100%;
-        display:none;
-        background-color: #eee;
-
-        .interaction-box{
-            @include span-columns(10 of 14);
-            @include shift(3);
-            height: 100%;
-        }
-    }
-
-    .unit-collapsed{
-        height: 300px !important;
-        .unit{
-            color: transparent !important;
-            width: percentage( 1/8 ) !important;
-            height: 150px !important;
-            margin-left: percentage( -1/8 );
-            
-            .unit-value{
-                color: transparent !important;
-            }
-            
-            .letter{
                 @include rhythm(1);
-            }
+                width: 100%;
+                height: 16%; // Each has 1 / 6 of the nav total height
+                margin-bottom: 0.666666667%;
+                display: table;
+                overflow: hidden;
 
-            .unit-control-up,
-            .unit-control-down{
-                opacity: 1;
+                .unit-value{
+                    @include position(relative, 0 0 0 0);
+                    display: table-cell;
+                    text-align: center;
+                    vertical-align: middle;
+                    margin: 0px;
+                    padding: 0px;
+                }
+
+                &:nth-child(1) { background-color: #000; color: #999; }
+                &:nth-child(2) { background-color: #111; color: #aaa; }
+                &:nth-child(3) { background-color: #222; color: #bbb; }
+                &:nth-child(4) { background-color: #333; color: #ccc; }
+                &:nth-child(5) { background-color: #444; color: #ddd; }
+                &:nth-child(6) { background-color: #555; color: #eee; }
+                &:nth-child(7) { background-color: #666; color: #fff; }
+                &:nth-child(8) { background-color: #777; color: #eee; }
+                &:nth-child(9) { background-color: #888; color: #ccc; }
+                &:nth-child(10) { background-color: #999; color: #aaa; }
+                &:nth-child(11) { background-color: #aaa; color: #888; }
+                &:nth-child(12) { background-color: #bbb; color: #666; }
+                &:nth-child(13) { background-color: #ccc; color: #444; }
+                &:nth-child(14) { background-color: #ddd; color: #222; }
+                &:nth-child(15) { background-color: #eee; color: #111; }
+                &:nth-child(16) { background-color: #fff; color: #000; }
             }
         }
     }
+}
 
-    .interaction    .scale{
-        @include position(30% 0 0 0);
-		@include user-select(none);
-        @include span-columns(10 of 10);
-        height: 150px;
-        text-align: center;
-        white-space: nowrap;
-
-        .unit{
-            @include transition(all 1s ease, color .4s ease);
-            vertical-align: bottom;
-            display: inline-block;
-            font-family: $fontfamily-montserrat;
-            font-weight: 700;
-            text-transform: uppercase;
-            width: percentage( 1/16 );
-            height: 75px;
-
-            &:nth-child(1) .unit-value{ background-color: #000; color: #999; left: 0px; }
-            &:nth-child(2) .unit-value{ background-color: #111; color: #aaa; left: 50px; }
-            &:nth-child(3) .unit-value{ background-color: #222; color: #bbb; left: 100px; }
-            &:nth-child(4) .unit-value{ background-color: #333; color: #ccc; left: 150px; }
-            &:nth-child(5) .unit-value{ background-color: #444; color: #ddd; left: 200px; }
-            &:nth-child(6) .unit-value{ background-color: #555; color: #eee; left: 250px; }
-            &:nth-child(7) .unit-value{ background-color: #666; color: #fff; left: 300px; }
-            &:nth-child(8) .unit-value{ background-color: #777; color: #eee; left: 350px; }
-            &:nth-child(9) .unit-value{ background-color: #888; color: #ccc; left: 400px; }
-            &:nth-child(10) .unit-value{ background-color: #999; color: #aaa; left: 450px; }
-            &:nth-child(11) .unit-value{ background-color: #aaa; color: #888; left: 500px; }
-            &:nth-child(12) .unit-value{ background-color: #bbb; color: #666; left: 550px; }
-            &:nth-child(13) .unit-value{ background-color: #ccc; color: #444; left: 600px; }
-            &:nth-child(14) .unit-value{ background-color: #ddd; color: #222; left: 650px; }
-            &:nth-child(15) .unit-value{ background-color: #eee; color: #111; left: 700px; }
-            &:nth-child(16) .unit-value{ background-color: #fff; color: #000; left: 750px; }
-        }
-            
-        .unit-caption{
-            @include rhythm(0, 0, .5);
-        }
-
-        .unit-control-up{
-            @include transition(all .5s ease 1.5s);
-            @include margins(0,.5);            
-            // display: none;
-            opacity: 0;
-            background-color: magenta;
-            width: 100%;
-            height: 20%;
-            &:hover{
-                cursor: n-resize;
-                background-color: darken(magenta, 10%);
-            }
-        }
-
-        .unit-value{
-            @include transition(all 1s ease, color .4s ease);
-            position: relative;
-            left: 0px !important;
-            outline: 1px solid rgb(40, 40, 40);
-            height: 100%;
-            padding-top: 45%;
-            overflow: hidden;
-        }
-        
-        .unit-control-down{
-            @extend .unit-control-up;
-            @include margins(.5,0);
-            &:hover{
-                cursor: s-resize;
-            }
-        }        
-    }
-
-    .ring{
-        // @include transition(all .3s ease-in-out);
-        @include position(absolute, 0px 0 0 0);
-        display: block;
-        width: 100%;
+#section-colorcode{
+    .interaction-block{
+        @include span-columns(16 of 16);
+        @include position(absolute, 0 0 0 0);
+        background-color: $color-interaction-bg;
         height: 100%;
-        font-family: $fontfamily-montserrat;
-        text-align: center;
-        text-transform: uppercase;
-        color: black;
+        display: none;
 
-        .letter{
-            @include rhythm(0);
-            // @include transition(background-color .3s ease-in-out, color .3s ease-in-out, position .5s $ease-out-quad);
+        .nav-next{
+            @include position(absolute, 0 0 0px 70%);
+        }
 
-            display: block;
-            width: 100%;
+        .interaction{
+            @include span-columns(16 of 16);
+            @include position(absolute, 0 0 0 0);
+            @include transition(all 1s ease);
+            @include user-select(none);
+            display:none;
             height: 100%;
-            background-color: rgba(255, 255, 255, .8);
-            padding-top: 45%;
+
+            .interaction-box{
+                @include span-columns(14 of 16);
+                @include shift(2);
+                height: 100%;
+            }
+
+            .interaction-widget{
+                @include span-columns(12 of 14);
+                @include shift(1);
+                height: 100%;
+                vertical-align: top;
+            }
+        }
+
+        .interaction.first{
+            .scale{
+                @include position(30% 0 0 0);
+        		@include user-select(none);
+                @include span-columns(12 of 12);
+                display: inline-block;
+                height: 170px;
+                white-space: nowrap;
+                text-align: center;
+
+                .unit{
+                    @include transition(all 1s ease, color .4s ease);
+                    @include typeface-montserrat;
+                    vertical-align: top;
+                    display: inline-block;
+                    width: percentage( 1/16 );
+                    height: 100px;
+
+                    &:nth-child(1) .unit-value{ background-color: #000; color: #999; }
+                    &:nth-child(2) .unit-value{ background-color: #111; color: #aaa; }
+                    &:nth-child(3) .unit-value{ background-color: #222; color: #bbb; }
+                    &:nth-child(4) .unit-value{ background-color: #333; color: #ccc; }
+                    &:nth-child(5) .unit-value{ background-color: #444; color: #ddd; }
+                    &:nth-child(6) .unit-value{ background-color: #555; color: #eee; }
+                    &:nth-child(7) .unit-value{ background-color: #666; color: #fff; }
+                    &:nth-child(8) .unit-value{ background-color: #777; color: #eee; }
+                    &:nth-child(9) .unit-value{ background-color: #888; color: #ccc; }
+                    &:nth-child(10) .unit-value{ background-color: #999; color: #aaa; }
+                    &:nth-child(11) .unit-value{ background-color: #aaa; color: #888; }
+                    &:nth-child(12) .unit-value{ background-color: #bbb; color: #666; }
+                    &:nth-child(13) .unit-value{ background-color: #ccc; color: #444; }
+                    &:nth-child(14) .unit-value{ background-color: #ddd; color: #222; }
+                    &:nth-child(15) .unit-value{ background-color: #eee; color: #111; }
+                    &:nth-child(16) .unit-value{ background-color: #fff; color: #000; }
+                }  
+            }
+        }
+
+        .interaction.second{
+            .hex-container{
+                @include position(30% 0 0 0);
+                @include span-columns(6 of 12);
+                @include shift(3);
+            }
+
+            .hex{
+                @include span-columns(2 of 6);
+                height: 300px;
+            }
+        }
+
+        .interaction.third{
+            .hex-container{
+                @include position(30% 0 0 0);
+                @include span-columns(12 of 12);
+            }
+
+            .hex{
+                @include span-columns(2 of 12);
+                height: 300px;
+            }
+        }
+
+        .interaction.second,
+        .interaction.third{
+            .value{
+                @include position(0 0 0 0);
+                @include transition(all 1s ease, color .4s ease);
+                @include typeface-montserrat;
+                // outline: 1px solid rgb(40, 40, 40);
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+
+                .ring{
+                    // @include transition(all .3s ease-in-out);
+                    @include position(absolute, 0px 0 0 0);
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    color: black;
+
+                    .letter{
+                        @include rhythm(2);
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(255, 255, 255, .8);
+                        padding-top: 45%;
+                    }
+                }
+            }
+
+            
+            .unit-control-up{
+                @include transition(all .5s ease 1.5s);
+                background-color: magenta;
+                width: 100%;
+                height: 30px;
+                margin: 0 0 20px 0; 
+                &:hover{
+                    cursor: n-resize;
+                    background-color: darken(magenta, 10%);
+                }
+            }
+
+            .unit-control-down{
+                @extend .unit-control-up;
+                margin: 20px 0 0 0;
+                &:hover{
+                    cursor: s-resize;
+                }
+            }    
         }
     }
 }
