@@ -61,6 +61,14 @@
             @include position(absolute, 0 0 10% 0);
             background-color: rgba(0,0,0,.8);
 
+            small{
+                display: inline-block;
+                width: 60%;
+                margin-left: 20%;
+                margin-right: 20%;
+                color: #ddd;
+            }
+
             .tech-controller{
                 @include span-columns(12 of 12);
                 // @include shift(1);
@@ -69,15 +77,23 @@
                 @include rhythm(0, 0, 0); 
                 text-align: center;
 
+
+
                 li{
                     @include span-columns(2 of 12);
                     @include omega;
+
+                    @include transition(all .3s ease);
 
                     color: white;
                     cursor: pointer;
                     
                     &.selected{
                         background-color: purple;
+                    }
+
+                    &:hover{
+                        background-color: black;
                     }
 
                     &:nth-child(1){

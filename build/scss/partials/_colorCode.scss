@@ -102,6 +102,15 @@
                 height: 100%;
             }
 
+            .interaction-container{
+                @include span-columns(6 of 14);
+                @include shift(1);
+                padding-top: 10%;
+                p {
+                    @include rhythm(2);
+                }
+            }
+
             .interaction-widget{
                 @include span-columns(12 of 14);
                 @include shift(1);
@@ -112,7 +121,7 @@
 
         .interaction.first{
             .scale{
-                @include position(30% 0 0 0);
+                @include position(20% 0 0 0);
         		@include user-select(none);
                 @include span-columns(12 of 12);
                 display: inline-block;
@@ -145,6 +154,12 @@
                     &:nth-child(15) .unit-value{ background-color: #eee; color: #111; }
                     &:nth-child(16) .unit-value{ background-color: #fff; color: #000; }
                 }  
+
+                .unit-value{
+                    @include rhythm(1);
+                    padding-top: 60%;
+                    height: 150px;
+                }
             }
         }
 
