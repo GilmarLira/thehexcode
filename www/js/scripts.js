@@ -246,6 +246,14 @@ $(".unit-control-down").click(function(){
 	logPositions($(this).parent(), "down");
 });
 
+// $(".super-control-up").click(function(){
+// 	superPositions($(this).parent(), "up");
+// });
+
+// $(".super-control-down").click(function(){
+// 	superPositions($(this).parent(), "down");
+// });
+
 
 
 
@@ -291,13 +299,42 @@ var slotMachineAnimationSpeed = 400;
 
 function logPositions(container, way){
 	var $currentRing = container.find(".ring");
-	var ringPositionTop = $("#ring-red1").position().top;
-	var currentLetterIndex = -ringPositionTop / 200;
+	var ringPositionTop, currentLetterIndex;
 
 	console.log("container: ");
  	console.log(container);
  	console.log("currentRing: ");
- 	console.log($currentRing);
+ 	console.log($currentRing.attr('id'));
+
+	switch($currentRing.attr('id')) {
+		case 'ring-red1' :
+			ringPositionTop = $("#ring-red1").position().top;
+			currentLetterIndex= -ringPositionTop / 200;
+			break;
+		case 'ring-red2' :
+			ringPositionTop = $("#ring-red2").position().top;
+			currentLetterIndex= -ringPositionTop / 200;
+			break;
+		case 'ring-green1' :
+			ringPositionTop = $("#ring-green1").position().top;
+			currentLetterIndex= -ringPositionTop / 200;
+			break;
+		case 'ring-green2' :
+			ringPositionTop = $("#ring-green2").position().top;
+			currentLetterIndex= -ringPositionTop / 200;
+			break;
+		case 'ring-blue1' :
+			ringPositionTop = $("#ring-blue1").position().top;
+			currentLetterIndex= -ringPositionTop / 200;
+			break;
+		case 'ring-blue2' :
+			ringPositionTop = $("#ring-blue2").position().top;
+			currentLetterIndex= -ringPositionTop / 200;
+			break;
+	}
+
+	
+ 	
  	console.log("currentLetterIndex: "+currentLetterIndex);
 	
 	if ( $currentRing.is(":animated") ) {
