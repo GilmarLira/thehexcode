@@ -93,11 +93,11 @@ $("#section-colorcode .interaction-block .nav-next").click(function(){
 
 
 $(".unit-control-up").click(function(){
-	logPositions($(this).parent(), "up");
+	logPositions($(this).parent(), "down");
 });
 
 $(".unit-control-down").click(function(){
-	logPositions($(this).parent(), "down");
+	logPositions($(this).parent(), "up");
 });
 
 // $(".super-control-up").click(function(){
