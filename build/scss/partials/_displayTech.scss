@@ -3,6 +3,7 @@
 
 #section-technology{
     height: 100%;
+    // @include outline;
 
     .section-content{
         @include row();
@@ -35,7 +36,7 @@
     }
 
     .interaction{
-        @include span-columns(14 of 14);
+        @include span-columns(16 of 16);
         @include position(absolute, 0 0 0 0);
         height: 100%;
         display: none;
@@ -56,47 +57,48 @@
 
 
         .interaction-box{
-            @include span-columns(12 of 16);
-            @include shift(3);
+            @include span-columns(10 of 16);
+            @include shift(4);
             @include position(absolute, 0 0 10% 0);
             background-color: rgba(0,0,0,.8);
 
             small{
-                display: inline-block;
-                width: 60%;
-                margin-left: 20%;
-                margin-right: 20%;
+                @include span-columns(8 of 10);
+                @include shift(1);
+                // width: 60%;
+                // margin-left: 20%;
+                // margin-right: 20%;
                 color: #ddd;
             }
 
             .tech-controller{
                 @include span-columns(12 of 12);
-                @include paddings(1,1);
+                @include paddings(1,0);
                 @include typeface-montserrat;
                 @include rhythm(0, 0, 0); 
                 text-align: center;
-                margin:0;
+                margin-bottom:0;
 
 
                 li{
-                    @include span-columns(2 of 12);
-                    @include omega;
-
+                    @include span-columns(2 of 16);
                     @include transition(all .3s ease);
+                    @include button(#fff);
+                    background-color: rgba(white,.4);
 
-                    color: white;
-                    cursor: pointer;
+                    // color: white;
+                    // cursor: pointer;
                     
-                    &.selected{
-                        background-color: purple;
-                    }
+                    // &.selected{
+                    //     background-color: purple;
+                    // }
 
-                    &:hover{
-                        background-color: black;
-                    }
+                    // &:hover{
+                    //     background-color: black;
+                    // }
 
                     &:nth-child(1){
-                        @include shift(1);
+                        @include shift(2);
                     }
                 }
             }
