@@ -71,12 +71,11 @@
 
             .tech-controller{
                 @include span-columns(12 of 12);
-                // @include shift(1);
                 @include paddings(1,1);
                 @include typeface-montserrat;
                 @include rhythm(0, 0, 0); 
                 text-align: center;
-
+                margin:0;
 
 
                 li{
