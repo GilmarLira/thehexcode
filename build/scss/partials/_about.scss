@@ -10,35 +10,26 @@
 		@include span-columns(8 of 13);
 	}
 	.portraits {
-		@include span-columns(4 of 12);
-		// @include shift(1);
+		@include span-columns(2 of 12);
+		@include shift(2);
 		@include omega;
 		.portraits-item {
-			@include position(0 0 0 0);
-			@include span-columns(2 of 4);
-			@include shift(1);
-
-			height: 260px;
+			@include position(relative, 0 0 0 0);
 			img{
-				// @include span-columns(2 of 4);
-				// @include omega;
-				@include position(absolute, 0 0 0 0);
 				width: 100%;
-
-				
-				&.static{ 	opacity: 1; }
-				&.colorful{ 	opacity: 0;	}
+				height: auto;
 			}
-
 			&:hover{
-				.colorful{ opacity: 1; }
+				.colorful { opacity: 1; }
+				.static { 	opacity: 0;	}
 			}
-		}
-		.name {
-			@include position(80% 0 0 0);
-			@include rhythm(0, 0, 0); 
-			text-align: center;
-			white-space: nowrap;
+			.name {
+				@include position(absolute, 45% 0 0 0);
+				@include rhythm(0, 0, 0); 
+				text-align: center;
+				white-space: nowrap;
+				width: 100%;
+			}
 		}
 	}
 }
