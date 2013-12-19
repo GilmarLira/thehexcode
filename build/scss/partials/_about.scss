@@ -11,24 +11,38 @@
 	}
 	.portraits {
 		@include span-columns(2 of 12);
-		@include shift(2);
+		@include shift(1);
 		@include omega;
+		@include position(relative, -100px 0 0 0);
 		.portraits-item {
 			@include position(relative, 0 0 0 0);
+			@include transition(all .5s ease-out);
 			img{
 				width: 100%;
 				height: auto;
 			}
-			&:hover{
-				.colorful { opacity: 1; }
-				.static { 	opacity: 0;	}
-			}
 			.name {
-				@include position(absolute, 45% 0 0 0);
-				@include rhythm(0, 0, 0); 
+				@include position(absolute, 35% 0 0 0);
+				@include rhythm(1, 0, 0); 
+				line-height: 1;
 				text-align: center;
-				white-space: nowrap;
 				width: 100%;
+				opacity: 0;
+				@include transition(all .5s ease-out);
+			}
+			&:hover{
+				img {
+					@include transition(all .3s ease-in);
+					opacity: .3;
+				}
+				@include transition(all .3s ease-in);
+				.name {
+					opacity: 1;
+					@include transition(all .3s ease-in);
+					&:hover {
+						color: black !important;
+					}
+				}
 			}
 		}
 	}

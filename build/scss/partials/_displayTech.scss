@@ -59,7 +59,7 @@
         .interaction-box{
             @include span-columns(10 of 16);
             @include shift(4);
-            @include position(absolute, 0 0 10% 0);
+            @include position(absolute, 0 0 0% 0);
             background-color: rgba(0,0,0,.8);
 
             small{
@@ -68,7 +68,14 @@
                 // width: 60%;
                 // margin-left: 20%;
                 // margin-right: 20%;
-                color: #ddd;
+                color: rgba(white,.5);
+                @include typeface-montserrat;
+                @include rhythm(-1, 0, 0);
+                line-height: 1.4;
+                @include paddings(1,0);
+                padding-bottom: 3em;
+                text-align: center;
+                display: block;
             }
 
             .tech-controller{

@@ -78,7 +78,18 @@
     }
 
     .interaction.first{
-        background-color: #eee;
+         @include background-image(url('../img/pattern.svg'),
+            radial-gradient(100% 10%, circle cover, #eee, #aaa) );
+        height: 100%;
+        .rgb-container{
+            @include span-columns(8 of 8);
+            overflow: hidden;
+            svg {
+                @include animation(carroussel 60s linear infinite);
+                width: 120%;
+                height: 120%;
+            }
+        }
     }
 
     .interaction.second,

@@ -136,12 +136,17 @@ body {
         white-space: nowrap;
     }
 
-    .nav-next a:after {
+    .nav-next a:after,{
         display: inline-block;
         margin-left: 15px;
         @include position(relative, 5px 0 0 0);
 		@include triangle(16px, rgba(0,0,0,.8), down);
 		opacity: .5;
+    }
+
+    .interaction .nav-next a:after {
+    	@include position(relative, 2px 0 0 0);
+		@include triangle(16px, rgba(0,0,0,.8), right);
     }
 
     .nav-prev{
