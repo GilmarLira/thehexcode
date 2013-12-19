@@ -25,6 +25,7 @@ sliderL = 1;
 // NAV RESET
 // ////////////////////////////////////////////////////
 $(".main-nav li").click(function(){
+  	$(".interaction-block").fadeOut();
   	$(".interaction").fadeOut();
 });
 
