@@ -17,11 +17,11 @@ module.exports = function(grunt) {
 
         concat: {
             dist: {
-            	src: ['build/js/scripts/*.js'],
+            		src: ['build/js/scripts/*.js'],
 				dest: 'build/js/scripts.js',
             },
 			push: {
-            	src: ['build/js/scripts.js'],
+            		src: ['build/js/scripts.js'],
 				dest: 'www/js/scripts.js',
 			}
         },
@@ -31,41 +31,28 @@ module.exports = function(grunt) {
 				livereload: true,
 			},
             html: {
-                files: ['www/*.*'],
-                tasks: [],
-                options: {
-                    spawn: false,
-                }
+                files: ['www/*.html'],
             },
 			cssFirst: {
 				files: ['www/css/style.css'],
-				tasks: [],
-				options: {
-					spawn: false,
-				}
+				tasks: []
 			},
-			css: {
+			sass: {
+				options: {
+					livereload: false
+				},
 				files: [
 					'build/scss/*.scss',
                     'build/scss/partials/*.scss',
                     'build/scss/globals/*.scss'
 					],
 				tasks: ['sass'],
-				options: {
-					spawn: false,
-				}
 			},
 			scripts: {
 				files: ['build/js/scripts/*.js'],
 				tasks: ['concat'],
-				options: {
-					spawn: false,
-				}
-			}
-			
+			}			
 		}
-			
-
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.
