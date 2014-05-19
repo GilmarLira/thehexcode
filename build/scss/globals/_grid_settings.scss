@@ -16,4 +16,11 @@ $visual-grid-opacity: 0.1;
 $visual-grid-color: #ff00ff;
 
 // Media Query Breakpoints
-//$small      :new-breakpoint( min-width 320px max-width 480px 16 );
+// $small      :new-breakpoint( min-width 320px max-width 480px 16 );
+// $medium     :new-breakpoint( min-width 481px max-width 768px 16 );
+// $big        :new-breakpoint( min-width 769px 16 );
+$small      :new-breakpoint( max-width 480px 16 );
+$medium     :new-breakpoint( max-width 768px 16 );
+$big        :new-breakpoint( min-width 769px 16 );
+
+

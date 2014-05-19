@@ -10,16 +10,37 @@
 			@include row();
 			margin-top: 2em;
 			li {
-				@include span-columns(4 of 12);
-				@include omega(3n);
-				h2 {
-					@include rhythm(1, 1, .5);
-					line-height: 1;
+				@include media($big) {
+					@include span-columns(4 of 12);
+					@include omega(3n);
+					
+					h2 {
+						@include rhythm(1, 1, .5);
+						line-height: 1;
+					}
+					
+					p {
+						@include rhythm(1, 0, .5);
+						line-height: 1.6;
+					}
 				}
-				p {
-					@include rhythm(1, 0, .5);
-					line-height: 1.6;
+
+				@include media($medium) {
+					@include span-columns(6 of 12);
+					@include omega(2n);
+					
+					h2 { @include rhythm(0, 1, .5); }
+					p { @include rhythm(0, 0, .5); }
 				}
+
+				@include media($small) {
+					@include span-columns(12 of 12);
+					@include omega;
+					h2 { @include rhythm(0, 1, .5); }
+					p { @include rhythm(0, 0, .5); }	
+					
+				}
+				
 			}
 		}
 	}

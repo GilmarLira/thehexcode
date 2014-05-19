@@ -15,6 +15,7 @@
 <body>
 
     <div class="site-container">
+        <!-- <div class="marker" style="height: 10px;"></div> -->
 
 
         <header class="site-header">
@@ -63,7 +64,7 @@
                 </div><!-- .section-container -->
 
                 <div class="interaction-teaser">
-                    <img src="img/section2/1bit.jpg" title="" alt="A sunset displayed in 1bit color depth" />
+                    <img src="img/section2/1bit.jpg" title="" alt="A sunset displayed in 1bit color depth" class="teaser" />
                     <!-- 
                     <div class="interaction-teaser-action">
                         <a href="#interaction-technology">What does this all mean?</a>
@@ -155,9 +156,7 @@
                                 <div class="interaction-content">
                                     <p>So, How does screen color work? It's all about light and it's intensity. The only way to see this in action is to remove all light.</p>
                                 </div>
-                                <nav class="nav-next">
-                                    <a href="#section-additivecolor">Turn off the lights!</a>
-                                </nav>
+                                
                             </div><!-- .interaction-container -->
 
                             <div class="interaction-widget">
@@ -201,6 +200,10 @@
                                 </div>
                             </div><!-- .interaction-widget -->
 
+                            <nav class="nav-next">
+                                <a href="#section-additivecolor">Turn off the lights!</a>
+                            </nav>
+
                             <div class="close"><span>Close</span></div>
                         </div><!-- .interaction-box -->
                     </div><!-- .interaction .first -->
@@ -214,9 +217,6 @@
                                 <div class="interaction-content">
                                     <p>What happened here? Why so dark all of a sudden'? Well, no light equals no color. Try moving that slider over to increase the amount of light - notice how the overlayed colors interact with each other.</p>
                                 </div>
-                                <nav class="nav-next">
-                                    <a href="#section-additivecolor">Now control each color's light</a>
-                                </nav>
                             </div><!-- .interaction-container -->
 
                             <div class="interaction-widget">
@@ -260,11 +260,21 @@
                                 </div>
                                 
                                 <div class="rgb-controller-wrapper">
-                                    <label>Light
+                                    <!-- <label>Light
                                         <input id="l" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
                                     </label>
+                                     -->
+                                    
+                                    <input id="l" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    <p class="label">Light</p>
+                                    
+                                    
                                 </div>
                             </div><!-- .interaction-widget -->
+
+                            <nav class="nav-next">
+                                <a href="#section-additivecolor">Individual colors</a>
+                            </nav>
 
                             <div class="close"><span>Close</span></div>
                         </div><!-- .interaction-box -->
@@ -325,7 +335,7 @@
                                 </div><!-- .interaction-widget -->
                                 
                                 <div class="rgb-controller-wrapper">
-                                    <label>Red
+                                    <!-- <label>Red
                                         <input id="r" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
                                     </label>
                                     <label>Green
@@ -333,7 +343,16 @@
                                     </label>
                                     <label>Blue
                                     <input id="b" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
-                                    </label>
+                                    </label> -->
+
+                                    <input id="r" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    <p class="label">Red</p>
+                                    
+                                    <input id="g" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    <p class="label">Green</p>
+                                    
+                                    <input id="b" type="range" min="0" max="255" step="1" value="0" onchange="updateSlider(this)" />
+                                    <p class="label">Blue</p>
                                 </div>
                             </div>
 
@@ -530,27 +549,21 @@
                         <li>
                             <h2><a href="http://0to255.com/fd2b82" title="0 to 255">0 to 255</a></h2>
                             <p>Find lighter and darker colors based on any color</p>
-                        </li>
                         <li>
                             <h2><a href="http://www.colormatters.com" title="Color Matters">Color Matters</a></h2>
                             <p>Everything about color</p>
-                        </li>
                         <li>
                             <h2><a href="http://www.colorsontheweb.com" title="Colors on the Web">Colors on the Web</a></h2>
                             <p>A color resource for web&nbsp;designers</p>
-                        </li>
                         <li>
                             <h2><a href="http://www.color-hex.com" title="Color Hex">Color Hex</a></h2>
                             <p>Hex color generator for web&nbsp;designers</p>
-                        </li>
                         <li>
                             <h2><a href="http://www.colourlovers.com" title="Colour Lovers">Colour Lovers</a></h2>
                             <p>Create and share colors, palettes and patterns</p>
-                        </li>
                         <li>
                             <h2><a href="http://www.colorhexa.com" title="Color Hexa">Color Hexa</a></h2>
                             <p>Color encyclopedia: Information and conversion</p>
-                        </li>
                     </ul><!-- .resources-list -->
                     <nav class="nav-next">
                         <a href="#section-about">Why y'all did this?</a>
@@ -568,29 +581,30 @@
                     <div class="section-content">
                         <p>We felt the general understanding of screen color and the way the hex code is formed was lacking in the web development community. We learned a ton in this process! We're glad to share it with you! <br />Why don't you do the same? <br />Spread the love!</p>
                     </div>
-                    <div class="portraits">
+                </div>
+
+                <div class="portraits">
                         <div class="portraits-item">
                             <a href="http://gilmarlira.com/">
                                 <img src="img/avatar-gilmar.png" />
                             </a>
-                            <h2 class="name"><a href="http://gilmarlira.com/">Gilmar Lira</a></h2>
+                            <h2 class="name"><a href="http://gilmarlira.com/">Gilmar<br /> Lira</a></h2>
                         </div>
 
                         <div class="portraits-item">
                             <a href="http://hugobaeta.com/">
                                 <img src="img/avatar-hugo.png" />
                             </a>
-                            <h2 class="name"><a href="http://hugobaeta.com/">Hugo Baeta</a></h2>
+                            <h2 class="name"><a href="http://hugobaeta.com/">Hugo<br /> Baeta</a></h2>
                         </div>
 
                         <div class="portraits-item">
                             <a href="http://jameshellesen.com/">
                                 <img src="img/avatar-james.png" />
                             </a>
-                            <h2 class="name"><a href="http://jameshellesen.com/">James Hellesen</a></h2>
+                            <h2 class="name"><a href="http://jameshellesen.com/">James<br /> Hellesen</a></h2>
                         </div>
-                    </div><!-- .portraits -->          
-                </div>
+                    </div><!-- .portraits -->     
             
             </section><!-- #section-about -->
 

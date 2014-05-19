@@ -33,10 +33,7 @@ module.exports = function(grunt) {
             html: {
                 files: ['www/*.html'],
             },
-			cssFirst: {
-				files: ['www/css/style.css'],
-				tasks: []
-			},
+			   
 			sass: {
 				options: {
 					livereload: false

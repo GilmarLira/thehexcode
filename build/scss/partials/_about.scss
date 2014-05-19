@@ -2,20 +2,19 @@
 // ////////////////////////////////////
 
 #section-about {
-	// @include outline;
-	.section-container {
-		@include span-columns(13 of 16);
-	}
-	.section-content {
-		@include span-columns(8 of 13);
-	}
+	height: 100%;
+
+	.section-container { @include omega; }
+
 	.portraits {
-		@include span-columns(2 of 12);
+		@include span-columns(4 of 16);
 		@include shift(1);
 		@include omega;
-		@include position(relative, -100px 0 0 0);
+		@include position(relative, 10% 0 0 0);
+		height: 100%;
+		
 		.portraits-item {
-			@include position(relative, 0 0 0 0);
+			@include position;
 			@include transition(all .5s ease-out);
 			img{
 				width: 100%;
@@ -23,12 +22,17 @@
 			}
 			.name {
 				@include position(absolute, 35% 0 0 0);
-				@include rhythm(1, 0, 0); 
+				// @include rhythm(1, 0, 0); 
+				@extend .gamma;
+				@include transition(all .5s ease-out);
 				line-height: 1;
 				text-align: center;
 				width: 100%;
 				opacity: 0;
-				@include transition(all .5s ease-out);
+				@include media($medium) {
+					@include position;
+					opacity: 1;
+				}
 			}
 			&:hover{
 				img {
